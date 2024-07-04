@@ -122,8 +122,8 @@ a.external {
 
 .site-footer {
   box-sizing: border-box;
-  padding: 1.5rem 0 3rem;
-  margin: 0 var(--site-edge);
+  padding: 1.5rem var(--site-edge) 3rem;
+  margin: 0;
   position: relative;
   color: #fff;
 
