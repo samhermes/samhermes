@@ -3,7 +3,7 @@ title: Introduction
 date: 2024-08-25 14:47:00 Z
 series: Nightlight
 backgroundColor: f4c9db
-permalink: /writing/nightlight/introduction
+permalink: "writing/nightlight/introduction/index.html"
 ---
 
 Austin Wiley and Zach Parsons are a gay couple living in the Midwest. They met six months ago at their local outdoor theater. Austin was on stage, and Zach was behind the scenes. When they found each other, they knew that they had found something special. Now, they're living together and finding out what it means to be a gay couple in a place that doesn't always welcome them with open arms.

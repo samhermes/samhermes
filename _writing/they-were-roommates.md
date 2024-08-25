@@ -3,7 +3,7 @@ title: They were roommates
 date: 2024-08-25 19:00:00 Z
 series: Nightlight
 backgroundColor: ffd7a3
-permalink: /writing/nightlight/they-were-roommates
+permalink: "writing/nightlight/they-were-roommates/index.html"
 ---
 
 “I was thinking that maybe we could go to a museum tomorrow?” Austin proposed, cautiously. It was Friday night, and he was snuggled into Zach on the couch, decompressing after a busy week with some mind numbing television.
