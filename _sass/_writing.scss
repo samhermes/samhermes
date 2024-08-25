@@ -54,11 +54,11 @@
     .story-list {
         border-left: 1px solid var(--dark-border-color);
         list-style: none;
-        margin: 0;
+        margin: 0 0 0 0.8rem;
         padding: 0 0 0 1.3rem;
 
         li {
-            margin-bottom: 1.3rem;
+            margin-bottom: 1rem;
         }
 
         .story-title {
@@ -153,5 +153,52 @@
         @media screen and (min-width: 37.5em) {
             font-size: 1.4rem;
         }
+    }
+
+    hr {
+        margin: 4rem auto;
+        border: 0;
+        border-top: 1px solid #000;
+        width: 25%;
+    }
+
+    .character-description {
+        margin: 2rem 0;
+
+        p {
+            text-indent: 0;
+        }
+    }
+}
+
+.story-nav {
+    display: flex;
+    gap: 2rem;
+    margin-top: 5rem;
+    font-family: 'Inter', sans-serif;
+
+    > * {
+        width: 50%;
+        border-left: 1px solid #0000001c;
+        padding-left: 1rem;
+
+        &:hover {
+            .story-title {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .story-nav-next {
+        margin-left: auto;
+    }
+
+    p {
+        text-indent: 0;
+        font-size: 1.25rem;
+    }
+
+    .story-title {
+        font-weight: 500;
     }
 }

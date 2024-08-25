@@ -37,7 +37,7 @@ module.exports = function (config) {
 
     config.addCollection('writing', collection =>
         collection.getFilteredByGlob('_writing/*.md')
-            .sort((a, b) => b.date - a.date)
+            .sort((a, b) => a.date - b.date)
     )
 
     function filterTagList(tags) {
