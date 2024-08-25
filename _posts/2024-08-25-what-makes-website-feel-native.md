@@ -1,6 +1,6 @@
 ---
 title: What makes a website feel native?
-date: 2024-08-25T14:17:00
+date: 2024-08-25T14:17:00 -6
 tags:
   - HTML
   - Accessibility

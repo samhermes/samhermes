@@ -1,6 +1,6 @@
 ---
 title: The tension between modularity and accessibility
-date: 2024-08-10T12:45:00
+date: 2024-08-10T12:45:00 -6
 tags:
   - Accessibility
   - JavaScript
