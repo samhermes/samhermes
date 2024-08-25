@@ -3,6 +3,7 @@ title: First story
 date: 2024-06-25 19:00:00 Z
 series: First Story Group
 backgroundColor: ffd7a3
+permalink: /writing/story-group/first-story
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet sapien sed porttitor iaculis. Aenean dui justo, auctor vel nisi in, ultricies finibus sapien. In convallis ac libero id condimentum. In hendrerit, sapien sed vehicula bibendum, dolor enim dictum massa, sit amet egestas mi nisi eget diam. Morbi quis aliquet sem. Suspendisse quis ex et augue efficitur consectetur nec eget odio. Donec sit amet congue quam. Donec hendrerit enim at mollis mattis. Proin eget varius leo, id euismod nulla.
