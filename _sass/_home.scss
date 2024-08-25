@@ -141,6 +141,10 @@
     }
 }
 
+.home-projects {
+    padding-bottom: 0;
+}
+
 .home-project-list {
     display: flex;
     flex-direction: column;
@@ -158,8 +162,4 @@
             color: #bbb;
         }
     }
-}
-
-.home-writing {
-    padding-bottom: 9rem;
 }

@@ -16,12 +16,12 @@
     font-family: 'Instrument Serif';
     font-style: normal;
     font-weight: 400;
-    src: url('/fonts/instrument-serif-v4-latin-regular.woff2') format('woff2');
+    src: url('/fonts/Instrument-Regular.woff2') format('woff2');
 }
 
 
 .type-story {
-    background-color: var(--color-extra-light);
+    background: var(--color-extra-light);
 
     .site-header,
     .site-footer {
