@@ -1,5 +1,5 @@
 ---
-title: The Truth Will Set You Free
+title: The truth will set you free
 date: 2024-09-11 19:13:00 Z
 series: Nightlight
 backgroundColor: a3d4ff
@@ -252,7 +252,13 @@ Zach turned to the other side and reached and switched off his lamp. He nestled 
     <div class="story-nav-prev">
         <a href="/writing/nightlight/they-were-roommates">
             <p>Previous:</p>
-            <p class="story-title">They Were Roommates</p>
+            <p class="story-title">They were roommates</p>
+        </a>
+    </div>
+    <div class="story-nav-next">
+        <a href="/writing/nightlight/are-you-happy">
+            <p>Next:</p>
+            <p class="story-title">Are you happy?</p>
         </a>
     </div>
 </nav>

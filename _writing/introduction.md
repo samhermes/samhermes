@@ -22,7 +22,7 @@ Austin Wiley and Zach Parsons are a gay couple living in the Midwest. They met s
     <div class="story-nav-next">
         <a href="/writing/nightlight/they-were-roommates">
             <p>Next:</p>
-            <p class="story-title">They Were Roommates</p>
+            <p class="story-title">They were roommates</p>
         </a>
     </div>
 </nav>

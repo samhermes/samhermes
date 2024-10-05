@@ -1,5 +1,5 @@
 ---
-title: They Were Roommates
+title: They were roommates
 date: 2024-08-25 19:00:00 Z
 series: Nightlight
 backgroundColor: ffd7a3
@@ -232,7 +232,7 @@ Austin leaned his head into Zach's. "I think that that's a great idea."
     <div class="story-nav-next">
         <a href="/writing/nightlight/the-truth-will-set-you-free">
             <p>Next:</p>
-            <p class="story-title">The Truth Will Set You Free</p>
+            <p class="story-title">The truth will set you free</p>
         </a>
     </div>
 </nav>
