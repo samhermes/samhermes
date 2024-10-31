@@ -15,6 +15,9 @@
 
     .page-content-contain {
         flex-grow: 1;
-        max-width: 43.75rem;
+
+        @media screen and (min-width: 60em) {
+            max-width: 43.75rem;
+        }
     }
 }
