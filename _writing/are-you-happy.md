@@ -259,4 +259,10 @@ Outside of the restaurant, the sun was setting and casting an orange glow over e
             <p class="story-title">The truth will set you free</p>
         </a>
     </div>
+    <div class="story-nav-next">
+        <a href="/writing/nightlight/the-carousel-of-emotion">
+            <p>Next:</p>
+            <p class="story-title">The carousel of emotion</p>
+        </a>
+    </div>
 </nav>
