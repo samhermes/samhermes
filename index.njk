@@ -79,11 +79,11 @@ layout: default
 		</div>
 		<div class="writing-series">
 			<div class="series-intro">
-				<h3 class="series-title"><a href="/writing/nightlight/introduction">Nightlight</a></h3>
+				<h3 class="series-title"><a href="/writing/nightlight">Nightlight</a></h3>
 				<p class="series-description">A gay love story about Austin and Zach, a couple from the midwest.</p>
 			</div>
 			<ul class="story-list">
-				{% for story in collections.writing %}
+				{% for story in collections.nightlight %}
 				<li>
 					<h4 class="story-title">
 						<a class="story-link" href="{{ story.url | url }}">{{ story.data.title }}</a>

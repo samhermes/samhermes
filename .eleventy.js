@@ -40,6 +40,11 @@ module.exports = function (config) {
             .sort((a, b) => a.date - b.date)
     )
 
+    config.addCollection('nightlight', collection =>
+        collection.getFilteredByGlob('_writing/nightlight/*.md')
+            .sort((a, b) => a.date - b.date)
+    )
+
     function filterTagList(tags) {
         return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
     }

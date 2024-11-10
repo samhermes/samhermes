@@ -15,13 +15,15 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <ol>
         <li>Writing</li>
-        <li>{{ series }}</li>
+        <li><a href="/writing/{{seriesSlug}}">{{ series }}</a></li>
       </ol>
     </nav>
 
     <article class="story-container">
       <header class="story-header">
         <h1 class="story-title">{{ title }}</h1>
+        <p class="count">{{count}}</p>
+        <p class="series">{{series}}</p>
       </header>
 
       <div class="story-content">
