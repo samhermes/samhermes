@@ -207,4 +207,10 @@ After he finished the burger, he was beginning to feel better. Slightly calmer, 
             <p class="story-title">Are you happy?</p>
         </a>
     </div>
+    <div class="story-nav-next">
+        <a href="/writing/nightlight/melting-down-in-style">
+            <p>Next:</p>
+            <p class="story-title">Melting down in style</p>
+        </a>
+    </div>
 </nav>
