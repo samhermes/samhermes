@@ -77,20 +77,16 @@ layout: default
 		<div class="home-section-header">
 			<h2>Writing</h2>
 		</div>
-		<div class="writing-series">
-			<div class="series-intro">
-				<h3 class="series-title"><a href="/writing/nightlight">Nightlight</a></h3>
-				<p class="series-description">A gay love story about Austin and Zach, a couple from the midwest.</p>
-			</div>
-			<ul class="story-list">
-				{% for story in collections.nightlight %}
-				<li>
-					<h4 class="story-title">
-						<a class="story-link" href="{{ story.url | url }}">{{ story.data.title }}</a>
-					</h4>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>
+		<ul class="series-list">
+			<li class="series-item">
+				<div class="series-info">
+					<h3 class="series-title"><a href="/writing/nightlight">Nightlight</a></h3>
+					<p class="series-description">A gay love story about Austin and Zach, a couple from the midwest.</p>
+				</div>
+				<div class="series-image">
+					<img src="/img/writing/nightlight.jpg" alt="A hand in the dark reaching out towards the light coming from a window." loading="lazy" />
+				</div>
+			</li>
+		</ul>
 	</div>
 </section>

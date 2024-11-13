@@ -9,34 +9,16 @@ layout: default
 	</header>
 
 	<div class="page-content-contain">
-		{% for story in collections.writing %}
-			{% assign currentyear = story.date | date: "%Y" %}
-			{% if forloop.first %}
-				{% assign lastyear = currentyear %}
-				<div class="year-group">
-					<h2 class="screen-reader-text" id="{{currentyear}}-ref">{{ currentyear }}</h2>
-					<ul class="post-list">
-			{% endif %}
-			{% if currentyear != lastyear %}
-					</ul>
+		<ul class="series-list">
+			<li class="series-item">
+				<div class="series-info">
+					<h3 class="series-title"><a href="/writing/nightlight">Nightlight</a></h3>
+					<p class="series-description">A gay love story about Austin and Zach, a couple from the midwest.</p>
 				</div>
-				<div class="year-group">
-					<h2 class="posts-subheading" id="{{currentyear}}-ref">{{ currentyear }}</h2>
-					<ul class="post-list">
-				{% assign lastyear = currentyear %}
-			{% endif %}
-				<li>
-					<h3 class="post-title">
-						<a class="post-link" href="{{ story.url | prepend: site.baseurl }}">{{ story.data.title }}</a>
-					</h3>
-					<div class="post-meta">
-						<p class="post-date">{{ story.date | readableDate }}</p>
-					</div>
-				</li>
-			{% if forloop.last %}
-				</ul>
+				<div class="series-image">
+					<img src="/img/writing/nightlight.jpg" alt="A hand in the dark reaching out towards the light coming from a window." loading="lazy" />
 				</div>
-			{% endif %}
-		{% endfor %}
+			</li>
+		</ul>
 	</div>
 </div>

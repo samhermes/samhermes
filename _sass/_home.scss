@@ -170,52 +170,13 @@
 .home-writing {
     padding-bottom: 8rem;
 
-    .writing-series {
-        border-top: 1px solid var(--dark-border-color);
-        padding-top: 1.5rem;
-
-        a {
-            color: inherit;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
-        .series-title {
-            font-size: 1.3rem;
-            font-weight: 400;
-            line-height: 1.25;
-            margin: 0 0 0.6rem;
-
-            @media screen and (min-width: 28.125em) {
-                font-size: 1.45rem;
-            }
-
-            @media screen and (min-width: 37.5em) {
-                font-size: 1.6rem;
-            }
+    .series-item {
+        .series-info {
+            background-color: #282828;
         }
 
         .series-description {
             color: #bbb;
-            margin-bottom: 1.5rem;
-        }
-
-        .story-list {
-            border-left: 1px solid var(--dark-border-color);
-            list-style: none;
-            margin: 0 0 0 0.8rem;
-            padding: 0 0 0 1.3rem;
-
-            li {
-                margin-bottom: 1rem;
-            }
-
-            .story-title {
-                font-size: 1.2rem;
-                margin: 0;
-            }
         }
     }
 }
