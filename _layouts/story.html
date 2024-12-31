@@ -23,7 +23,9 @@
       <header class="story-header">
         <h1 class="story-title">{{ title }}</h1>
         <p class="count">{{count}}</p>
-        <p class="series">{{series}}</p>
+        {% if slug != "page-nightlight" %}
+          <p class="series">{{series}}</p>
+        {% endif %}
       </header>
 
       <div class="story-content">

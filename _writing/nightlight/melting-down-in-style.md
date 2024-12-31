@@ -3,7 +3,7 @@ title: Melting down in style
 date: 2024-11-10T12:44:00 -6
 series: Nightlight
 backgroundColor: ffc1a3
-count: 5 / 5
+count: 5 / 6
 permalink: "writing/nightlight/melting-down-in-style/index.html"
 ---
 
@@ -214,6 +214,12 @@ Ten minutes later, the curtain rose.
         <a href="/writing/nightlight/the-carousel-of-emotion">
             <p>Previous:</p>
             <p class="story-title">The carousel of emotion</p>
+        </a>
+    </div>
+    <div class="story-nav-next">
+        <a href="/writing/nightlight/babe-youre-a-firework">
+            <p>Next:</p>
+            <p class="story-title">Babe, you’re a firework</p>
         </a>
     </div>
 </nav>

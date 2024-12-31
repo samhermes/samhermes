@@ -3,7 +3,7 @@ title: Are you happy?
 date: 2024-10-05 16:44:00 Z
 series: Nightlight
 backgroundColor: e3c7ff
-count: 3 / 5
+count: 3 / 6
 permalink: "writing/nightlight/are-you-happy/index.html"
 ---
 
