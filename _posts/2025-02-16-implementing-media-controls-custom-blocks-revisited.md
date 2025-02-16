@@ -24,7 +24,7 @@ If you’re using `render.php` to display the image on the front end, you could 
 
 ```json
 "attributes": {
-
+	...
 	"mediaURL": {
 		"type": "string"
 	},
