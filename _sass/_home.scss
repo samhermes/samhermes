@@ -1,10 +1,6 @@
 .page-home {
-    .page {
-        color: #fff;
-    }
-
-    .site-footer {
-        border-top: 1px solid #222;
+    .site-header {
+        border-bottom: 0;
     }
 
     h2 {
@@ -39,38 +35,42 @@
 }
 
 .home-intro {
-    padding: 0 0 2rem;
-    border-bottom: 1px solid #222;
+    padding: 0 0 3rem;
+    border-bottom: 1px solid var(--border-color);
 
     .intro {
         margin: 0 var(--site-edge);
-        padding: 35vh 0 3rem;
+        padding: 25vh 0 0;
 
         p {
             font-size: 2.5rem;
             margin: 0;
 
             @media screen and (min-width: 37.5em) {
-                font-size: 3.25rem;
+                font-size: 3rem;
             }
 
             @media screen and (min-width: 60em) {
-                font-size: 4rem;
+                font-size: 3.5rem;
             }
         }
+    }
+}
+
+.home-contain {
+    padding: 4rem var(--site-edge) 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+
+    @media screen and (min-width: 37.5em) {
+        gap: 6rem;
     }
 }
 
 .home-posts,
 .home-projects,
 .home-writing {
-    background-color: var(--color-bg);
-    padding: 3rem var(--site-edge) 6rem;
-
-    @media screen and (min-width: 37.5em) {
-        padding: 6rem var(--site-edge);
-    }
-
     .wrapper {
         display: grid;
         gap: 2rem;
@@ -87,7 +87,7 @@
     flex: 0 0 40%;
     margin: 0;
 
-    @media screen and (min-width: 37.5em) {
+    @media screen and (min-width: 60em) {
         margin: 0 0 2rem;
     }
 
@@ -99,18 +99,12 @@
 }
 
 .home-posts {
-    padding-bottom: 6rem;
+    .home-section-header {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
 
-    @media screen and (min-width: 37.5em) {
-        padding-bottom: 0;
-    }
-
-    .contain {
-        padding-top: 3rem;
-        padding-bottom: 0;
-
-        @media screen and (min-width: 37.5em) {
-            padding-top: 4rem;
+        @media screen and (min-width: 60em) {
+            border-bottom: 0;
         }
     }
 }
@@ -121,31 +115,17 @@
     max-width: 43.75rem;
 
     .post-list {
-        margin: 1rem 0 3.5rem;
-
-        @media screen and (min-width: 37.5em) {
-            margin-bottom: 5rem;
-        }
-
-        @media screen and (min-width: 60em) {
-            margin-top: 0;
-        }
+        margin: 0 0 2rem;
 
         > li {
-            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
         }
 
         .post-meta {
-            color: #bbb;
+            color: var(--color-meta);
         }
-    }
-}
-
-.home-projects {
-    padding-bottom: 6rem;
-
-    @media screen and (min-width: 37.5em) {
-        padding-bottom: 0;
     }
 }
 
@@ -155,28 +135,14 @@
     flex-grow: 1;
 
     .project-list {
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
 
         li {
-            background-color: #282828;
+            border: 1px solid var(--border-color);
         }
 
         .project-desc {
-            color: #bbb;
-        }
-    }
-}
-
-.home-writing {
-    padding-bottom: 8rem;
-
-    .series-item {
-        .series-info {
-            background-color: #282828;
-        }
-
-        .series-description {
-            color: #bbb;
+            color: var(--color-meta);
         }
     }
 }

@@ -12,6 +12,7 @@
 }
 
 .series-item {
+    border: 1px solid var(--border-color);
     border-radius: 0.625rem;
     overflow: hidden;
     display: flex;
@@ -36,7 +37,6 @@
     }
 
     .series-info {
-        background-color: var(--color-extra-light);
         padding: 1.2rem 5%;
         text-align: center;
 

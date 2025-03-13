@@ -109,8 +109,6 @@
 }
 
 .type-story {
-    background: var(--color-extra-light);
-
     .site-header,
     .site-footer {
         color: var(--color-text);
@@ -258,7 +256,7 @@
     margin-top: 5rem;
     font-family: 'Inter', sans-serif;
 
-    >* {
+    > * {
         width: 50%;
         border-left: 1px solid #0000001c;
         padding-left: 1rem;

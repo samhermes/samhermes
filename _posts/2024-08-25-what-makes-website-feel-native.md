@@ -5,6 +5,7 @@ tags:
   - HTML
   - Accessibility
   - JavaScript
+selected: true
 ---
 There are a lot of pieces that go into making a good website. The design, the content, the UX. Each of these need to come together in harmony to meet users where they are. The piece of this that I'm most interested in, naturally, is the front end development part. This is really where all of the other disciplines meet, and can really make or break a site. To this end, I think that it's a sense of a site feeling "native" that measures how successful it is. So, what makes a website native?
 

@@ -5,6 +5,7 @@ tags:
   - Accessibility
   - JavaScript
   - HTML
+selected: true
 ---
 Modularity is everywhere. It's React components. It's packages. It's WordPress blocks. The web has been fully modularized. I've done my fair share of adding to this, and while it's really good for organizing code and for project management, it can often be detrimental for users. Especially when used in places where it isn't really needed.
 

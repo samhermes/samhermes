@@ -12,81 +12,83 @@ layout: default
 	</div>
 </section>
 
-<section class="home-posts">
-	<div class="wrapper">
-		<div class="home-section-header">
-			<h2>Selected Posts</h2>
-		</div>
-		<div class="home-post-list">
-			<ul class="post-list">
-				{% for post in collections.posts | postsFilter(true) %}
-				<li>
-					<h3 class="post-title">
-						<a class="post-link" href="{{ post.url | url }}">{{ post.data.title }}</a>
-					</h3>
-					<div class="post-meta">
-						{% if post.data.tags %}
-							<div class="post-tags-container">
-								{% include 'icons/tag.svg' %}
-								<ul class="post-tags" aria-label="Post Tags">
-									{% for tag in post.data.tags %}
-										<li><a href="/category/{{ tag | slug }}">{{tag}}</a></li>
-									{% endfor %}
-								</ul>
-							</div>
-						{% endif %}
-					</div>
-				</li>
-				{% endfor %}
-			</ul>
-			<a class="more" href="/posts">All Posts<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
-		</div>
-	</div>
-</section>
-
-<section class="home-projects">
-	<div class="wrapper">
-		<div class="home-section-header">
-			<h2>Selected Projects</h2>
-		</div>
-		<div class="home-project-list">
-			<ul class="project-list">
-				{% for project in collections.projects.slice(0, 2) %}
-				<li>
-					<div class="project-info">
-						<h3 class="project-title">
-							<a class="project-link" href="{{ project.data.external_url | url }}">{{ project.data.title }}</a>
+<div class="home-contain">
+	<section class="home-posts">
+		<div class="wrapper">
+			<div class="home-section-header">
+				<h2>Selected Posts</h2>
+			</div>
+			<div class="home-post-list">
+				<ul class="post-list">
+					{% for post in collections.posts | postsFilter(true) %}
+					<li>
+						<h3 class="post-title">
+							<a class="post-link" href="{{ post.url | url }}">{{ post.data.title }}</a>
 						</h3>
-						<p class="project-desc">{{ project.data.description }}</p>
+						<div class="post-meta">
+							{% if post.data.tags %}
+								<div class="post-tags-container">
+									{% include 'icons/tag.svg' %}
+									<ul class="post-tags" aria-label="Post Tags">
+										{% for tag in post.data.tags %}
+											<li><a href="/category/{{ tag | slug }}">{{tag}}</a></li>
+										{% endfor %}
+									</ul>
+								</div>
+							{% endif %}
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+				<a class="more" href="/posts">All Posts<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
+			</div>
+		</div>
+	</section>
 
-						<a class="project-github" href="{{ project.data.github_url }}">
-							{% include 'icons/github.svg' %}
-							<span class="screen-reader-text">{{ project.data.title }} repository on GitHub</span>
-						</a>
+	<section class="home-projects">
+		<div class="wrapper">
+			<div class="home-section-header">
+				<h2>Selected Projects</h2>
+			</div>
+			<div class="home-project-list">
+				<ul class="project-list">
+					{% for project in collections.projects.slice(0, 2) %}
+					<li>
+						<div class="project-info">
+							<h3 class="project-title">
+								<a class="project-link" href="{{ project.data.external_url | url }}">{{ project.data.title }}</a>
+							</h3>
+							<p class="project-desc">{{ project.data.description }}</p>
+
+							<a class="project-github" href="{{ project.data.github_url }}">
+								{% include 'icons/github.svg' %}
+								<span class="screen-reader-text">{{ project.data.title }} repository on GitHub</span>
+							</a>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+				<a class="more" href="/projects">All Projects<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
+			</div>
+		</div>
+	</section>
+
+	<section class="home-writing">
+		<div class="wrapper">
+			<div class="home-section-header">
+				<h2>Writing</h2>
+			</div>
+			<ul class="series-list">
+				<li class="series-item">
+					<div class="series-info">
+						<h3 class="series-title"><a href="/writing/nightlight">Nightlight</a></h3>
+						<p class="series-description">A gay love story about Austin and Zach, a couple from the midwest.</p>
+					</div>
+					<div class="series-image">
+						<img src="/img/writing/nightlight.jpg" alt="A hand in the dark reaching out towards the light coming from a window." loading="lazy" />
 					</div>
 				</li>
-				{% endfor %}
 			</ul>
-			<a class="more" href="/projects">All Projects<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
 		</div>
-	</div>
-</section>
-
-<section class="home-writing">
-	<div class="wrapper">
-		<div class="home-section-header">
-			<h2>Writing</h2>
-		</div>
-		<ul class="series-list">
-			<li class="series-item">
-				<div class="series-info">
-					<h3 class="series-title"><a href="/writing/nightlight">Nightlight</a></h3>
-					<p class="series-description">A gay love story about Austin and Zach, a couple from the midwest.</p>
-				</div>
-				<div class="series-image">
-					<img src="/img/writing/nightlight.jpg" alt="A hand in the dark reaching out towards the light coming from a window." loading="lazy" />
-				</div>
-			</li>
-		</ul>
-	</div>
-</section>
+	</section>
+</div>
