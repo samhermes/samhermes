@@ -58,19 +58,29 @@
 }
 
 .home-contain {
-    padding: 4rem var(--site-edge) 6rem;
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 4rem;
 
     @media screen and (min-width: 37.5em) {
-        gap: 6rem;
+        gap: 5rem;
     }
 }
 
 .home-posts,
 .home-projects,
 .home-writing {
+    padding: 0 var(--site-edge) 4rem;
+
+    @media screen and (min-width: 37.5em) {
+        padding-bottom: 5rem;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--border-color);
+    }
+
     .wrapper {
         display: grid;
         gap: 2rem;
