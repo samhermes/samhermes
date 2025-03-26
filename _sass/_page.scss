@@ -1,7 +1,10 @@
 .page-container {
     display: grid;
     gap: 2rem;
-    padding: 5rem var(--site-edge) 8rem;
+    padding: 5rem 0 8rem;
+    margin: 0 auto;
+    max-width: var(--site-max);
+    width: calc(100% - (var(--site-edge) * 2));
 
     @media screen and (min-width: 60em) {
         gap: 5rem;

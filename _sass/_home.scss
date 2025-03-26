@@ -39,7 +39,9 @@
     border-bottom: 1px solid var(--border-color);
 
     .intro {
-        margin: 0 var(--site-edge);
+        margin: 0 auto;
+        max-width: var(--site-max);
+        width: calc(100% - (var(--site-edge) * 2));
         padding: 25vh 0 0;
 
         p {
@@ -71,7 +73,7 @@
 .home-posts,
 .home-projects,
 .home-writing {
-    padding: 0 var(--site-edge) 4rem;
+    padding: 0 0 4rem;
 
     @media screen and (min-width: 37.5em) {
         padding-bottom: 5rem;
@@ -84,6 +86,9 @@
     .wrapper {
         display: grid;
         gap: 2rem;
+        margin: 0 auto;
+        max-width: var(--site-max);
+        width: calc(100% - (var(--site-edge) * 2));
 
         @media screen and (min-width: 60em) {
             gap: 5rem;
@@ -146,10 +151,6 @@
 
     .project-list {
         margin-bottom: 2rem;
-
-        li {
-            border: 1px solid var(--border-color);
-        }
 
         .project-desc {
             color: var(--color-meta);

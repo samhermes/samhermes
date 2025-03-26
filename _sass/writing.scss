@@ -123,7 +123,9 @@
     }
 
     .page {
-        padding: 0 var(--site-edge);
+        margin: 0 auto;
+        max-width: var(--site-max);
+        width: calc(100% - (var(--site-edge) * 2));
     }
 
     .breadcrumbs {
@@ -200,6 +202,7 @@
 
     .series {
         font-family: 'Inter', sans-serif;
+        font-size: 0.875rem;
         font-weight: 300;
         position: absolute;
         top: 0.8rem;
