@@ -2,7 +2,7 @@
 title: Melting down in style
 date: 2024-11-10T12:44:00 -6
 series: Nightlight
-backgroundColor: ffc1a3
+backgroundColor: FFC9AF
 count: 5 / 6
 permalink: "writing/nightlight/melting-down-in-style/index.html"
 ---
