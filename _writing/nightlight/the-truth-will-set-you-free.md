@@ -1,5 +1,5 @@
 ---
-title: The truth will set you free
+title: The Truth Will Set You Free
 date: 2024-09-11 19:13:00 Z
 series: Nightlight
 backgroundColor: a3d4ff

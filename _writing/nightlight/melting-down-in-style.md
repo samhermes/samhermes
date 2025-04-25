@@ -1,5 +1,5 @@
 ---
-title: Melting down in style
+title: Melting Down in Style
 date: 2024-11-10T12:44:00 -6
 series: Nightlight
 backgroundColor: FFC9AF

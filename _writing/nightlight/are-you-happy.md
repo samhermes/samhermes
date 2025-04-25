@@ -1,5 +1,5 @@
 ---
-title: Are you happy?
+title: Are You Happy?
 date: 2024-10-05 16:44:00 Z
 series: Nightlight
 backgroundColor: e3c7ff

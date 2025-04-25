@@ -1,5 +1,5 @@
 ---
-title: Babe, you’re a firework
+title: Babe, You’re a Firework
 date: 2024-12-31 14:00:00 Z
 series: Nightlight
 backgroundColor: ffaca3

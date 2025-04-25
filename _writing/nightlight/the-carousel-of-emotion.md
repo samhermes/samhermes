@@ -1,8 +1,8 @@
 ---
-title: The carousel of emotion
+title: The Carousel of Emotion
 date: 2024-11-08T17:58:00 -6
 series: Nightlight
-backgroundColor: 90E9D8
+backgroundColor: 8DDEBE
 count: 4 / 6
 permalink: "writing/nightlight/the-carousel-of-emotion/index.html"
 ---

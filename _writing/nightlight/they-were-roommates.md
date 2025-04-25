@@ -1,5 +1,5 @@
 ---
-title: They were roommates
+title: They Were Roommates
 date: 2024-08-25 19:00:00 Z
 series: Nightlight
 backgroundColor: ffd7a3
