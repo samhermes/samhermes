@@ -195,19 +195,28 @@
 }
 
 .series-header {
+    background-color: #fff;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 2rem;
     justify-content: center;
     margin-bottom: 3rem;
 
     .series-image {
-        margin-bottom: 1.45rem;
+        margin-bottom: 2rem;
         order: -1;
 
         img {
             aspect-ratio: 4 / 3;
             object-fit: cover;
             width: 100%;
+        }
+    }
+
+    .story-title {
+        font-size: 2.5rem;
+
+        @media screen and (min-width: 37.5em) {
+            font-size: 3.25rem;
         }
     }
 }
