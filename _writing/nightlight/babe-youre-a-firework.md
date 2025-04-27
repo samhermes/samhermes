@@ -284,12 +284,3 @@ Austin laughed. ”You, silly. I didn’t know that I would be so in love then.�
 “Hey! I’ll get carried away if I want to.”
 
 Zach leaned in and gave Austin a kiss. At the moment that their lips touched, the first firework launched across the lake and exploded in the sky. They smiled into the kiss and then turned to watch the show.
-
-<nav class="story-nav">
-    <div class="story-nav-prev">
-        <a href="/writing/nightlight/melting-down-in-style">
-            <p>Previous:</p>
-            <p class="story-title">Melting down in style</p>
-        </a>
-    </div>
-</nav>

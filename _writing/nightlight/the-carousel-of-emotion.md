@@ -200,18 +200,3 @@ While he ate his burger, he tried to sort out what his parents had said. It didn
 He remembered that his dad had mentioned the city being unsafe. He knew that big cities were more dangerous, maybe his dad had a point. He considered for a moment if it might be safer if he stayed home. But no, that was ridiculous. He was going to be with Austin's family, it would be safe. Or at least safe enough.
 
 After he finished the burger, he was beginning to feel better. Slightly calmer, at least. As he finished his soda, he thought about what he was going to do. What was he going to tell Austin? He was going to be seeing him as soon as he got back to their apartment. He didn't know. He didn't know at all. What was so clear before was now so confused.
-
-<nav class="story-nav">
-    <div class="story-nav-prev">
-        <a href="/writing/nightlight/are-you-happy">
-            <p>Previous:</p>
-            <p class="story-title">Are you happy?</p>
-        </a>
-    </div>
-    <div class="story-nav-next">
-        <a href="/writing/nightlight/melting-down-in-style">
-            <p>Next:</p>
-            <p class="story-title">Melting down in style</p>
-        </a>
-    </div>
-</nav>

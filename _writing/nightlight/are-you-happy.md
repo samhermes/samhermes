@@ -252,18 +252,3 @@ Zach was quiet for a moment to think. Then he had an idea. “What if I did all 
 The waiter returned, and placed their food in front of each of them. He asked if they needed anything else, and then disappeared again. The light on the table illuminated their faces as they dug into their food.
 
 Outside of the restaurant, the sun was setting and casting an orange glow over everything. On the balcony of an apartment above the restaurant, a pride flag waved gently in the wind.
-
-<nav class="story-nav">
-    <div class="story-nav-prev">
-        <a href="/writing/nightlight/the-truth-will-set-you-free">
-            <p>Previous:</p>
-            <p class="story-title">The truth will set you free</p>
-        </a>
-    </div>
-    <div class="story-nav-next">
-        <a href="/writing/nightlight/the-carousel-of-emotion">
-            <p>Next:</p>
-            <p class="story-title">The carousel of emotion</p>
-        </a>
-    </div>
-</nav>

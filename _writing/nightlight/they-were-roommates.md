@@ -222,18 +222,3 @@ As they broke apart, Austin exclaimed with brownie in his mouth, “I'm still ea
 Zach wrapped his arm around Austin and hugged him close. “I think we should come to the museum more often.”
 
 Austin leaned his head into Zach's. “I think that that's a great idea.”
-
-<nav class="story-nav">
-    <div class="story-nav-prev">
-        <a href="/writing/nightlight">
-            <p>Previous:</p>
-            <p class="story-title">Introduction</p>
-        </a>
-    </div>
-    <div class="story-nav-next">
-        <a href="/writing/nightlight/the-truth-will-set-you-free">
-            <p>Next:</p>
-            <p class="story-title">The truth will set you free</p>
-        </a>
-    </div>
-</nav>

@@ -208,18 +208,3 @@ After dinner, they walked over to the theater and got in line to go in. Austin's
 Inside, they found their seats and settled in for the show. Zach was feeling much better, but relieved that he could escape into a show for a few hours.
 
 Ten minutes later, the curtain rose.
-
-<nav class="story-nav">
-    <div class="story-nav-prev">
-        <a href="/writing/nightlight/the-carousel-of-emotion">
-            <p>Previous:</p>
-            <p class="story-title">The carousel of emotion</p>
-        </a>
-    </div>
-    <div class="story-nav-next">
-        <a href="/writing/nightlight/babe-youre-a-firework">
-            <p>Next:</p>
-            <p class="story-title">Babe, you’re a firework</p>
-        </a>
-    </div>
-</nav>

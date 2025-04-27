@@ -248,18 +248,3 @@ Austin returned to his phone, getting sucked back into his feed. Zach sat and th
 He looked over at Austin. What a magical little boy. He was just sitting there, totally unaware of what he was doing.
 
 Zach turned to the other side and reached and switched off his lamp. He nestled further into bed. As he closed his eyes he whispered, “Night, babe.”
-
-<nav class="story-nav">
-    <div class="story-nav-prev">
-        <a href="/writing/nightlight/they-were-roommates">
-            <p>Previous:</p>
-            <p class="story-title">They were roommates</p>
-        </a>
-    </div>
-    <div class="story-nav-next">
-        <a href="/writing/nightlight/are-you-happy">
-            <p>Next:</p>
-            <p class="story-title">Are you happy?</p>
-        </a>
-    </div>
-</nav>
