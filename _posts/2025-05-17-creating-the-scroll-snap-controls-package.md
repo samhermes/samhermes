@@ -1,6 +1,6 @@
 ---
 title: Creating the Scroll Snap Controls package
-date: 2025-05-17T12:15:00 -6
+date: 2025-05-17T12:15:00 -5
 tags:
   - JavaScript
   - CSS
