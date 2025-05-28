@@ -8,8 +8,15 @@ module.exports = function (config) {
     config.addPlugin(pluginRss);
     config.addPlugin(syntaxHighlight);
 
+    config.addFilter("bust", (url) => {
+        const [urlPart, paramPart] = url.split("?");
+        const params = new URLSearchParams(paramPart || "");
+        params.set("v", DateTime.local().toFormat("X"));
+        return `${urlPart}?${params}`;
+    });
+
     config.addFilter("readableDate", dateObj => {
-        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("DDD");
+        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("DDD");
     });
 
     let markdownLibrary = markdownIt({
@@ -24,7 +31,7 @@ module.exports = function (config) {
             .sort((a, b) => b.date - a.date)
     )
 
-    config.addFilter('postsFilter', function(collection, post) {
+    config.addFilter('postsFilter', function (collection, post) {
         if (!post) return collection;
         return collection.filter(item => item.data.selected)
     })
@@ -50,7 +57,7 @@ module.exports = function (config) {
     }
 
     // Create an array of all tags
-    config.addCollection("tagList", function(collection) {
+    config.addCollection("tagList", function (collection) {
         let tagSet = new Set();
         collection.getAll().forEach(item => {
             (item.data.tags || []).forEach(tag => tagSet.add(tag));
