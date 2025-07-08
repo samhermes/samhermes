@@ -22,6 +22,14 @@
 <link rel="stylesheet" href="{{ '/css/writing.css' | url | bust }}">
 {% endif %}
 
+{% if page.url contains '/writing/nightlight' %}
+<link rel="stylesheet" href="{{ '/css/writing-nightlight.css' | url | bust }}">
+{% endif %}
+
+{% if page.url contains '/writing/bear-creek' %}
+<link rel="stylesheet" href="{{ '/css/writing-bear-creek.css' | url | bust }}">
+{% endif %}
+
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml" | prepend: site.baseurl
     | prepend: site.url }}">

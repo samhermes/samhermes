@@ -52,6 +52,11 @@ module.exports = function (config) {
             .sort((a, b) => a.date - b.date)
     )
 
+    config.addCollection('bearCreek', collection =>
+        collection.getFilteredByGlob('_writing/bear-creek/*.md')
+            .sort((a, b) => a.date - b.date)
+    )
+
     function filterTagList(tags) {
         return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
     }

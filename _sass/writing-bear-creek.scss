@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'IM Fell Great Primer';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/IM-Fell-Great-Primer.woff2') format('woff2');
+}
+
+.series-header,
+.story-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 0 7rem;
+    position: relative;
+
+    .story-title {
+        font-family: "IM Fell Great Primer", serif;
+        font-size: 3.25rem;
+        font-weight: 400;
+        line-height: 1.1;
+        text-align: center;
+        text-wrap: balance;
+        max-width: 80%;
+        margin: 0 auto 0.7rem;
+
+        @media screen and (min-width: 37.5em) {
+            font-size: 4rem;
+        }
+    }
+
+    .story-series {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 0.3rem;
+        font-weight: 500;
+    }
+}
+
+.series-header {
+    flex-direction: column;
+    margin-bottom: 5rem;
+    padding: 0;
+
+    .series-image {
+        order: -1;
+        margin-bottom: 2rem;
+        width: 65%;
+
+        img {
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 0.3rem;
+        }
+    }
+
+    .story-title {
+        font-size: 3rem;
+        margin: 0 0 0.5rem;
+
+        @media screen and (min-width: 37.5em) {
+            font-size: 3.3rem;
+        }
+    }
+
+    p {
+        text-indent: 0;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.series-nav {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    padding-top: 3rem;
+    position: relative;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 4rem;
+    }
+
+    li {
+        font-size: 1.8rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+
+        p {
+            text-indent: 0;
+        }
+
+        .story-title {
+            font-size: 2.2rem;
+            font-family: "IM Fell Great Primer", serif;
+            margin: 0;
+
+            @media screen and (min-width: 37.5em) {
+                font-size: 2.8rem;
+            }
+        }
+
+        .count {
+            order: -1;
+            font-family: "IM Fell Great Primer", serif;
+            font-size: 1.3rem;
+            line-height: 1.2;
+            margin-bottom: 0.3rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

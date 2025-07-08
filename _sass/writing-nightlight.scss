@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'Instrument Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/Instrument-Regular.woff2') format('woff2');
+}
+
+.series-nav {
+    border-top: 1px solid var(--color-text);
+    padding-top: 4rem;
+    margin-top: 4rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        border-left: 1px solid var(--color-text);
+        left: 0;
+        top: 0;
+        position: absolute;
+        height: 3rem;
+        width: 1rem;
+    }
+
+    &::after {
+        content: '';
+        border-right: 1px solid var(--color-text);
+        right: 0;
+        top: 0;
+        position: absolute;
+        height: 3rem;
+        width: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 4.5rem;
+        border-bottom: 1px solid var(--color-text);
+
+        &::before {
+            content: '';
+            border-left: 1px solid var(--color-text);
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            height: 3rem;
+            width: 1rem;
+        }
+
+        &::after {
+            content: '';
+            border-right: 1px solid var(--color-text);
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            height: 3rem;
+            width: 1rem;
+        }
+    }
+
+    li {
+        font-size: 1.8rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+
+        p {
+            text-indent: 0;
+        }
+
+        .story-title {
+            font-size: 2.2rem;
+            font-family: "Instrument Serif", serif;
+            margin: 0;
+
+            @media screen and (min-width: 37.5em) {
+                font-size: 2.8rem;
+            }
+        }
+
+        .count {
+            order: -1;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            line-height: 1.2;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.series-header,
+.story-header {
+    display: flex;
+    align-items: center;
+    aspect-ratio: 4 / 3;
+    margin-bottom: 2rem;
+    padding: 10rem 0;
+    border: 1px solid var(--color-text);
+    position: relative;
+
+    .story-title {
+        font-family: "Instrument Serif", serif;
+        font-size: 3.25rem;
+        font-weight: 400;
+        line-height: 1.1;
+        text-align: center;
+        text-wrap: balance;
+        max-width: 80%;
+        margin: 0 auto;
+
+        @media screen and (min-width: 37.5em) {
+            font-size: 4rem;
+        }
+    }
+}
+
+.series-header {
+    background-color: #fff;
+    flex-direction: column;
+    padding: 1.5rem 1.5rem 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    .series-image {
+        margin-bottom: 2rem;
+        order: -1;
+
+        img {
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    .story-title {
+        font-size: 2.5rem;
+
+        @media screen and (min-width: 37.5em) {
+            font-size: 3.25rem;
+        }
+    }
+}
+
+.story-header {
+    .count {
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        position: absolute;
+        right: 1rem;
+        bottom: 0.8rem;
+        margin: 0;
+    }
+
+    .series {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.875rem;
+        font-weight: 300;
+        position: absolute;
+        top: 0.8rem;
+        left: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        transform: rotate(-90deg) translate(-100%, 0);
+        transform-origin: top left;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        border: 1px solid var(--color-text);
+        left: 1rem;
+        bottom: 0.8rem;
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+    }
+}

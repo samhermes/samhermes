@@ -2,6 +2,7 @@
 title: They Were Roommates
 date: 2024-08-25 19:00:00 Z
 series: Nightlight
+layout: nightlight
 backgroundColor: ffd7a3
 count: 1 / 6
 permalink: "writing/nightlight/they-were-roommates/index.html"

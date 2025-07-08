@@ -2,6 +2,7 @@
 title: The Truth Will Set You Free
 date: 2024-09-11 19:13:00 Z
 series: Nightlight
+layout: nightlight
 backgroundColor: a3d4ff
 count: 2 / 6
 permalink: "writing/nightlight/the-truth-will-set-you-free/index.html"
