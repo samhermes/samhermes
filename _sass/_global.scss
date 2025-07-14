@@ -24,6 +24,15 @@
     &:hover {
       opacity: 0.5;
     }
+
+    svg {
+      width: 9.5rem;
+      height: auto;
+
+      @media screen and (min-width: 23.75em) {
+        width: 10.8rem;
+      }
+    }
   }
 }
 
