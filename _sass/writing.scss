@@ -33,7 +33,11 @@
     }
 
     .breadcrumbs {
-        margin-top: 1.25rem;
+        margin-top: 0.9rem;
+
+        @media screen and (min-width: 60em) {
+            margin-top: 1.25rem;
+        }
 
         ol {
             list-style: none;
@@ -103,7 +107,7 @@
     display: flex;
     gap: 2rem;
     margin-top: 5rem;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--base-font-family);
 
     > * {
         width: 50%;

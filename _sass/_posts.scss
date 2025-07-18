@@ -21,7 +21,7 @@
 .post-list {
   list-style: none;
   padding: 0;
-  margin: 2rem 0 0;
+  margin: 1rem 0 0;
 
   @media screen and (min-width: 60em) {
     margin: 0;
@@ -134,10 +134,10 @@
 .post {
   margin: 0 auto;
   max-width: 48rem;
-  padding: 3rem 0 5rem;
+  padding: 2.5rem 0 5rem;
 
   @media screen and (min-width: 62.5em) {
-    padding: 5rem 0 10rem;
+    padding: 4rem 0 10rem;
   }
 
   .post-header {
@@ -145,14 +145,14 @@
     flex-direction: column;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2.25rem;
+    margin-bottom: 2rem;
   }
 }
 
 .post-title {
   font-size: 2rem;
   line-height: 1.2;
-  margin: 0 0 1.8rem;
+  margin: 0 0 1.2rem;
   font-weight: 400;
 
   @media screen and (min-width: 37.5em) {
@@ -195,12 +195,12 @@
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 1.8rem;
 
     @media screen and (min-width: 37.5em) {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
     &.subhead {
@@ -208,7 +208,7 @@
       font-weight: 400;
       line-height: 1.3;
 
-      @media screen and (min-width: 37.5em) {
+      @media screen and (min-width: 60em) {
         font-size: 2rem;
       }
     }
@@ -218,8 +218,8 @@
   li {
     code {
       font-size: 1rem;
-      background: #fff;
-      border: 1px solid #ddd;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border-color);
       padding: 0.2em 0.5em;
       border-radius: 0.2em;
       word-wrap: break-word;

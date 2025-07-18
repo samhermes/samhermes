@@ -31,7 +31,7 @@
     .story-series {
         text-transform: uppercase;
         font-size: 0.9rem;
-        font-family: 'Inter', sans-serif;
+        font-family: var(--base-font-family);
         letter-spacing: 0.3rem;
         font-weight: 500;
     }

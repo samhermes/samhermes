@@ -46,6 +46,7 @@
 
         p {
             font-size: 2.5rem;
+            font-weight: 400;
             margin: 0;
 
             @media screen and (min-width: 37.5em) {
@@ -139,7 +140,7 @@
         }
 
         .post-meta {
-            color: var(--color-meta);
+            color: var(--color-text);
         }
     }
 }
@@ -153,7 +154,11 @@
         margin-bottom: 2rem;
 
         .project-desc {
-            color: var(--color-meta);
+            color: var(--color-text);
         }
     }
+}
+
+.home-writing {
+    padding-bottom: 6rem;
 }
