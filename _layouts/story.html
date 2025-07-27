@@ -5,7 +5,10 @@
 
 <style>
   .type-story {
-    background-color: #{{ backgroundColor }};
+    background-color: #{{ backgroundColor }
+  }
+
+  ;
   }
 </style>
 
@@ -36,18 +39,18 @@
       <nav class="story-nav">
         {% if previousPost %}
         <div class="story-nav-prev">
-            <a href="{{ previousPost.url }}">
-                <p>Previous:</p>
-                <p class="story-title">{{ previousPost.data.title }}</p>
-            </a>
+          <a href="{{ previousPost.url }}">
+            <p>Previous:</p>
+            <p class="story-title">{{ previousPost.data.title }}</p>
+          </a>
         </div>
         {% endif %}
         {% if nextPost %}
         <div class="story-nav-next">
-            <a href="{{ nextPost.url }}">
-                <p>Next:</p>
-                <p class="story-title">{{ nextPost.data.title }}</p>
-            </a>
+          <a href="{{ nextPost.url }}">
+            <p>Next:</p>
+            <p class="story-title">{{ nextPost.data.title }}</p>
+          </a>
         </div>
         {% endif %}
       </nav>

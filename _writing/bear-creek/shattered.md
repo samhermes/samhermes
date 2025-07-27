@@ -7,7 +7,6 @@ backgroundColor: B1AB86
 count: 1
 permalink: "writing/bear-creek/shattered/index.html"
 ---
-
 I gathered up my shopping bags, thanked the cashier, and then left through the sliding doors. I’d come into town that evening on one of my weekly trips to get food and other odds and ends for the house. Outside, I rounded the corner of the store into the parking lot, and it was there that I saw it. On the side of my car, a gay slur had been spray painted.
 
 Blanking out, I dropped the shopping bags, sending containers of food flying and busting open a glass jar of strawberry jam. Taking in the scene, I slowly stepped backwards. The word covered both of the drivers side doors, and was written in bright yellow paint. It stuck right out against the dark gray color of my car, impossible to miss.
