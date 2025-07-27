@@ -108,7 +108,7 @@ He looked back up at me, and clearly noticed that I wasn’t doing well. “Come
 
 “I think I need to go to bed.” I didn’t know what else to do, and usually when that happened, I went to bed.
 
-Christopher sighed. “Yeah, that’s a good idea. Let’s try to figure this out in the morning. You’re safe now, there’s nothing else we can do tonight.”
+Bradley sighed. “Yeah, that’s a good idea. Let’s try to figure this out in the morning. You’re safe now, there’s nothing else we can do tonight.”
 
 The mention of safety unnerved me. “Am I safe, though?” The question was on the tip of my tongue, and I had to ask it. I didn’t really want to know the answer.
 
