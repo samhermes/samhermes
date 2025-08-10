@@ -1,5 +1,6 @@
 ---
 title: Shattered
+exceprt: A homophobic attack in a small town brings a man’s worst fears to life. As he flees, everything that he holds dear is thrown into disarray.
 date: 2025-07-07 18:58:00 Z
 series: Bear Creek
 layout: bearCreek
