@@ -1,0 +1,47 @@
+---
+const { title } = Astro.props;
+import PrideIcon from '../img/progress.svg';
+const currentYear = new Date().getFullYear();
+import '../sass/main.scss';
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="contain">
+                <a class="logotype" href="/"> Sam Hermes </a>
+                <nav class="site-nav" aria-label="Site">
+                    <h2 id="main-nav-heading" class="screen-reader-text">
+                        Site Navigation
+                    </h2>
+                    <ul aria-labelledby="main-nav-heading" role="list">
+                        <li><a href="/about">About</a></li>
+                        <li>
+                            <a href="https://samhermes.typeform.com/to/d4C4FT"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="page">
+            <slot />
+        </main>
+        <footer class="site-footer">
+            <div class="contain">
+                <p class="copyright">&copy; {currentYear} Sam Hermes</p>
+                <div class="pride"><PrideIcon /></div>
+            </div>
+        </footer>
+    </body>
+    <style>
+        h1 {
+            font-size: 2rem;
+        }
+    </style>
+</html>

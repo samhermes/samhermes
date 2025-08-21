@@ -3,7 +3,7 @@ title: Fighting Back
 excerpt: A week later, a cookout seems to be the key to getting life back on track. As fear rears its ugly head, Christopher and Bradley’s relationship is tested in new ways.
 date: 2025-08-10 12:15:00 Z
 series: Bear Creek
-layout: bearCreek
+# layout: bearCreek
 backgroundColor: D7D3B4
 count: 3
 permalink: "writing/bear-creek/fighting-back/index.html"

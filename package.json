@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy & sass _sass:_site/css",
+    "build": "astro build & sass _sass:_site/css",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "sass _sass:_site/css --watch",
-    "dev": "npm run watch:eleventy & npm run watch:sass"
+    "dev": "astro dev & npm run watch:sass",
+    "preview": "astro preview"
   },
   "repository": {
     "type": "git",
@@ -21,12 +22,12 @@
   },
   "homepage": "https://github.com/samhermes/samhermes.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-plugin-rss": "^1.1.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
     "luxon": "^2.5.2",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
     "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "astro": "^5.13.2"
   }
 }

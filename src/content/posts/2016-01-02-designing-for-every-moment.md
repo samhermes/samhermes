@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/PostLayout.astro
 title: Designing for every moment
 date: 2016-01-02 18:00:00 Z
 tags:

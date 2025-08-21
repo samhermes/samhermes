@@ -1,0 +1,45 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+// layout: default
+---
+
+<PageLayout title="Writing">
+	<div class="page-container">
+		<header class="page-header">
+			<h1 class="page-title">Writing</h1>
+		</header>
+
+		<div class="page-content-contain">
+			<ul class="series-list">
+				<li class="series-item">
+					<div class="series-info">
+						<h3 class="series-title">
+							<a href="/writing/bear-creek">
+								<img src="/img/writing/bear-creek-logo.svg" alt="" width="190" height="48" aria-hidden="true" />
+								<span class="screen-reader-text">Bear Creek</span>
+							</a>
+						</h3>
+						<p class="series-description">An attack in a small town brings a man’s worst fears to life.</p>
+					</div>
+					<div class="series-image">
+						<img src="/img/writing/bear-creek.jpg" alt="Sun shining through the trees in a wooded area." loading="lazy" />
+					</div>
+				</li>
+				<li class="series-item">
+					<div class="series-info">
+						<h3 class="series-title">
+							<a href="/writing/nightlight">
+								<img src="/img/writing/nightlight-logo.svg" alt="" width="150" height="42" aria-hidden="true" />
+								<span class="screen-reader-text">Nightlight</span>
+							</a>
+						</h3>
+						<p class="series-description">Austin and Zach find each other in a hopeless place.</p>
+					</div>
+					<div class="series-image">
+						<img src="/img/writing/nightlight.jpg" alt="A hand in the dark reaching out towards the light coming from a window." loading="lazy" />
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</PageLayout>
