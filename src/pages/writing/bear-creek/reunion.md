@@ -1,9 +1,9 @@
 ---
+layout: ../../../layouts/StoryLayout.astro
 title: Reunion
 exceprt: After the struggles of the past month, a retreat is the healing escape that is needed. A dip in the cool water cleanses what horrors persist, and gives hope for a path ahead.
 date: 2025-08-17 12:37:00 Z
 series: Bear Creek
-layout: bearCreek
 backgroundColor: FEFAE0
 count: 5
 permalink: "writing/bear-creek/reunion/index.html"

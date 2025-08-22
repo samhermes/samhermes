@@ -1,9 +1,9 @@
 ---
+layout: ../../../layouts/StoryLayout.astro
 title: The Pieces
 excerpt: The day after the attack, it’s time to face reality. Although everything seems fine on the surface, doubts begin to develop about who can be trusted to help.
 date: 2025-07-27 12:47:00 Z
 series: Bear Creek
-layout: bearCreek
 backgroundColor: C4BF9D
 count: 2
 permalink: "writing/bear-creek/the-pieces/index.html"

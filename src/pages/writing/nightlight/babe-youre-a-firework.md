@@ -1,8 +1,8 @@
 ---
+layout: ../../../layouts/StoryLayout.astro
 title: Babe, You’re a Firework
 date: 2024-12-31 14:00:00 Z
 series: Nightlight
-layout: nightlight
 backgroundColor: ffaca3
 count: 6 / 6
 permalink: "writing/nightlight/babe-youre-a-firework/index.html"

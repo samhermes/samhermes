@@ -11,6 +11,9 @@ const posts = defineCollection({
 const projects = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/content/projects" }),
 });
+const writing = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/content/writing" }),
+});
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { posts, projects };
+export const collections = { posts, projects, writing };

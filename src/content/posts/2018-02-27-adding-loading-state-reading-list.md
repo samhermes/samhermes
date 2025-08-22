@@ -50,7 +50,7 @@ The full `reading-list.js` is [available on GitHub](https://github.com/samhermes
 
 Now, we have a little work to do in our template and styles. We need to add the loading animation to our template and control its display using the `loading` variable. Here, I have added a `div` with a class of `loading`, and used `v-show` to toggle an inline style attribute. `loading`, when used inside of `v-show` is a reference to the variable we’ve been working with.
 
-```markup
+```html
 <div class="loading" v-show="loading">
   {% raw %}{% include loading.svg %}{% endraw %}
 </div>

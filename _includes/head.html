@@ -1,16 +1,8 @@
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>{% if title != "Home" %}{{ title | escape | append: ' - Sam Hermes' }}{% else %}{{ site.title | escape
     }}{% endif %}</title>
 <meta name="description"
     content="{% if excerpt %}{{ excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
 <link rel="stylesheet" href="{{ '/css/main.css' | url | bust }}">
 

@@ -1,15 +1,18 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import { getCollection } from "astro:content";
+import SiteLayout from '../layouts/SiteLayout.astro';
 import ArrowIcon from '../img/arrow.svg';
+import TagIcon from '../img/tag.svg';
 import nightlightLogo from '../img/writing/nightlight-logo.svg';
 import nightlightCover from '../img/writing/nightlight.jpg'
 import bearCreekLogo from '../img/writing/bear-creek-logo.svg';
-import bearCreekCover from '../img/writing/bear-creek.jpg'
-
-console.log('This runs in your terminal, not the browser!');
+import bearCreekCover from '../img/writing/bear-creek.jpg';
+const posts = (await getCollection("posts")).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+).slice(0, 5);
 ---
-<PageLayout title="Home Page">
-    <!-- <ArrowIcon /> -->
+<SiteLayout title="Home">
+    <ArrowIcon />
     <h1 class="screen-reader-text">Home</h1>
 
     <section class="home-intro">
@@ -26,25 +29,25 @@ console.log('This runs in your terminal, not the browser!');
                 </div>
                 <div class="home-post-list">
                     <ul class="post-list">
-                        <!-- {% for post in collections.posts | postsFilter(true) %} -->
-                        <li>
-                            <h3 class="post-title">
-                                <!-- <a class="post-link" href="{{ post.url | url }}">{{ post.data.title }}</a> -->
-                            </h3>
-                            <div class="post-meta">
-                                <!-- {% if post.data.tags %}
-                                    <div class="post-tags-container">
-                                        {% include 'icons/tag.svg' %}
-                                        <ul class="post-tags" aria-label="Post Tags">
-                                            {% for tag in post.data.tags %}
-                                                <li><a href="/category/{{ tag | slug }}">{{tag}}</a></li>
-                                            {% endfor %}
-                                        </ul>
+                        {posts.map((post) => (
+                            <li>
+                                <h3 class="post-title">
+                                    <a class="post-link" href={`/posts/${post.id}`}>{post.data.title}</a>
+                                </h3>
+                                {post.data.tags.length ? (
+                                    <div class="post-meta">
+                                        <div class="post-tags-container">
+                                            <TagIcon />
+                                            <ul class="post-tags" aria-label="Post Tags">
+                                                {post.data.tags.map((tag) => (
+                                                    <li><a href={`/category/${tag.toLowerCase()}`}>{tag}</a></li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
-                                {% endif %} -->
-                            </div>
-                        </li>
-                        <!-- {% endfor %} -->
+                                ) : null}
+                            </li>
+                        ))}
                     </ul>
                     <a class="more" href="/posts">All Posts<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
                 </div>
@@ -117,7 +120,7 @@ console.log('This runs in your terminal, not the browser!');
             </div>
         </section>
     </div>
-</PageLayout>
+</SiteLayout>
 <style>
   h1 {
     color: orange;

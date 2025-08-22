@@ -1,8 +1,8 @@
 ---
+layout: ../../../layouts/StoryLayout.astro
 title: Melting Down in Style
 date: 2024-11-10T12:44:00 -6
 series: Nightlight
-layout: nightlight
 backgroundColor: FFC9AF
 count: 5 / 6
 permalink: "writing/nightlight/melting-down-in-style/index.html"

@@ -43,14 +43,14 @@ Now that `gulpfile.js` is up to date and ready for Gulp 4, it’s time to actual
 
 According to [this note in the Pattern Lab repo](https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4), “Gulp 4 uses an updated CLI which needs to be updated globally. This CLI is backwards compatible with any Gulp 3.X projects you may have locally.”
 
-```markup
+```html
 $ npm rm -g gulp
 $ npm install -g gulp-cli
 ```
 
 Now that Gulp is upgraded globally, each individual project needs to be updated to take advantage of it. Just like the global upgrade, the following commands uninstall the local version and then install the new.
 
-```markup
+```html
 $ npm uninstall gulp --save-dev
 $ npm install gulp@^4.0.0 --save-dev
 ```

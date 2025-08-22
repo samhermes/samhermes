@@ -17,7 +17,7 @@ The issue with using Moment.js for this is that it’s just simply overkill, as 
 
 I uninstalled `react-moment` and `moment` from my project, and then installed `date-fns`.
 
-```markup
+```html
 $ npm uninstall react-moment
 $ npm uninstall moment
 $ npm install date-fns

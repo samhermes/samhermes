@@ -1,6 +1,6 @@
 ---
+layout: ../layouts/PageLayout.astro
 title: About
-layout: page
 ---
 
 <p class="subhead">I believe in the power of the web to educate, inform, and connect.</p>

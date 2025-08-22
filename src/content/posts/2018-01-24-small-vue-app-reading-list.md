@@ -88,7 +88,7 @@ This next part is what I’ve been poking around on still. The template that Vue
 
 First, you can use a for loop in Vue to create a list of the possible statuses. For my example, I wanted two radio buttons that are labeled as “Currently” and “Completed.”
 
-```markup
+```html
 <template v-for="status in statuses">
   <input type="radio"
   :id="status.id"
@@ -103,7 +103,7 @@ It’s a little weird to be writing a for loop using markup, but it feels sort o
 
 As for the markup for the actual book list, it’s a fairly simple setup, and even easier to understand than the radio button markup. We wrap it in an unordered list tag and then create a for loop to iterate over each of the books, listing the title and author for each.
 
-```markup
+```html
 <ul class="book-list">
 <template v-for="book in books">
   <li>

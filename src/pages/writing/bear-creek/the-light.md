@@ -1,9 +1,9 @@
 ---
+layout: ../../../layouts/StoryLayout.astro
 title: The Light
 exceprt: After the previous day’s revelations, it’s time to wrestle with moving forward. A trip to the creek is just what the doctor ordered, and the opportunity to turn a new page reveals itself.
 date: 2025-08-17 12:11:00 Z
 series: Bear Creek
-layout: bearCreek
 backgroundColor: EAE7CB
 count: 4
 permalink: "writing/bear-creek/the-light/index.html"

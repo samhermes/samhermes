@@ -1,0 +1,57 @@
+---
+import SiteLayout from "./SiteLayout.astro";
+const { title, series, backgroundColor, count } = Astro.props.content;
+const seriesSlug = series ? series.toLowerCase().replace(/\s+/g, '-') : '';
+import '../sass/writing.scss';
+import '../sass/writing-nightlight.scss';
+---
+
+<SiteLayout title={title} type="story" background={backgroundColor}>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="/writing/">Writing</a></li>
+            <li><a href=`/writing/${seriesSlug}`>{series}</a></li>
+        </ol>
+    </nav>
+
+  <article class="story-container">
+    <header class="story-header">
+        <h1 class="story-title">{title}</h1>
+        <p class="count">{count}</p>
+        <!-- {% if slug != "page-nightlight" %}
+            <p class="series">{{series}}</p>
+        {% endif %} -->
+    </header>
+
+    <div class="story-content">
+      <slot />
+    </div>
+
+    <!-- {% assign previousPost = collections.nightlight | getPreviousCollectionItem %}
+      {% assign nextPost = collections.nightlight | getNextCollectionItem %}
+      <nav class="story-nav">
+        {% if previousPost %}
+        <div class="story-nav-prev">
+          <a href="{{ previousPost.url }}">
+            <p>Previous:</p>
+            <p class="story-title">{{ previousPost.data.title }}</p>
+          </a>
+        </div>
+        {% endif %}
+        {% if nextPost %}
+        <div class="story-nav-next">
+          <a href="{{ nextPost.url }}">
+            <p>Next:</p>
+            <p class="story-title">{{ nextPost.data.title }}</p>
+          </a>
+        </div>
+        {% endif %} -->
+      </nav>
+  </article>
+</SiteLayout>
+
+<style>
+  .type-story {
+    background-color: `${backgroundColor}`;
+  }
+</style>

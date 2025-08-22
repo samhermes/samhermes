@@ -1,25 +1,30 @@
 ---
-import PageLayout from "./PageLayout.astro";
+import SiteLayout from "./SiteLayout.astro";
 import FormattedDate from "../components/FormattedDate.astro";
-const { title, date } = Astro.props;
+import TagIcon from '../img/tag.svg';
+const { title, date, tags } = Astro.props;
 ---
 
-<PageLayout>
+<SiteLayout title={title} type="post">
   <article class="post">
     <header class="post-header">
       <h1 class="post-title">{title}</h1>
       <div class="post-meta">
         <p class="post-date"><FormattedDate date={date} /></p>
-        <!-- {% if tags %}
+        {tags.length ? (
+          <div class="post-meta">
             <div class="post-tags-container">
-              {% include 'icons/tag.svg' %}
+              <TagIcon />
               <ul class="post-tags" aria-label="Post Tags">
-                {% for tag in tags %}
-                  <li><a href="/category/{{ tag | slug }}">{{tag}}</a></li>
-                {% endfor %}
+                {tags.map((tag) => (
+                  <li>
+                    <a href={`/category/${tag.toLowerCase()}`}>{tag}</a>
+                  </li>
+                ))}
               </ul>
             </div>
-          {% endif %} -->
+          </div>
+        ) : null}
       </div>
     </header>
 
@@ -27,4 +32,4 @@ const { title, date } = Astro.props;
       <slot />
     </div>
   </article>
-</PageLayout>
+</SiteLayout>
