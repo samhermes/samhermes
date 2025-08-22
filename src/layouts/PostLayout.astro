@@ -1,15 +1,16 @@
 ---
 import PageLayout from "./PageLayout.astro";
-const { title } = Astro.props;
+import FormattedDate from "../components/FormattedDate.astro";
+const { title, date } = Astro.props;
 ---
 
 <PageLayout>
-    <article class="post">
-        <header class="post-header">
-            <h1 class="post-title">{title}</h1>
-            <div class="post-meta">
-                <!-- <p class="post-date"><time>{{ page.date | readableDate }}</time></p> -->
-                <!-- {% if tags %}
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{title}</h1>
+      <div class="post-meta">
+        <p class="post-date"><FormattedDate date={date} /></p>
+        <!-- {% if tags %}
             <div class="post-tags-container">
               {% include 'icons/tag.svg' %}
               <ul class="post-tags" aria-label="Post Tags">
@@ -19,11 +20,11 @@ const { title } = Astro.props;
               </ul>
             </div>
           {% endif %} -->
-            </div>
-        </header>
+      </div>
+    </header>
 
-        <div class="post-content">
-            <slot />
-        </div>
-    </article>
+    <div class="post-content">
+      <slot />
+    </div>
+  </article>
 </PageLayout>
