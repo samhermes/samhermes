@@ -32,7 +32,7 @@ const posts = (await getCollection("posts")).sort(
 									<div class="post-tags-container">
 										<TagIcon />
 										<ul class="post-tags" aria-label="Post Tags">
-											{post.data.tags?.map((tag) => (
+											{post.data.tags.map((tag) => (
 												<li>
 													<a href={`/category/${tag.toLowerCase()}`}>{tag}</a>
 												</li>
