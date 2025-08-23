@@ -1,8 +1,7 @@
 ---
 title: Slowly backing away from theme.json
 date: 2023-05-25
-tags:
-- WordPress
+tags: ['WordPress']
 ---
 
 I was on board with theme.json. I wrote a [whole post about it](https://samhermes.com/posts/getting-to-know-theme-json/) last year. However, I think I was confused. I thought that it was the future, where all roads lead. I’ve realized that it’s primarily meant for block themes, even though it isn’t presented this way. The [top of the dev page about it](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/) reads “WordPress 5.8 comes with a new mechanism to configure the editor.” I took it at its word, and it hasn’t quite played out.
@@ -17,7 +16,7 @@ There is a way to disable these “global” styles, using `wp_dequeue_style( 'g
 
 Watching the further development of the site editor, I’ve seen instructions on how to add styles to theme.json to tweak the appearance of different blocks. This makes me uneasy, as it’s basically CSS in JS, which was a bad idea to begin with, and is fading in popularity already.
 
-There are quite a few issues here, the main one being the half-in half-out situation this leads to (as in some styles are coming from WordPress and some are coming from custom stylesheets in a theme). I see why it’s required for the block editor to work, and I see why they are putting equivalent styles on the front end, I just don’t see how someone might reasonably add their own styles on top. It feels too fragile to me. 
+There are quite a few issues here, the main one being the half-in half-out situation this leads to (as in some styles are coming from WordPress and some are coming from custom stylesheets in a theme). I see why it’s required for the block editor to work, and I see why they are putting equivalent styles on the front end, I just don’t see how someone might reasonably add their own styles on top. It feels too fragile to me.
 
 Specificity issues are already rampant since the block editor, and the constantly changing markup and class names only adds confusion and frustration.
 

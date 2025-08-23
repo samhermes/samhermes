@@ -1,9 +1,7 @@
 ---
 title: Customize default wp-scripts config
 date: 2023-12-28
-tags:
-  - WordPress
-  - JavaScript
+tags: ['WordPress', 'JavaScript']
 ---
 [`wp-scripts`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-scripts/) is a great package for building WordPress blocks, as it takes care of the basic build tooling out of the box, getting block development going quickly. However, while using it, I quickly found myself needing to customize the default configuration. For a while, I used some custom commands in the `scripts` property of package.json, adding additional arguments, but eventually found that changing the config would offer more control.
 

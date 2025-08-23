@@ -1,10 +1,7 @@
 ---
 title: Giving the dialog element a whirl
 date: 2023-02-25
-tags:
-- Accessibility
-- HTML
-- JavaScript
+tags: ['Accessibility', 'HTML', 'JavaScript']
 ---
 
 After [Scott O’Hara’s suggestion to use the dialog element](https://www.scottohara.me/blog/2023/01/26/use-the-dialog-element.html), I thought that it was time to try it out, see how it works, and what’s different or improved from the way I was approaching dialogs previously. To get yourself acquainted, here’s [the MDN docs article about it](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog). Additionally, if you’re looking for a quick, simplified demo, see [this demo from Google](https://googlechrome.github.io/dialog-polyfill/).
@@ -13,7 +10,7 @@ After [Scott O’Hara’s suggestion to use the dialog element](https://www.scot
 
 My first reaction, naturally, was to the browser default styles. They are mostly the same across browsers. There’s a black border, a bit of padding, and positioning to center the element in the viewport. All of them are easy to adjust or remove, but it’s a little strange to have so much browser-default styling. It really suggests a more specific use of the element than is typical.
 
-For the display/hide functionality of the dialog, it uses the display property, and toggles it between `none` and `block`. This works, but means that we are limited on the amount of animation that we can use. `transition` won’t work, so keyframe animations are needed, and we’re only able to animate the dialog in, not out, as `display: none` will hide it immediately. 
+For the display/hide functionality of the dialog, it uses the display property, and toggles it between `none` and `block`. This works, but means that we are limited on the amount of animation that we can use. `transition` won’t work, so keyframe animations are needed, and we’re only able to animate the dialog in, not out, as `display: none` will hide it immediately.
 
 Notably, if we attempt to handle the display state ourselves, such as by setting `display: block` all of the time and replacing it with `visibility`, we lose all of the accessibility features that are inherent in the element. So, that’s a bummer. [Maybe that will be a non-issue soon?](https://css-tricks.com/so-youd-like-to-animate-the-display-property/) 🤞 If you’re interested in getting around this in the meantime, I found [this web.dev article](https://web.dev/building-a-dialog-component/) to be a good example of how to approach that (though the author gets quite distracted by his CSS variable library).
 

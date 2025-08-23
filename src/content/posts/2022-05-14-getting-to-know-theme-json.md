@@ -1,8 +1,7 @@
 ---
 title: Getting to know theme.json
 date: 2022-05-14
-tags:
-- WordPress
+tags: ['WordPress']
 ---
 
 When developing a custom WordPress theme for usage with the block editor, there can be an overwhelming amount of possibilities to account for. Countless settings, combinations, and layout conundrums can make it difficult to apply a consistent look and feel, whether it’s to match a brand, or just a casual blog. At its release, the block editor offered few ways of controlling these possibilities. Theme.json aims to address this, allowing theme authors to dramatically scale back the options and settings offered out of the box.
@@ -17,7 +16,7 @@ On a more “experimental” or “beta” note, theme.json provides controls fo
 
 ### Opt-in controls
 
-By and large, theme.json exists to disable controls, but there is a small subset of “opt-in” controls, which can be enabled via theme.json, either individually or wholesale using `appearanceTools` set to `true`. Documentation on what these are is [available on wordpress.org](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/#opt-in-into-ui-controls). 
+By and large, theme.json exists to disable controls, but there is a small subset of “opt-in” controls, which can be enabled via theme.json, either individually or wholesale using `appearanceTools` set to `true`. Documentation on what these are is [available on wordpress.org](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/#opt-in-into-ui-controls).
 
 Most interesting of them is the `spacing` control, which seems to be quite limited at this time, but holds potential. It would be nice if we could move away from the core spacer block.
 

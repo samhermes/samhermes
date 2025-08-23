@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+export async function getStaticPaths() {
+  const allPosts = (await getCollection("posts")).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
+
+  const uniqueTags = [
+    ...new Set(
+      allPosts
+        .map((post: any) => post.data.tags)
+        .flat()
+        .filter(Boolean),
+    ),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter(
+      (post: any) => post.data.tags && post.data.tags.includes(tag),
+    );
+    const formattedTag = tag.toLowerCase();
+    return {
+      params: { tag: formattedTag },
+      props: { posts: filteredPosts, tagName: tag },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts, tagName } = Astro.props;
+---
+
+<SiteLayout title={tagName}>
+  <div class="page-container">
+    <header class="page-header">
+      <h1 class="page-title">Category: {tagName}</h1>
+    </header>
+
+    <div class="page-content-contain">
+      <ul class="post-list">
+        {
+          posts.map((post: any) => (
+            <li>
+              <h3 class="post-title">
+                <a class="post-link" href={`/posts/${post.id.slice(11)}`}>
+                  {post.data.title}
+                </a>
+              </h3>
+              <div class="post-meta">
+                <p class="post-date">
+                  <FormattedDate date={post.data.date} />
+                </p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</SiteLayout>

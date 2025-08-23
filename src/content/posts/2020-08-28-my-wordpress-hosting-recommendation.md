@@ -1,8 +1,7 @@
 ---
 title: My WordPress hosting recommendation
 date: 2020-08-28 19:14:00 Z
-tags:
-- WordPress
+tags: ['WordPress']
 ---
 
 I’ve been making hosting recommendations to clients for a while now, and it’s honestly been a bit of a journey. With so many options, there are a lot of good paths, and some paths that you just have to go down for a while before you really know. It would probably be useful to list those paths, but I’m going to just focus on the path that has been the most sensible to me.
@@ -19,7 +18,7 @@ WordPress hosting is, for the most part, WordPress hosting. There’s a server, 
 I like the simplicity of the control panel. There’s a sidebar with everything associated with your account, the domain, hosting, databases, SSL certificates, billing, etc. So many other hosts have many different views for all of this, and then change or rearrange things often.
 
 ### Pricing
-Dreamhost’s WordPress hosting is priced really competitively. Currently, if you sign up for 1 year, it includes a domain and an SSL certificate for $3.95/mo. That’s a great deal for most people. 
+Dreamhost’s WordPress hosting is priced really competitively. Currently, if you sign up for 1 year, it includes a domain and an SSL certificate for $3.95/mo. That’s a great deal for most people.
 
 ### SSL Certificate
 With Dreamhost, the SSL certificate is included for free. With Let’s Encrypt, the expectation is that these certificates just come out of the box. Somehow, as of writing, GoDaddy is still charging customers $80/year for SSL certificates.

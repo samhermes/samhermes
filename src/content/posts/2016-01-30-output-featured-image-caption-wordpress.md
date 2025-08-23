@@ -1,8 +1,7 @@
 ---
 title: Output featured image caption in WordPress
 date: 2016-01-30 18:00:00 Z
-tags:
-- WordPress
+tags: ['WordPress']
 ---
 
 It's relatively easy and well documented to output a featured image, but getting the caption is a little trickier. Here's the code I use:

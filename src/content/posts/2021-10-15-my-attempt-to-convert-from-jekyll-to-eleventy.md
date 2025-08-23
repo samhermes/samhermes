@@ -1,8 +1,7 @@
 ---
 title: My attempt to convert from Jekyll to Eleventy
 date: 2021-10-15 11:30:00 Z
-tags:
-- Static Sites
+tags: ['Static Sites']
 ---
 
 *Update 11/22/21: I have published a [follow-up post](https://samhermes.com/posts/returning-to-eleventy/), where I finally bring this all together.*
@@ -91,7 +90,7 @@ categories:
 ---
 ```
 
-Admittedly, the way that I’m handling categories in Jekyll is not super great. I created collection and a markdown file for each category that I wanted to make an archive for. 
+Admittedly, the way that I’m handling categories in Jekyll is not super great. I created collection and a markdown file for each category that I wanted to make an archive for.
 
 Eleventy seems to be able to handle this in a much easier way, but I still haven’t been able to get it to work. In the front matter above, I updated “categories” to “tags,” to take advantage of the tagging system that is built in. I then created a template in the root of my project called `tags.njk` and used the same configuration as the [template file in the Eleventy base blog repo](https://github.com/11ty/eleventy-base-blog/blob/master/tags.njk). I assumed that this would just work, but I couldn't get any posts to show up. The tag pages would be created, but nothing would be on them.
 

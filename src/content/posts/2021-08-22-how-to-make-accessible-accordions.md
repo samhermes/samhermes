@@ -1,10 +1,7 @@
 ---
 title: How to make accessible accordions
 date: 2021-08-22 20:29:00 Z
-tags:
-- Accessibility
-- HTML
-- CSS
+tags: ['Accessibility', 'HTML', 'CSS']
 selected: true
 ---
 
@@ -98,7 +95,7 @@ button.addEventListener('click', () => {
     if (expanded === 'true') {
         closeAccordion(accordion, elements)
     } else {
-        openAccordion(accordion, elements)   
+        openAccordion(accordion, elements)
     }
 })
 ```
@@ -116,7 +113,7 @@ Starting with a function to open the accordion, we pass in the accordion element
 ```js
 const openAccordion = (accordion, elements) => {
     const contentHeight = elements.content.scrollHeight
-    
+
     elements.content.style.height = contentHeight + 'px'
     elements.content.addEventListener('transitionend', function(){
         elements.content.removeEventListener('transitionend', arguments.callee)

@@ -1,11 +1,7 @@
 ---
 title: Submitting an accessibility-ready theme to WordPress
 date: 2018-05-11 00:00:00 Z
-tags:
-- WordPress
-- Accessibility
-- CSS
-- Design
+tags: ['WordPress', 'Accessibility', 'CSS', 'Design']
 selected: true
 ---
 

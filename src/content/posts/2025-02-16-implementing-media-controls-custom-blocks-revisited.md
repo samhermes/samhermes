@@ -1,8 +1,7 @@
 ---
 title: Implementing media controls in custom blocks, revisited
 date: 2025-02-16T12:52:00 -6
-tags:
-  - WordPress
+tags: ['WordPress']
 ---
 I last [wrote about this topic in 2019](https://samhermes.com/posts/implementing-media-controls-in-custom-blocks), and, well, not a lot has changed since then. However, I left a list of questions at the end of that post, and never returned to answer them. Let’s take a look in a wholistic way, answering those questions along the way.
 

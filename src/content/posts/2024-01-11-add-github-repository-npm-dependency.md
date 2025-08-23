@@ -1,8 +1,7 @@
 ---
 title: Add GitHub repository as npm dependency
 date: 2024-01-11
-tags:
-  - JavaScript
+tags: ['JavaScript']
 ---
 I have a GitHub repository that contains foundational styles and scripts that I use in other projects. In order to avoid copying and pasting the code, I wanted to include it as an npm dependency. Additionally, I wanted to see if I could avoid sending it to npm, and get it directly from GitHub. Fortunately, you can!
 

@@ -1,8 +1,7 @@
 ---
 title: How to configure a sticky header to prevent page jump
 date: 2016-11-10 00:00:00 Z
-tags:
-- JavaScript
+tags: ['JavaScript']
 selected: true
 ---
 

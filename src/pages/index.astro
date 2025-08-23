@@ -1,67 +1,84 @@
 ---
 import { getCollection } from "astro:content";
-import SiteLayout from '../layouts/SiteLayout.astro';
-import ArrowIcon from '../img/arrow.svg';
-import TagIcon from '../img/tag.svg';
-import nightlightLogo from '../img/writing/nightlight-logo.svg';
-import nightlightCover from '../img/writing/nightlight.jpg'
-import bearCreekLogo from '../img/writing/bear-creek-logo.svg';
-import bearCreekCover from '../img/writing/bear-creek.jpg';
-const posts = (await getCollection("posts")).sort(
-	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-).slice(0, 5);
+import SiteLayout from "../layouts/SiteLayout.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import ArrowIcon from "../img/arrow.svg";
+import TagIcon from "../img/tag.svg";
+import nightlightLogo from "../img/writing/nightlight-logo.svg";
+import nightlightCover from "../img/writing/nightlight.jpg";
+import bearCreekLogo from "../img/writing/bear-creek-logo.svg";
+import bearCreekCover from "../img/writing/bear-creek.jpg";
+const posts = (await getCollection("posts"))
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+	.slice(0, 5);
 ---
+
 <SiteLayout title="Home">
-    <ArrowIcon />
-    <h1 class="screen-reader-text">Home</h1>
+	<ArrowIcon />
+	<h1 class="screen-reader-text">Home</h1>
 
-    <section class="home-intro">
-        <div class="intro">
-            <p>Making the web more human.</p>
-        </div>
-    </section>
+	<section class="home-intro">
+		<div class="intro">
+			<p>Making the web more human.</p>
+		</div>
+	</section>
 
-    <div class="home-contain">
-        <section class="home-posts">
-            <div class="wrapper">
-                <div class="home-section-header">
-                    <h2>Selected Posts</h2>
-                </div>
-                <div class="home-post-list">
-                    <ul class="post-list">
-                        {posts.map((post) => (
-                            <li>
-                                <h3 class="post-title">
-                                    <a class="post-link" href={`/posts/${post.id}`}>{post.data.title}</a>
-                                </h3>
-                                {post.data.tags.length ? (
-                                    <div class="post-meta">
-                                        <div class="post-tags-container">
-                                            <TagIcon />
-                                            <ul class="post-tags" aria-label="Post Tags">
-                                                {post.data.tags.map((tag) => (
-                                                    <li><a href={`/category/${tag.toLowerCase()}`}>{tag}</a></li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                ) : null}
-                            </li>
-                        ))}
-                    </ul>
-                    <a class="more" href="/posts">All Posts<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
-                </div>
-            </div>
-        </section>
+	<div class="home-contain">
+		<section class="home-posts">
+			<div class="wrapper">
+				<div class="home-section-header">
+					<h2>Selected Posts</h2>
+				</div>
+				<div class="home-post-list">
+					<ul class="post-list">
+						{
+							posts.map((post) => (
+								<li>
+									<h3 class="post-title">
+										<a class="post-link" href={`/posts/${post.id.slice(11)}`}>
+											{post.data.title}
+										</a>
+									</h3>
+									<div class="post-meta">
+										<p class="post-date">
+											<FormattedDate date={post.data.date} />
+										</p>
+										{post.data.tags?.length ? (
+											<div class="post-tags-container">
+												<TagIcon />
+												<ul class="post-tags" aria-label="Post Tags">
+													{post.data.tags.map((tag) => (
+														<li>
+															<a href={`/category/${tag.toLowerCase()}`}>
+																{tag}
+															</a>
+														</li>
+													))}
+												</ul>
+											</div>
+										) : null}
+									</div>
+								</li>
+							))
+						}
+					</ul>
+					<a class="more" href="/posts"
+						>All Posts<svg class="more-icon"
+							><use xlink:href="#arrow"></use></svg
+						></a
+					>
+				</div>
+			</div>
+		</section>
 
-        <section class="home-projects">
-            <div class="wrapper">
-                <div class="home-section-header">
-                    <h2>Selected Projects</h2>
-                </div>
-                <div class="home-project-list">
-                    <ul class="project-list">
-                        <!-- {% for project in collections.projects.slice(0, 2) %}
+		<section class="home-projects">
+			<div class="wrapper">
+				<div class="home-section-header">
+					<h2>Selected Projects</h2>
+				</div>
+				<div class="home-project-list">
+					<ul class="project-list">
+						<!-- {% for project in collections.projects.slice(0, 2) %}
                         <li>
                             <div class="project-info">
                                 <h3 class="project-title">
@@ -76,53 +93,81 @@ const posts = (await getCollection("posts")).sort(
                             </div>
                         </li>
                         {% endfor %} -->
-                    </ul>
-                    <a class="more" href="/projects">All Projects<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
-                </div>
-            </div>
-        </section>
+					</ul>
+					<a class="more" href="/projects"
+						>All Projects<svg class="more-icon"
+							><use xlink:href="#arrow"></use></svg
+						></a
+					>
+				</div>
+			</div>
+		</section>
 
-        <section class="home-writing">
-            <div class="wrapper">
-                <div class="home-section-header">
-                    <h2>Writing</h2>
-                </div>
-                <ul class="series-list">
-                    <li class="series-item">
-                        <div class="series-info">
-                            <h3 class="series-title">
-                                <a href="/writing/bear-creek">
-                                    <img src={bearCreekLogo.src} alt="" width="190" height="48" aria-hidden="true" />
-                                    <span class="screen-reader-text">Bear Creek</span>
-                                </a>
-                            </h3>
-                            <p class="series-description">An attack in a small town brings a man’s worst fears to life.</p>
-                        </div>
-                        <div class="series-image">
-                            <img src={bearCreekCover.src} alt="Sun shining through the trees in a wooded area." loading="lazy" />
-                        </div>
-                    </li>
-                    <li class="series-item">
-                        <div class="series-info">
-                            <h3 class="series-title">
-                                <a href="/writing/nightlight">
-                                    <img src={nightlightLogo.src} alt="" width="150" height="42" aria-hidden="true" />
-                                    <span class="screen-reader-text">Nightlight</span>
-                                </a>
-                            </h3>
-                            <p class="series-description">Austin and Zach find each other in a hopeless place.</p>
-                        </div>
-                        <div class="series-image">
-                            <img src={nightlightCover.src} alt="A hand in the dark reaching out towards the light coming from a window." loading="lazy" />
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </div>
+		<section class="home-writing">
+			<div class="wrapper">
+				<div class="home-section-header">
+					<h2>Writing</h2>
+				</div>
+				<ul class="series-list">
+					<li class="series-item">
+						<div class="series-info">
+							<h3 class="series-title">
+								<a href="/writing/bear-creek">
+									<img
+										src={bearCreekLogo.src}
+										alt=""
+										width="190"
+										height="48"
+										aria-hidden="true"
+									/>
+									<span class="screen-reader-text">Bear Creek</span>
+								</a>
+							</h3>
+							<p class="series-description">
+								An attack in a small town brings a man’s worst fears to life.
+							</p>
+						</div>
+						<div class="series-image">
+							<img
+								src={bearCreekCover.src}
+								alt="Sun shining through the trees in a wooded area."
+								loading="lazy"
+							/>
+						</div>
+					</li>
+					<li class="series-item">
+						<div class="series-info">
+							<h3 class="series-title">
+								<a href="/writing/nightlight">
+									<img
+										src={nightlightLogo.src}
+										alt=""
+										width="150"
+										height="42"
+										aria-hidden="true"
+									/>
+									<span class="screen-reader-text">Nightlight</span>
+								</a>
+							</h3>
+							<p class="series-description">
+								Austin and Zach find each other in a hopeless place.
+							</p>
+						</div>
+						<div class="series-image">
+							<img
+								src={nightlightCover.src}
+								alt="A hand in the dark reaching out towards the light coming from a window."
+								loading="lazy"
+							/>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
 </SiteLayout>
 <style>
-  h1 {
-    color: orange;
-  }
+	h1 {
+		color: orange;
+	}
 </style>

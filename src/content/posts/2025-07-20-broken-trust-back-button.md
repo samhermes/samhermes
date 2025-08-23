@@ -1,8 +1,7 @@
 ---
 title: The broken trust of the back button
 date: 2025-07-20T12:46:00 -5
-tags:
-  - JavaScript
+tags: ['JavaScript']
 ---
 One of the worst user experience offenses caused by the [JavaScript-ification](https://infrequently.org/series/reckoning/) of the web is a broken back button. In this environment, it’s _not_ the browser that fails to take the user back, it’s that developers have taken over control of what “back” means and how it behaves. When it fails, it’s often that either the history state gets messed up, or the previous state wasn't ever entered into the history state.
 

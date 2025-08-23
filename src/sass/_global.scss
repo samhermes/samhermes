@@ -79,8 +79,12 @@
 /* Page Elements */
 
 .page {
-  min-height: calc(100vh - 11rem);
+  min-height: calc(100vh - 10.5rem);
   color: var(--color-text);
+
+  @media screen and (min-width: 37.5em) {
+    min-height: calc(100vh - 11.1875rem);
+  }
 
   .contain {
     max-width: 48rem;
@@ -190,7 +194,6 @@ a.external {
 
 .page-not-found {
   .page {
-    background-color: #fff;
     text-align: center;
     display: flex;
     align-items: center;

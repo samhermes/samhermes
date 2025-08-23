@@ -4,24 +4,6 @@
 <meta name="description"
     content="{% if excerpt %}{{ excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-<link rel="stylesheet" href="{{ '/css/main.css' | url | bust }}">
-
-{% if page.custom_css %}
-<link rel="stylesheet" href="{{ page.custom_css }}.css">
-{% endif %}
-
-{% if page.url contains '/writing' %}
-<link rel="stylesheet" href="{{ '/css/writing.css' | url | bust }}">
-{% endif %}
-
-{% if page.url contains '/writing/nightlight' %}
-<link rel="stylesheet" href="{{ '/css/writing-nightlight.css' | url | bust }}">
-{% endif %}
-
-{% if page.url contains '/writing/bear-creek' %}
-<link rel="stylesheet" href="{{ '/css/writing-bear-creek.css' | url | bust }}">
-{% endif %}
-
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml" | prepend: site.baseurl
     | prepend: site.url }}">

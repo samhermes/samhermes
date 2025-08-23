@@ -1,9 +1,7 @@
 ---
 title: Use button element to toggle parent menu items in WordPress
 date: 2022-09-25
-tags:
-- Accessibility
-- WordPress
+tags: ['Accessibility', 'WordPress']
 ---
 
 If you’re here for the code, skip to [Modifying the WordPress navigation markup](#modifying-the-wordpress-navigation-markup).

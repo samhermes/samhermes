@@ -1,9 +1,7 @@
 ---
 title: Creating the Scroll Snap Controls package
 date: 2025-05-17T12:15:00 -5
-tags:
-  - JavaScript
-  - CSS
+tags: ['JavaScript', 'CSS']
 ---
 I just released the first version of a new package, [Scroll Snap Controls](https://github.com/samhermes/scroll-snap-controls). It’s fairly simple, adding next and previous buttons to a container that uses CSS scroll snap. This allows us to provide a neat and tidy layout, shared between mobile and desktop, and still reach users without a way to horizontally scroll.
 

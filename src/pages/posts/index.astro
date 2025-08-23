@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
+import TagIcon from "../../img/tag.svg";
 const posts = (await getCollection("posts")).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
@@ -15,18 +16,34 @@ const posts = (await getCollection("posts")).sort(
 
 		<div class="page-content-contain">
 			<ul class="post-list">
-				{posts.map((post) => (
-					<li>
-						<h3 class="post-title">
-							<a class="post-link" href={`/posts/${post.id}`}>
-								{post.data.title}
-							</a>
-						</h3>
-						<div class="post-meta">
-							<p class="post-date"><FormattedDate date={post.data.date} /></p>
-						</div>
-					</li>
-				))}
+				{
+					posts.map((post) => (
+						<li>
+							<h3 class="post-title">
+								<a class="post-link" href={`/posts/${post.id.slice(11)}`}>
+									{post.data.title}
+								</a>
+							</h3>
+							<div class="post-meta">
+								<p class="post-date">
+									<FormattedDate date={post.data.date} />
+								</p>
+								{post.data.tags?.length ? (
+									<div class="post-tags-container">
+										<TagIcon />
+										<ul class="post-tags" aria-label="Post Tags">
+											{post.data.tags?.map((tag) => (
+												<li>
+													<a href={`/category/${tag.toLowerCase()}`}>{tag}</a>
+												</li>
+											))}
+										</ul>
+									</div>
+								) : null}
+							</div>
+						</li>
+					))
+				}
 			</ul>
 			<!-- {% assign currentyear = post.date | date: "%Y" %}
 				{% if forloop.first %}

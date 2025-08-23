@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import StoryLayout from "../../../layouts/StoryLayout.astro";
+import nightlightCover from '../../../img/writing/nightlight.jpg';
+import '../../../sass/writing-nightlight.scss';
+
+const stories = (await getCollection("nightlight")).sort(
+	(a, b) => a.data.date.valueOf() - b.data.date.valueOf(),
+);
+---
+<StoryLayout
+	isHomepage
+	series="Nightlight"
+	title="Nightlight"
+	excerpt="Austin and Zach find each other in a hopeless place."
+	backgroundColor="FFC7DE"
+>
+	<header class="series-header">
+		<h1 class="story-title">Nightlight</h1>
+
+		<div class="series-image">
+			<img src={nightlightCover.src} alt="A hand in the dark reaching out towards the light coming from a window." loading="lazy" />
+		</div>
+	</header>
+
+	<div class="story-content">
+		<p>Austin Wiley and Zach Parsons are a gay couple living in the Midwest. They met six months ago at their local outdoor theater, where Austin was on stage, and Zach was behind the scenes. When they found each other, they knew that they had something special. Now, they're living together and finding out what it means to be a gay couple in a place that doesn't always welcome them with open arms.</p>
+
+		<div class="character-description">
+			<p><strong>Austin Wiley</strong></p>
+			<p>Austin loves to put on a show. In fact, he's been performing since he could put on a hat. Now, he's in his last semester of college, and preparing for a show at the local outdoor theater.</p>
+		</div>
+
+		<div class="character-description">
+			<p><strong>Zach Parsons</strong></p>
+			<p>Zach is always deep in thought. He loves coffee and numbers. He graduated from college last year, has his own apartment, and works as an accountant.</p>
+		</div>
+	</div>
+
+	<nav class="series-nav">
+		<ul class="story-list">
+			{stories.map((story) => (
+				<li>
+					<p class="story-title">
+						<a class="story-link" href={`/writing/nightlight/${story.id}`}>{story.data.title}</a>
+					</p>
+					<p class="count">{story.data.count}</p>
+				</li>
+			))}
+		</ul>
+	</nav>
+</StoryLayout>

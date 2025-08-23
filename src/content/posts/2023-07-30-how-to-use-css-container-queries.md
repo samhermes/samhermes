@@ -1,8 +1,7 @@
 ---
 title: How to use CSS container queries
 date: 2023-07-30
-tags:
-- CSS
+tags: ['CSS']
 ---
 
 Of all the exciting things happening with CSS, I think container queries are at the top of the list for me. [Browser support](https://caniuse.com/css-container-queries) is really strong at this point, so while I'd still exercise a bit of caution based on project context, we're entering the phase where we can seriously consider them without fallbacks.

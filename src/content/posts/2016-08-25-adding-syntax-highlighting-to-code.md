@@ -1,9 +1,7 @@
 ---
 title: Adding syntax highlighting to code
 date: 2016-08-25 00:00:00 Z
-tags:
-- JavaScript
-- CSS
+tags: ['JavaScript', 'CSS']
 ---
 
 When I started working on the last iteration of my site, I knew I was going to need to figure out how to display code snippets. I considered using Github Gists or Codepen, but they both seemed to be a bit overkill. Also, I wanted control over the appearance and formatting.
@@ -18,7 +16,7 @@ custom_js: prism
 
 Then, in the footer, I added a `for` loop that added a script tag for each javascript file included.
 
-```markup
+```html
 {% raw %}{% if page.custom_js %}
   {% for js_file in page.custom_js %}
 <script src='/js/{{ js_file }}.js' type="text/javascript"></script>

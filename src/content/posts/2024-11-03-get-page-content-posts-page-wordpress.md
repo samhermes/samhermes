@@ -1,8 +1,7 @@
 ---
 title: Get page content for posts page in WordPress
 date: 2024-11-03T12:41:00 -5
-tags:
-  - WordPress
+tags: ['WordPress']
 ---
 In WordPress, you can set your homepage to either display a list of the latest posts or a static page. When the static page option is used, you can additionally select a second page on which to display the list of the latest posts. Of course, to select this page, you’ll need to have created a page that you’d like to use. This page will be overtaken by the list of the latest posts, so any content that you add to the page will not be displayed.
 

@@ -1,8 +1,7 @@
 ---
 title: Unregistering widgets in WordPress
 date: 2017-06-03 00:00:00 Z
-tags:
-- WordPress
+tags: ['WordPress']
 ---
 
 If you’ve ever installed Jetpack, you’re probably familiar with widget overload. Sometimes it’s better to cut down on the number of widgets available to your users, both for the benefit of their cognitive load and just for the fact that they may never use some of them. Meta widget, anyone?

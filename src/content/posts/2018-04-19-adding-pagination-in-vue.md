@@ -1,8 +1,7 @@
 ---
 title: Adding pagination in Vue
 date: 2018-04-19 00:00:00 Z
-tags:
-- JavaScript
+tags: ['JavaScript']
 ---
 
 So, I’ve been reading too much. The reading list that I’ve been maintaining has grown to an unwieldy length (I’m kind of making up problems to solve at this point…). To remedy this, we need pagination!
@@ -55,13 +54,13 @@ I took both of these functions almost verbatim from the article I mentioned abov
 
 One minor change that we need to make to the template before moving on is how we’re looping through the book list. Right now, the current book list is stored in `books`, but we want to get it from `paginatedData` going forward. It’s as simple as updating the for loop.
 
-```markup
+```html
 <template v-for="book in paginatedData">
 ```
 
 The final bit is to add the previous and next page button to the template. This is where we can build in the logic to handle what happens when a user presses one of the buttons.
 
-```markup
+```html
 <nav v-if="pageCount >= 1" class="book-list-nav">
 	<button type="button" :disabled="pageNumber === 0" v-on:click="prevPage">Previous</button>
 	<button type="button" :disabled="pageNumber >= pageCount" v-on:click="nextPage">Next</button>
