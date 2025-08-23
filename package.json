@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "astro build & sass _sass:_site/css",
-    "watch:eleventy": "eleventy --serve",
-    "watch:sass": "sass _sass:_site/css --watch",
-    "dev": "astro dev & npm run watch:sass",
+    "build": "astro build",
+    "dev": "astro dev",
     "preview": "astro preview"
   },
   "repository": {
