@@ -1,11 +1,11 @@
 ---
 import SiteLayout from "./SiteLayout.astro";
-const { isHomepage, title, series, backgroundColor, count } = Astro.props;
+const { isHomepage, title, excerpt, series, backgroundColor, count } = Astro.props;
 const seriesSlug = series ? series.toLowerCase().replace(/\s+/g, '-') : '';
 import '../sass/writing.scss';
 ---
 
-<SiteLayout title={title} type="story" background={backgroundColor}>
+<SiteLayout title={title} excerpt={excerpt} type="story" background={backgroundColor}>
 	<nav class="breadcrumbs" aria-label="Breadcrumb">
 		<ol>
 			<li><a href="/writing/">Writing</a></li>

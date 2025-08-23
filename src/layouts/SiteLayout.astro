@@ -1,20 +1,25 @@
 ---
-const { title, type, background, frontmatter } = Astro.props;
 import PrideIcon from "../img/progress.svg";
-const pageTitle = title ?? frontmatter.title;
+import "../sass/main.scss";
+const { title, excerpt, type, background, frontmatter } = Astro.props;
+const pageTitle = title ?? frontmatter?.title;
+const pageDesc = excerpt ?? frontmatter?.excerpt;
+const metaTitle = `${pageTitle !== "Home" ? `${pageTitle} - ` : ''}Sam Hermes`;
 const currentYear = new Date().getFullYear();
 const pageSlug = pageTitle
 	? `page-${pageTitle.toLowerCase().replace(/\s+/g, "-")}`
 	: "";
 const typeSlug = type ? ` type-${type}` : "";
 const backgroundColor = background ? `background-color: #${background}` : null;
-import "../sass/main.scss";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>{metaTitle}</title>
+		{pageDesc ? <meta name="description" content={pageDesc} /> : null}
 
 		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
