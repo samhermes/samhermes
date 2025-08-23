@@ -12,7 +12,7 @@ const { title, date, tags } = Astro.props;
 			<div class="post-meta">
 				<p class="post-date"><FormattedDate date={date} /></p>
 				{
-					tags.length ? (
+					tags?.length ? (
 						<div class="post-meta">
 							<div class="post-tags-container">
 								<TagIcon />
