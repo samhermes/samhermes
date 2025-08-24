@@ -4,7 +4,7 @@ import "../sass/main.scss";
 const { title, excerpt, type, background, frontmatter } = Astro.props;
 const pageTitle = title ?? frontmatter?.title;
 const pageDesc = excerpt ?? frontmatter?.excerpt;
-const metaTitle = `${pageTitle !== "Home" ? `${pageTitle} - ` : ''}Sam Hermes`;
+const metaTitle = `${pageTitle !== "Home" ? `${pageTitle} - ` : ""}Sam Hermes`;
 const currentYear = new Date().getFullYear();
 const pageSlug = pageTitle
 	? `page-${pageTitle.toLowerCase().replace(/\s+/g, "-")}`
@@ -25,6 +25,13 @@ const backgroundColor = background ? `background-color: #${background}` : null;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="Sam Hermes"
+			href={new URL("feed.xml", Astro.site)}
+		/>
 	</head>
 	<body class={`${pageSlug}${typeSlug}`} style={backgroundColor}>
 		<header class="site-header">
