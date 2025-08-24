@@ -1,9 +1,10 @@
 ---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import nightlightLogo from '../../img/writing/nightlight-logo.svg';
-import nightlightCover from '../../img/writing/nightlight.jpg';
-import bearCreekLogo from '../../img/writing/bear-creek-logo.svg';
-import bearCreekCover from '../../img/writing/bear-creek.jpg';
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { Image } from "astro:assets";
+import nightlightLogo from "../../img/writing/nightlight-logo.svg";
+import nightlightCover from "../../img/writing/nightlight.jpg";
+import bearCreekLogo from "../../img/writing/bear-creek-logo.svg";
+import bearCreekCover from "../../img/writing/bear-creek.jpg";
 ---
 
 <SiteLayout title="Writing">
@@ -18,28 +19,58 @@ import bearCreekCover from '../../img/writing/bear-creek.jpg';
 					<div class="series-info">
 						<h3 class="series-title">
 							<a href="/writing/bear-creek">
-								<img src={bearCreekLogo.src} alt="" width="190" height="48" aria-hidden="true" />
+								<Image
+									src={bearCreekLogo}
+									alt=""
+									width="190"
+									height="48"
+									aria-hidden="true"
+									priority
+								/>
 								<span class="screen-reader-text">Bear Creek</span>
 							</a>
 						</h3>
-						<p class="series-description">An attack in a small town brings a man’s worst fears to life.</p>
+						<p class="series-description">
+							An attack in a small town brings a man’s worst fears to life.
+						</p>
 					</div>
 					<div class="series-image">
-						<img src={bearCreekCover.src} alt="Sun shining through the trees in a wooded area." loading="lazy" />
+						<Image
+							src={bearCreekCover}
+							layout="constrained"
+							alt="Sun shining through the trees in a wooded area."
+							priority
+							sizes="(width > 31.25em) 283px, 100vw"
+						/>
 					</div>
 				</li>
 				<li class="series-item">
 					<div class="series-info">
 						<h3 class="series-title">
 							<a href="/writing/nightlight">
-								<img src={nightlightLogo.src} alt="" width="150" height="42" aria-hidden="true" />
+								<Image
+									src={nightlightLogo}
+									alt=""
+									width="150"
+									height="42"
+									aria-hidden="true"
+									priority
+								/>
 								<span class="screen-reader-text">Nightlight</span>
 							</a>
 						</h3>
-						<p class="series-description">Austin and Zach find each other in a hopeless place.</p>
+						<p class="series-description">
+							Austin and Zach find each other in a hopeless place.
+						</p>
 					</div>
 					<div class="series-image">
-						<img src={nightlightCover.src} alt="A hand in the dark reaching out towards the light coming from a window." loading="lazy" />
+						<Image
+							src={nightlightCover}
+							layout="constrained"
+							alt="A hand in the dark reaching out towards the light coming from a window."
+							priority
+							sizes="(width > 31.25em) 283px, 100vw"
+						/>
 					</div>
 				</li>
 			</ul>
