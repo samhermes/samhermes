@@ -13,4 +13,4 @@ These days, the web platform is a strange and interesting place. There's always 
 
 ## About this site
 
-I designed and developed this site, using [Eleventy](https://www.11ty.dev) to assemble it and [Cloudflare Pages](https://pages.cloudflare.com) to host it. The code is available on [GitHub](https://github.com/samhermes/samhermes.github.io).
+I designed and developed this site, using [Astro](https://astro.build) to assemble it and [Cloudflare Pages](https://pages.cloudflare.com) to host it. The code is available on [GitHub](https://github.com/samhermes/samhermes.github.io).
