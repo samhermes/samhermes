@@ -4,6 +4,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import ArrowIcon from "../img/arrow.svg";
 import TagIcon from "../img/tag.svg";
+import GitHubIcon from "../img/github.svg";
 import nightlightLogo from "../img/writing/nightlight-logo.svg";
 import nightlightCover from "../img/writing/nightlight.jpg";
 import bearCreekLogo from "../img/writing/bear-creek-logo.svg";
@@ -11,6 +12,9 @@ import bearCreekCover from "../img/writing/bear-creek.jpg";
 const posts = (await getCollection("posts"))
 	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 	.slice(0, 5);
+const projects = (await getCollection("projects"))
+	.sort((a, b) => Number(a.data.order) - Number(b.data.order))
+	.slice(0, 2);
 ---
 
 <SiteLayout title="Home">
@@ -78,27 +82,32 @@ const posts = (await getCollection("posts"))
 				</div>
 				<div class="home-project-list">
 					<ul class="project-list">
-						<!-- {% for project in collections.projects.slice(0, 2) %}
-                        <li>
-                            <div class="project-info">
-                                <h3 class="project-title">
-                                    <a class="project-link" href="{{ project.data.external_url | url }}">{{ project.data.title }}</a>
-                                </h3>
-                                <p class="project-desc">{{ project.data.description }}</p>
+						{
+							projects.map((project) => (
+								<li>
+									<div class="project-info">
+										<h3 class="project-title">
+											<a class="project-link" href={project.data.external_url}>
+												{project.data.title}
+											</a>
+										</h3>
+										<p class="project-desc">{project.data.description}</p>
 
-                                <a class="project-github" href="{{ project.data.github_url }}">
-                                    {% include 'icons/github.svg' %}
-                                    <span class="screen-reader-text">{{ project.data.title }} repository on GitHub</span>
-                                </a>
-                            </div>
-                        </li>
-                        {% endfor %} -->
+										<a class="project-github" href={project.data.github_url}>
+											<GitHubIcon />
+											<span class="screen-reader-text">
+												{project.data.title} repository on GitHub
+											</span>
+										</a>
+									</div>
+								</li>
+							))
+						}
 					</ul>
-					<a class="more" href="/projects"
-						>All Projects<svg class="more-icon"
-							><use xlink:href="#arrow"></use></svg
-						></a
-					>
+					<a class="more" href="/projects">
+						All Projects
+						<svg class="more-icon"><use xlink:href="#arrow"></use></svg>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -166,8 +175,3 @@ const posts = (await getCollection("posts"))
 		</section>
 	</div>
 </SiteLayout>
-<style>
-	h1 {
-		color: orange;
-	}
-</style>
