@@ -6,6 +6,14 @@ import TagIcon from "../../img/tag.svg";
 const posts = (await getCollection("posts")).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
+const years = [
+	...new Set(
+		posts
+			.map((post: any) => post.data.date.getFullYear())
+			.flat()
+			.filter(Boolean),
+	),
+];
 ---
 
 <SiteLayout title="Posts">
@@ -15,74 +23,54 @@ const posts = (await getCollection("posts")).sort(
 		</header>
 
 		<div class="page-content-contain">
-			<ul class="post-list">
-				{
-					posts.map((post) => (
-						<li>
-							<h3 class="post-title">
-								<a class="post-link" href={`/posts/${post.id.slice(11)}`}>
-									{post.data.title}
-								</a>
-							</h3>
-							<div class="post-meta">
-								<p class="post-date">
-									<FormattedDate date={post.data.date} />
-								</p>
-								{post.data.tags?.length ? (
-									<div class="post-tags-container">
-										<TagIcon />
-										<ul class="post-tags" aria-label="Post Tags">
-											{post.data.tags.map((tag) => (
-												<li>
-													<a href={`/category/${tag.toLowerCase()}`}>{tag}</a>
-												</li>
-											))}
-										</ul>
-									</div>
-								) : null}
-							</div>
-						</li>
-					))
-				}
-			</ul>
-			<!-- {% assign currentyear = post.date | date: "%Y" %}
-				{% if forloop.first %}
-					{% assign lastyear = currentyear %}
-					<div class="year-group">
-						<h2 class="screen-reader-text" id="{{currentyear}}-ref">{{ currentyear }}</h2>
-						<ul class="post-list">
-				{% endif %}
-				{% if currentyear != lastyear %}
-						</ul>
-					</div>
-					<div class="year-group">
-						<h2 class="posts-subheading" id="{{currentyear}}-ref">{{ currentyear }}</h2>
-						<ul class="post-list">
-					{% assign lastyear = currentyear %}
-				{% endif %}
-					<li>
-						<h3 class="post-title">
-							<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.data.title }}</a>
-						</h3>
-						<div class="post-meta">
-							<p class="post-date">{{ post.date | readableDate }}</p>
-							{% if post.data.tags %}
-								<div class="post-tags-container">
-									{% include 'icons/tag.svg' %}
-									<ul class="post-tags" aria-label="Post Tags">
-										{% for tag in post.data.tags %}
-											<li><a href="/category/{{ tag | slug }}">{{tag}}</a></li>
-										{% endfor %}
-									</ul>
-								</div>
-							{% endif %}
+			{
+				years.map((year) => {
+					const headingClass =
+						year === new Date().getFullYear()
+							? "screen-reader-text"
+							: "posts-subheading";
+					const yearPosts = posts.filter(
+						(post) => post.data.date.getFullYear() === year,
+					);
+					return (
+						<div class="year-group">
+							<h2 class={headingClass} id={`${year}-ref`}>
+								{year}
+							</h2>
+							<ul class="post-list">
+								{yearPosts.map((post) => (
+									<li>
+										<h3 class="post-title">
+											<a class="post-link" href={`/posts/${post.id.slice(11)}`}>
+												{post.data.title}
+											</a>
+										</h3>
+										<div class="post-meta">
+											<p class="post-date">
+												<FormattedDate date={post.data.date} />
+											</p>
+											{post.data.tags?.length ? (
+												<div class="post-tags-container">
+													<TagIcon />
+													<ul class="post-tags" aria-label="Post Tags">
+														{post.data.tags.map((tag) => (
+															<li>
+																<a href={`/category/${tag.toLowerCase()}`}>
+																	{tag}
+																</a>
+															</li>
+														))}
+													</ul>
+												</div>
+											) : null}
+										</div>
+									</li>
+								))}
+							</ul>
 						</div>
-					</li>
-				{% if forloop.last %}
-					</ul>
-					</div>
-				{% endif %}
-			{% endfor %} -->
+					);
+				})
+			}
 		</div>
 	</div>
 </SiteLayout>
