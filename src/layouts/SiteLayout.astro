@@ -5,6 +5,7 @@ const { title, excerpt, type, background, frontmatter } = Astro.props;
 const pageTitle = title ?? frontmatter?.title;
 const pageDesc = excerpt ?? frontmatter?.excerpt;
 const metaTitle = `${pageTitle !== "Home" ? `${pageTitle} - ` : ""}Sam Hermes`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentYear = new Date().getFullYear();
 const pageSlug = pageTitle
 	? `page-${pageTitle.toLowerCase().replace(/\s+/g, "-")}`
@@ -26,6 +27,10 @@ const backgroundColor = background ? `background-color: #${background}` : null;
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
+		<link
+			rel="canonical"
+			href={canonicalURL}
+		/>
 		<link
 			rel="alternate"
 			type="application/rss+xml"
