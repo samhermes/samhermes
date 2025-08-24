@@ -1,7 +1,20 @@
 ---
+import { getCollection } from 'astro:content';
 import SiteLayout from "./SiteLayout.astro";
 const { isHomepage, title, excerpt, series, backgroundColor, count } = Astro.props;
+
+function toCamelCase(str) {
+  return str.replace(/(?:^.|[A-Z]|\b.)/g, function(letter, index) {
+    return index == 0 ? letter.toLowerCase() : letter.toUpperCase();
+  }).replace(/\s+/g, '');
+}
 const seriesSlug = series ? series.toLowerCase().replace(/\s+/g, '-') : '';
+const stories = (await getCollection(toCamelCase(series)))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const currentPostIndex = stories.findIndex((story) => story.id == Astro.params.slug);
+const previousPost = currentPostIndex + 1 === stories.length ? undefined : stories[currentPostIndex + 1];
+const nextPost = currentPostIndex === 0 ? undefined : stories[currentPostIndex - 1];
+
 import '../sass/writing.scss';
 ---
 
@@ -26,31 +39,25 @@ import '../sass/writing.scss';
 			<slot />
 		</div>
 
-		<!-- {% assign previousPost = collections.nightlight | getPreviousCollectionItem %}
-		{% assign nextPost = collections.nightlight | getNextCollectionItem %}
-		<nav class="story-nav">
-			{% if previousPost %}
-			<div class="story-nav-prev">
-			<a href="{{ previousPost.url }}">
-				<p>Previous:</p>
-				<p class="story-title">{{ previousPost.data.title }}</p>
-			</a>
-			</div>
-			{% endif %}
-			{% if nextPost %}
-			<div class="story-nav-next">
-			<a href="{{ nextPost.url }}">
-				<p>Next:</p>
-				<p class="story-title">{{ nextPost.data.title }}</p>
-			</a>
-			</div>
-			{% endif %} -->
-		</nav>
+		{!isHomepage ? (
+			<nav class="story-nav">
+				{previousPost ? (
+					<div class="story-nav-prev">
+						<a href={`/writing/${seriesSlug}/${previousPost.id}`}>
+							<p>Previous:</p>
+							<p class="story-title">{previousPost.data.title}</p>
+						</a>
+					</div>
+				) : null}
+				{nextPost ? (
+					<div class="story-nav-next">
+						<a href={`/writing/${seriesSlug}/${nextPost.id}`}>
+							<p>Next:</p>
+							<p class="story-title">{nextPost.data.title}</p>
+						</a>
+					</div>
+				) : null}
+			</nav>
+		) : null}
 	</article>
 </SiteLayout>
-
-<style>
-  .type-story {
-	background-color: `${backgroundColor}`;
-  }
-</style>
