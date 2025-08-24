@@ -37,7 +37,7 @@ const years = [
 							<h2 class={headingClass} id={`${year}-ref`}>
 								{year}
 							</h2>
-							<ul class="post-list">
+							<ul class="post-list" role="list">
 								{yearPosts.map((post) => (
 									<li>
 										<h3 class="post-title">
@@ -52,7 +52,7 @@ const years = [
 											{post.data.tags?.length ? (
 												<div class="post-tags-container">
 													<TagIcon />
-													<ul class="post-tags" aria-label="Post Tags">
+													<ul class="post-tags" aria-label="Post Tags" role="list">
 														{post.data.tags.map((tag) => (
 															<li>
 																<a href={`/category/${tag.toLowerCase()}`}>

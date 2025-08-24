@@ -16,7 +16,7 @@ const { title, excerpt, date, tags } = Astro.props;
 						<div class="post-meta">
 							<div class="post-tags-container">
 								<TagIcon />
-								<ul class="post-tags" aria-label="Post Tags">
+								<ul class="post-tags" aria-label="Post Tags" role="list">
 									{tags.map((tag) => (
 										<li>
 											<a href={`/category/${tag.toLowerCase()}`}>{tag}</a>

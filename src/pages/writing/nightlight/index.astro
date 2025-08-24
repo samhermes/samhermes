@@ -38,7 +38,7 @@ const stories = (await getCollection("nightlight")).sort(
 	</div>
 
 	<nav class="series-nav">
-		<ul class="story-list">
+		<ul class="story-list" role="list">
 			{stories.map((story) => (
 				<li>
 					<p class="story-title">

@@ -40,7 +40,7 @@ const { posts, tagName } = Astro.props;
     </header>
 
     <div class="page-content-contain">
-      <ul class="post-list">
+      <ul class="post-list" role="list">
         {
           posts.map((post: any) => (
             <li>

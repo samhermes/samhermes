@@ -14,7 +14,7 @@ const projects = (await getCollection("projects")).sort(
 		</header>
 
 		<div class="page-content-contain">
-			<ul class="project-list">
+			<ul class="project-list" role="list">
 				{
 					projects.map((project) => (
 						<li>
