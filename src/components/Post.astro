@@ -1,0 +1,30 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+import TagIcon from "../img/tag.svg";
+const { post } = Astro.props;
+---
+
+<h3 class="post-title">
+  <a class="post-link" href={`/posts/${post.id.slice(11)}`}>
+    {post.data.title}
+  </a>
+</h3>
+<div class="post-meta">
+  <p class="post-date">
+    <FormattedDate date={post.data.date} />
+  </p>
+  {
+    post.data.tags?.length ? (
+      <div class="post-tags-container">
+        <TagIcon />
+        <ul class="post-tags" aria-label="Post Tags" role="list">
+          {post.data.tags.map((tag) => (
+            <li>
+              <a href={`/category/${tag.toLowerCase()}`}>{tag}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ) : null
+  }
+</div>
