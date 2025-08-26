@@ -2,14 +2,13 @@
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import SiteLayout from "../layouts/SiteLayout.astro";
-import FormattedDate from "../components/FormattedDate.astro";
 import ArrowIcon from "../img/arrow.svg";
-import TagIcon from "../img/tag.svg";
 import GitHubIcon from "../img/github.svg";
 import nightlightLogo from "../img/writing/nightlight-logo.svg";
 import nightlightCover from "../img/writing/nightlight.jpg";
 import bearCreekLogo from "../img/writing/bear-creek-logo.svg";
 import bearCreekCover from "../img/writing/bear-creek.jpg";
+import Post from "../components/Post.astro";
 const posts = (await getCollection("posts"))
 	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 	.slice(0, 5);
@@ -37,38 +36,13 @@ const projects = (await getCollection("projects"))
 				<div class="home-section-header">
 					<h2>Latest Posts</h2>
 				</div>
-				<div class="home-post-list">
-					<ul class="post-list" role="list">
-						{
-							posts.map((post) => (
-								<li>
-									<h3 class="post-title">
-										<a class="post-link" href={`/posts/${post.id.slice(11)}`}>
-											{post.data.title}
-										</a>
-									</h3>
-									<div class="post-meta">
-										<p class="post-date">
-											<FormattedDate date={post.data.date} />
-										</p>
-										{post.data.tags?.length ? (
-											<div class="post-tags-container">
-												<TagIcon />
-												<ul class="post-tags" aria-label="Post Tags">
-													{post.data.tags.map((tag) => (
-														<li>
-															<a href={`/category/${tag.toLowerCase()}`}>
-																{tag}
-															</a>
-														</li>
-													))}
-												</ul>
-											</div>
-										) : null}
-									</div>
-								</li>
-							))
-						}
+				<div id="home-post-list-heading" class="home-post-list">
+					<ul
+						class="post-list"
+						role="list"
+						aria-labelledby="home-post-list-heading"
+					>
+						{posts.map((post) => <Post post={post} />)}
 					</ul>
 					<a class="more" href="/posts">
 						All Posts

@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
+import Post from "../../components/Post.astro";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 
 export async function getStaticPaths() {
@@ -40,23 +40,9 @@ const { posts, tagName } = Astro.props;
     </header>
 
     <div class="page-content-contain">
-      <ul class="post-list" role="list">
-        {
-          posts.map((post: any) => (
-            <li>
-              <h3 class="post-title">
-                <a class="post-link" href={`/posts/${post.id.slice(11)}`}>
-                  {post.data.title}
-                </a>
-              </h3>
-              <div class="post-meta">
-                <p class="post-date">
-                  <FormattedDate date={post.data.date} />
-                </p>
-              </div>
-            </li>
-          ))
-        }
+      <h2 id="category-post-list-heading" class="screen-reader-text">Post List</h2>
+      <ul class="post-list" role="list" aria-labelledby="category-post-list-heading">
+        {posts.map((post: any) => <Post post={post} />)}
       </ul>
     </div>
   </div>

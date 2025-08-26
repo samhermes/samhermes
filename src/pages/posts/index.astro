@@ -36,11 +36,9 @@ const years = [
 							<h2 class={headingClass} id={`${year}-ref`}>
 								{year}
 							</h2>
-							<ul class="post-list" role="list">
+							<ul class="post-list" role="list" aria-labelledby={`${year}-ref`}>
 								{yearPosts.map((post) => (
-									<li>
-										<Post post={post} />
-									</li>
+									<Post post={post} />
 								))}
 							</ul>
 						</div>
