@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import StoryLayout from "../../../layouts/StoryLayout.astro";
 import bearCreekCover from "../../../img/writing/bear-creek.jpg";
@@ -29,9 +30,11 @@ const stories = (await getCollection("bearCreek")).sort(
 			</div>
 
 			<div class="series-image">
-				<img
-					src={bearCreekCover.src}
+				<Image
+					src={bearCreekCover}
 					alt="Sun shining through the trees in a wooded area."
+					layout="constrained"
+					sizes="(width > 47.2em) 670px, 100vw"
 				/>
 			</div>
 		</header>
