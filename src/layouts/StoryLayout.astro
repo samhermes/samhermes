@@ -1,13 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import SiteLayout from "./SiteLayout.astro";
+import toCamelCase from "../utils/toCamelCase";
 const { isHomepage, title, excerpt, series, backgroundColor, count } = Astro.props;
-
-function toCamelCase(str) {
-  return str.replace(/(?:^.|[A-Z]|\b.)/g, function(letter, index) {
-    return index == 0 ? letter.toLowerCase() : letter.toUpperCase();
-  }).replace(/\s+/g, '');
-}
 const seriesSlug = series ? series.toLowerCase().replace(/\s+/g, '-') : '';
 const stories = (await getCollection(toCamelCase(series)))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -18,7 +13,7 @@ const nextPost = currentPostIndex === 0 ? undefined : stories[currentPostIndex -
 import '../sass/writing.scss';
 ---
 
-<SiteLayout title={title} excerpt={excerpt} type="story" background={backgroundColor}>
+<SiteLayout title={title} excerpt={excerpt} type="story" series={isHomepage ? '' : series} background={backgroundColor}>
 	<nav class="breadcrumbs" aria-label="Breadcrumb">
 		<ol>
 			<li><a href="/writing/">Writing</a></li>
