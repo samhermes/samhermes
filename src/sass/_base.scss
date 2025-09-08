@@ -14,7 +14,8 @@ dl, dd, ol, ul, figure {
 body {
 	font: 300 100% var(--base-font-family);
 	color: var(--color-text);
-	-webkit-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%; /* stylelint-disable-line */
+	text-size-adjust: 100%;
 	background-color: var(--color-bg);
 	background-size: 2.5rem;
 }

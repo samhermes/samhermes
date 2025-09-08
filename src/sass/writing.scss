@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Lusitana';
+    font-family: Lusitana;
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/Lusitana-Regular.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'Lusitana';
+    font-family: Lusitana;
     font-style: normal;
     font-weight: 700;
     src: url('../fonts/Lusitana-700.woff2') format('woff2');
@@ -63,7 +63,7 @@
 }
 
 .story-container {
-    font-family: "Lusitana", serif;
+    font-family: Lusitana, serif;
     font-weight: 400;
     font-style: normal;
     margin: 0 auto;
