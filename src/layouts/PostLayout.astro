@@ -19,7 +19,7 @@ const { title, excerpt, date, tags } = Astro.props;
 								<ul class="post-tags" aria-label="Post Tags" role="list">
 									{tags.map((tag) => (
 										<li>
-											<a href={`/category/${tag.toLowerCase()}`}>{tag}</a>
+											<a href={`/category/${tag.replace(/\s+/g, '-').toLowerCase()}`}>{tag}</a>
 										</li>
 									))}
 								</ul>

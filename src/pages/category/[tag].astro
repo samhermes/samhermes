@@ -21,7 +21,7 @@ export async function getStaticPaths() {
     const filteredPosts = allPosts.filter(
       (post: any) => post.data.tags && post.data.tags.includes(tag),
     );
-    const formattedTag = tag.toLowerCase();
+    const formattedTag = tag.replace(/\s+/g, '-').toLowerCase();
     return {
       params: { tag: formattedTag },
       props: { posts: filteredPosts, tagName: tag },
