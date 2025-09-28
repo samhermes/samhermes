@@ -10,9 +10,9 @@ The elements for tabs are very simple. Just an unordered list, links, and `divs`
 
 ```html
 <ul>
-	<li><a id="tab-1" href="#tab-1">Tab 1</a></li>
-	<li><a id="tab-2" href="#tab-2">Tab 2</a></li>
-	<li><a id="tab-3" href="#tab-3">Tab 3</a></li>
+  <li><a id="tab-1" href="#tab-1">Tab 1</a></li>
+  <li><a id="tab-2" href="#tab-2">Tab 2</a></li>
+  <li><a id="tab-3" href="#tab-3">Tab 3</a></li>
 </ul>
 <div id="tab-1-panel"></div>
 <div id="tab-2-panel"></div>
@@ -25,10 +25,10 @@ For the unordered list and links, there are `tablist` and `tab` roles. In additi
 
 ```html
 <ul role="tablist">
-	<li role="presentation">
-		<a id="tab-1" href="tab-1" role="tab">Tab 1</a>
-	</li>
-	...
+  <li role="presentation">
+    <a id="tab-1" href="tab-1" role="tab">Tab 1</a>
+  </li>
+  ...
 ```
 
 For each `div`, there is the `tabpanel` role.
@@ -43,10 +43,10 @@ Next, in a similar way, there are `aria-*` attributes that need to be added to t
 
 ```html
 <ul role="tablist">
-	<li role="presentation">
-		<a id="tab-1" href="tab-1" role="tab" aria-controls="tab-1-panel">Tab 1</a>
-	</li>
-	...
+  <li role="presentation">
+    <a id="tab-1" href="tab-1" role="tab" aria-controls="tab-1-panel">Tab 1</a>
+  </li>
+  ...
 ```
 
 As with `tab` and `tabpanel`, there is a corresponding attribute that goes with `aria-controls`. This is the `aria-labelledby` attribute, which needs to be added to each tab panel. The value of the attribute is the `id` of the corresponding tab.
@@ -61,10 +61,10 @@ On each tab, there is `aria-selected` that can either be true or false. Using Ja
 
 ```html
 <ul role="tablist">
-	<li role="presentation">
-		<a id="tab-1" href="tab-1" role="tab" aria-controls="tab-1-panel" aria-selected="true">Tab 1</a>
-	</li>
-	...
+  <li role="presentation">
+    <a id="tab-1" href="tab-1" role="tab" aria-controls="tab-1-panel" aria-selected="true">Tab 1</a>
+  </li>
+  ...
 ```
 
 Again, much like the `roles` and other ARIA attributes, there is a corresponding attribute for the tab panels. This one is slightly different, which is confusing at first. Each tab panel needs an `aria-hidden` attribute, which is set to `true` by default, and `false` on the currently active tab. It’s the reverse of the `aria-selected` attribute on the tabs, so this tripped me up.

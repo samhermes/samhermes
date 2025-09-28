@@ -25,8 +25,8 @@ I’ve also included an event listener for an `error` event, in case the image f
 ```jsx
 const image = document.querySelector('.container img');
 if ( !image.complete) {
-	image.addEventListener('load', handleImageLoad);
-	image.addEventListener('error', handleImageLoad);
+  image.addEventListener('load', handleImageLoad);
+  image.addEventListener('error', handleImageLoad);
 }
 ```
 
@@ -36,8 +36,8 @@ Now that we have a way to check the image status, and we’re listening for the 
 
 ```jsx
 const handleImageLoad = () => {
-	container.classList.remove('is-loading');
-	image.removeEventListener('load', handleImageLoad)
+  container.classList.remove('is-loading');
+  image.removeEventListener('load', handleImageLoad)
 }
 ```
 

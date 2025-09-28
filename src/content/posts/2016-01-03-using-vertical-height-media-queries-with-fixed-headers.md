@@ -11,14 +11,14 @@ Let's say that the fixed header on a site is 80px tall. Nothing too unruly, but 
 
 ```css
 @media screen and (min-height: 800px) {
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-    body {
-        margin-top: 80px;
-    }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  body {
+    margin-top: 80px;
+  }
 }
 ```
 

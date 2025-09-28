@@ -14,7 +14,7 @@ For my watch task, I had:
 
 ```js
 gulp.task('watch', function () {
-    gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.watch('./sass/**/*.scss', ['sass']);
 });
 ```
 

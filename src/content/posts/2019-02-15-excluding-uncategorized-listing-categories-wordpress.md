@@ -16,22 +16,22 @@ Place this function in your `functions.php` file, or in the commonly-used `templ
 
 ```php
 function custom_get_the_category_list() {
-    $categories = get_the_category();
-    $uncategorized_id = get_cat_ID( 'Uncategorized' );
-    $categories_list = '';
+  $categories = get_the_category();
+  $uncategorized_id = get_cat_ID( 'Uncategorized' );
+  $categories_list = '';
 
-    foreach ( $categories as $category ) {
-        if ( $category->category_parent == $uncategorized_id
-                || $category->cat_ID == $uncategorized_id ) {
-            continue;
-        }
-        $categories_list .=
-            '<li><a href="' . get_category_link( $category->cat_ID ) . '">' .
-            $category->name .
-            '</a></li>';
+  foreach ( $categories as $category ) {
+    if ( $category->category_parent == $uncategorized_id
+          || $category->cat_ID == $uncategorized_id ) {
+      continue;
     }
+    $categories_list .=
+      '<li><a href="' . get_category_link( $category->cat_ID ) . '">' .
+      $category->name .
+      '</a></li>';
+  }
 
-    return '<ul class="post-categories">' . $categories_list . '</ul>';
+  return '<ul class="post-categories">' . $categories_list . '</ul>';
 }
 ```
 

@@ -24,17 +24,17 @@ When working in a custom post type, it’s easy to set a pre-defined set of bloc
 
 ```php
 'template' => array (
-    array( 'core/heading', array(
-        'placeholder' => __( 'Title...', 'my-plugin' ),
-        'level' => 4,
-    ) ),
-    array( 'core/image', array(
-        // Any block atribute can be set as the default.
-        'align' => 'wide',
-    ) ),
-    array( 'core/paragraph', array(
-        'placeholder' => __( 'Bio...', 'my-plugin' ),
-    ) ),
+  array( 'core/heading', array(
+    'placeholder' => __( 'Title...', 'my-plugin' ),
+    'level' => 4,
+  ) ),
+  array( 'core/image', array(
+    // Any block atribute can be set as the default.
+    'align' => 'wide',
+  ) ),
+  array( 'core/paragraph', array(
+    'placeholder' => __( 'Bio...', 'my-plugin' ),
+  ) ),
 ),
 ```
 
@@ -69,15 +69,15 @@ Last but not least, it locks down the blocks using `template_lock`, like Andrew 
 
 ```php
 add_filter( 'allowed_block_types', function( $allowed ) {
-    global $wp_post_types, $post;
-    if ( 'templates/home.php' === get_page_template_slug( $post->ID ) ) {
-        $wp_post_types[ $post->post_type ]->template = [
-            [ 'wcus/homepage-hero' ],
-            [ 'wcus/curated-posts' ],
-            [ 'wcus/curated-staff' ],
-        ];
-        $wp_post_types[ $post->post_type ]->template_lock = 'all';
-    }
+  global $wp_post_types, $post;
+  if ( 'templates/home.php' === get_page_template_slug( $post->ID ) ) {
+    $wp_post_types[ $post->post_type ]->template = [
+      [ 'wcus/homepage-hero' ],
+      [ 'wcus/curated-posts' ],
+      [ 'wcus/curated-staff' ],
+    ];
+    $wp_post_types[ $post->post_type ]->template_lock = 'all';
+  }
 });
 ```
 

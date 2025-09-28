@@ -10,11 +10,11 @@ It's a super easy to add styles for dark mode using `prefers-color-scheme`. A ru
 
 ```css
 .project-link {
-    background: #282a36;
+  background: #282a36;
 
-    @media (prefers-color-scheme: dark) {
-        background: #fff;
-    }
+  @media (prefers-color-scheme: dark) {
+    background: #fff;
+  }
 }
 ```
 
@@ -26,7 +26,7 @@ The rule set for `color-scheme` would look like this, [thank you webkit.org](htt
 
 ```css
 :root {
-    color-scheme: light dark;
+  color-scheme: light dark;
 }
 ```
 

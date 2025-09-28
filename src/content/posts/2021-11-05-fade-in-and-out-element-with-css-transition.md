@@ -8,15 +8,15 @@ Here we have an element that is using `position: absolute`, and is not visible w
 
 ```sass
 .class-name {
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.5s cubic-bezier(0.2, 1, 0.3, 1), visibility 0s 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.2, 1, 0.3, 1), visibility 0s 0.5s;
 
-	&.is-active { /* This could be :hover on a parent element additionally or instead */
-		opacity: 1;
-		visibility: visible;
-		transition: opacity 0.5s cubic-bezier(0.2, 1, 0.3, 1);
-	}
+  &.is-active { /* This could be :hover on a parent element additionally or instead */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+  }
 }
 ```
 

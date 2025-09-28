@@ -48,8 +48,8 @@ Previously, to adjust the max-width of the block editor, it would require an `ed
 
 ```json
 "layout": {
-	"contentSize": "750px",
-	"wideSize": "1200px"
+    "contentSize": "750px",
+    "wideSize": "1200px"
 },
 ```
 
@@ -75,10 +75,10 @@ The very basic structure:
 
 ```json
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
-	"settings": {},
-	"styles": {},
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {},
+  "styles": {},
 }
 ```
 
@@ -90,44 +90,44 @@ This is what I’m currently using to start my projects with. It disables some o
 
 ```json
 {
-    "$schema": "https://schemas.wp.org/trunk/theme.json",
-    "version": 2,
-    "settings": {
-        "color": {
-            "custom": false,
-            "customDuotone": false,
-            "customGradient": false,
-            "defaultGradients": false,
-            "defaultPalette": true
-        },
-        "layout": {
-            "contentSize": "750px",
-            "wideSize": "1200px"
-        },
-        "typography": {
-            "customFontSize": true,
-            "dropCap": false,
-            "fontStyle": false,
-            "fontWeight": false,
-            "letterSpacing": false,
-            "textDecoration": false,
-            "textTransform": false
-        },
-        "blocks": {
-            "core/button": {
-                "border": {
-                    "radius": false
-                }
-            },
-            "core/pullquote": {
-                "border": {
-                    "color": false,
-                    "radius": false,
-                    "style": false,
-                    "width": false
-                }
-            }
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultGradients": false,
+      "defaultPalette": true
+    },
+    "layout": {
+      "contentSize": "750px",
+      "wideSize": "1200px"
+    },
+    "typography": {
+      "customFontSize": true,
+      "dropCap": false,
+      "fontStyle": false,
+      "fontWeight": false,
+      "letterSpacing": false,
+      "textDecoration": false,
+      "textTransform": false
+    },
+    "blocks": {
+      "core/button": {
+        "border": {
+          "radius": false
         }
+      },
+      "core/pullquote": {
+        "border": {
+          "color": false,
+          "radius": false,
+          "style": false,
+          "width": false
+        }
+      }
     }
+  }
 }
 ```

@@ -24,9 +24,9 @@ If you insert a `<form>` element into the dialog, with a `method` attribute of `
 
 ```html
 <dialog>
-	<form method="dialog">
-		<button type="button">Close</button>
-	</form>
+  <form method="dialog">
+    <button type="button">Close</button>
+  </form>
 </dialog>
 ```
 

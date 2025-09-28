@@ -12,6 +12,10 @@
     src: url('../fonts/Lusitana-700.woff2') format('woff2');
 }
 
+:root {
+    --color-text: #1d1d1d;
+}
+
 .type-story {
     .site-header,
     .site-footer {

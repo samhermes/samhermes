@@ -14,7 +14,7 @@ This works well if you have an stable environment in which to do it. If the head
 
 ```js
 var navHeight = document.getElementById('site-header').offsetHeight,
-	page = document.getElementById('page');
+  page = document.getElementById('page');
 
 page.style.paddingTop = navHeight + 'px';
 ```

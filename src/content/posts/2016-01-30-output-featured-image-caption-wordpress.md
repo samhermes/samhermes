@@ -10,7 +10,7 @@ It's relatively easy and well documented to output a featured image, but getting
 $post_thumbnail_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
 
 if ( ! empty( $post_thumbnail_caption ) ) {
-    echo '<p class="featured-image-caption">' . esc_html( $post_thumbnail_caption ) . '</p>';
+  echo '<p class="featured-image-caption">' . esc_html( $post_thumbnail_caption ) . '</p>';
 }
 ```
 

@@ -34,8 +34,8 @@ Now, my editor styles enqueue looks like this:
 
 ```php
 function theme_editor_styles() {
-    add_editor_style( 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,700' );
-    add_editor_style();
+  add_editor_style( 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,700' );
+  add_editor_style();
 }
 add_action( 'after_setup_theme', 'theme_editor_styles' );
 ```
@@ -44,7 +44,8 @@ There is only one last thing to make this work, probably the most important. You
 
 ```php
 function theme_setup() {
-    add_theme_support( 'editor-styles' );
+  add_theme_support( 'editor-styles' );
+}
 add_action( 'after_setup_theme', 'theme_setup' );
 ```
 

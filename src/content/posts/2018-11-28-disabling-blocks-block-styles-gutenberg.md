@@ -10,7 +10,7 @@ First things first, a JavaScript file needs to be enqueued in the Gutenberg edit
 
 ```php
 function namespace_block_editor_scripts() {
-    wp_enqueue_script( 'namespace-core-blocks', 'core-blocks.js', array( 'wp-blocks' ), '', true );
+  wp_enqueue_script( 'namespace-core-blocks', 'core-blocks.js', array( 'wp-blocks' ), '', true );
 }
 add_action( 'enqueue_block_editor_assets', 'namespace_block_editor_scripts' );
 ```
@@ -19,10 +19,10 @@ Inside of `core-blocks.js`, it's fairly simple to disable blocks and block style
 
 ```js
 wp.domReady(() => {
-    wp.blocks.unregisterBlockType('core/verse');
-    wp.blocks.unregisterBlockType('core/cover');
+  wp.blocks.unregisterBlockType('core/verse');
+  wp.blocks.unregisterBlockType('core/cover');
 
-    wp.blocks.unregisterBlockStyle('core/separator', 'dots');
+  wp.blocks.unregisterBlockStyle('core/separator', 'dots');
 }
 ```
 

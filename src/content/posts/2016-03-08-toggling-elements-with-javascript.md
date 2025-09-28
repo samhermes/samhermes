@@ -11,6 +11,6 @@ For my site, I needed a toggle for the menu on small screens. I used the followi
 ```js
 var menu = document.querySelector('.toggle');
 menu.onclick = function() {
-	menu.classList.toggle('open');
+  menu.classList.toggle('open');
 }
 ```

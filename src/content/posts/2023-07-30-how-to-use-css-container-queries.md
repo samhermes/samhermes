@@ -26,7 +26,7 @@ When you define a containment context, you use the `container-type` property and
 
 ```css
 .container-element {
-	container-type: inline-size;
+  container-type: inline-size;
 }
 ```
 
@@ -36,9 +36,9 @@ Once you've set the containment context, you can use the new `@container` on any
 
 ```css
 @container (min-width: 30em) {
-	.child-element {
-		font-size: 2rem;
-	}
+  .child-element {
+    font-size: 2rem;
+  }
 }
 ```
 
@@ -48,8 +48,8 @@ If you've got a lot of containers, naming them is a nice way to clearly specify 
 
 ```css
 .container-element {
-	container-type: inline-size;
-	container-name: card;
+  container-type: inline-size;
+  container-name: card;
 }
 ```
 
@@ -59,9 +59,9 @@ Once you've got it named, you can reference it directly in the query.
 
 ```css
 @container card (min-width: 50em) {
-	.child-element {
-		font-size: 3rem;
-	}
+  .child-element {
+    font-size: 3rem;
+  }
 }
 ```
 

@@ -15,12 +15,12 @@ Whether it's through a CMS or hand-coded, accordions do require some special mar
 
 ```html
 <div class="accordion">
-	<div class="accordion-heading">
-		<h3>Accordion heading</h3>
-	</div>
-	<div class="accordion-content">
-		<p>Accordion content</p>
-	</div>
+    <div class="accordion-heading">
+        <h3>Accordion heading</h3>
+    </div>
+    <div class="accordion-content">
+        <p>Accordion content</p>
+    </div>
 </div>
 ```
 
@@ -44,9 +44,9 @@ Next, we want to grab the heading and content elements, to get those ready for m
 
 ```js
 const elements = {
-	heading: accordion.querySelector('.accordion-heading'),
-	content: accordion.querySelector('.accordion-content'),
-	headingChildren: accordion.querySelector('.accordion-heading > *')
+    heading: accordion.querySelector('.accordion-heading'),
+    content: accordion.querySelector('.accordion-content'),
+    headingChildren: accordion.querySelector('.accordion-heading > *')
 }
 ```
 
@@ -112,15 +112,15 @@ Starting with a function to open the accordion, we pass in the accordion element
 
 ```js
 const openAccordion = (accordion, elements) => {
-    const contentHeight = elements.content.scrollHeight
+  const contentHeight = elements.content.scrollHeight
 
-    elements.content.style.height = contentHeight + 'px'
-    elements.content.addEventListener('transitionend', function(){
-        elements.content.removeEventListener('transitionend', arguments.callee)
-        elements.content.style.height = 'auto'
-    })
+  elements.content.style.height = contentHeight + 'px'
+  elements.content.addEventListener('transitionend', function(){
+    elements.content.removeEventListener('transitionend', arguments.callee)
+    elements.content.style.height = 'auto'
+  })
 
-    accordion.classList.add('is-active')
+  accordion.classList.add('is-active')
 }
 ```
 
@@ -130,9 +130,9 @@ To accompany this, some styles are needed. The height needs to be set to `0` by 
 
 ```css
 .accordion-content {
-	overflow: hidden;
-	transition: height 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
-	height: 0;
+  overflow: hidden;
+  transition: height 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  height: 0;
 }
 ```
 
@@ -142,22 +142,22 @@ Where we previously set the height to zero after the animation completed, this t
 
 ```js
 const closeAccordion = (accordion, elements) => {
-    const contentHeight = elements.content.scrollHeight
-    const elementTransition = elements.content.style.transition
-    elements.content.style.transition = ''
+  const contentHeight = elements.content.scrollHeight
+  const elementTransition = elements.content.style.transition
+  elements.content.style.transition = ''
 
+  requestAnimationFrame(() => {
+    elements.content.style.height = contentHeight + 'px'
+    elements.content.style.transition = elementTransition
     requestAnimationFrame(() => {
-        elements.content.style.height = contentHeight + 'px'
-        elements.content.style.transition = elementTransition
-        requestAnimationFrame(() => {
-            elements.content.style.height = 0 + 'px'
-        })
+      elements.content.style.height = 0 + 'px'
     })
+  })
 
-    accordion.addEventListener('transitionend', function(){
-        accordion.removeEventListener('transitionend', arguments.callee)
-        accordion.classList.remove('is-active')
-    })
+  accordion.addEventListener('transitionend', function(){
+    accordion.removeEventListener('transitionend', arguments.callee)
+    accordion.classList.remove('is-active')
+  })
 }
 ```
 

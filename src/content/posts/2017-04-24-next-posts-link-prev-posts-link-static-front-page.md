@@ -12,11 +12,11 @@ The issue is that the `paged` query variable isn’t called `paged` on the homep
 global $paged;
 
 if ( get_query_var( 'paged' ) ) {
-	$paged = get_query_var( 'paged' );
+  $paged = get_query_var( 'paged' );
 } elseif ( get_query_var( 'page' ) ) {
-	$paged = get_query_var( 'page' );
+  $paged = get_query_var( 'page' );
 } else {
-	$paged = 1;
+  $paged = 1;
 }
 ```
 

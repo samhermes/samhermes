@@ -21,8 +21,7 @@
 
     li {
         align-items: center;
-        border: 1px solid var(--border-color);
-        background-color: rgb(255 255 255 / 90%);
+        background-color: rgb(255 255 255 / 5%);
         border-radius: 0.625rem;
         padding: 1.5rem;
     }
@@ -58,6 +57,7 @@
 
     .project-desc {
         margin-bottom: 2rem;
+        color: #AE9147;
     }
 
     .project-github {

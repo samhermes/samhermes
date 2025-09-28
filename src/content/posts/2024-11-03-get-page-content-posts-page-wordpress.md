@@ -18,6 +18,6 @@ Next, at the spot in the template where you’d like to display the content, use
 
 ```php
 if ( $posts_page_content && $current_page === 1 ) {
-	echo '<div class="page-content">' . wp_kses_post( $posts_page_content ) . '</div>';
+  echo '<div class="page-content">' . wp_kses_post( $posts_page_content ) . '</div>';
 }
 ```

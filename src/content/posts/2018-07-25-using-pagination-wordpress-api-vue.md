@@ -24,8 +24,8 @@ Now that only the currently visible books are being held in state, pagination ha
 
 ```js
 watch: {
-    ...
-    pageNumber: 'fetchData'
+  ...
+  pageNumber: 'fetchData'
 }
 ```
 
@@ -35,8 +35,8 @@ A small hiccup that I encountered was that I needed to reset `pageNumber` to 1 w
 
 ```js
 currentStatus: function () {
-    this.pageNumber = 1
-    this.fetchData()
+  this.pageNumber = 1
+  this.fetchData()
 },
 ```
 

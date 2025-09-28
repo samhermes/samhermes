@@ -20,8 +20,8 @@ Within the forEach, it’s simple to create a new marker for each point in the `
 
 ```js
 new mapboxgl.Marker()
-    .setLngLat(marker.geometry.coordinates)
-    .addTo(map);
+  .setLngLat(marker.geometry.coordinates)
+  .addTo(map);
 ```
 
 The store locator example, like all of the others provided by Mapbox, uses a custom icon for each marker. I prefer the default Mapbox marker style, so the part of the demo where it creates an empty div for each marker is unnecessary, and actually removes the default icon when set in the `new mapboxgl.marker` call.
@@ -32,16 +32,16 @@ Above the `new mapboxgl.Marker()` call above, building a popup is done very simi
 
 ```js
 var popup = new mapboxgl.Popup()
-    .setText(marker.properties.title);
+  .setText(marker.properties.title);
 ```
 
 With a popup created, a slight modification to the marker setup will ensure that the popup is attached to the appropriate marker.
 
 ```js
 new mapboxgl.Marker()
-    .setLngLat(marker.geometry.coordinates)
-    .setPopup(popup)
-    .addTo(map);
+  .setLngLat(marker.geometry.coordinates)
+  .setPopup(popup)
+  .addTo(map);
 ```
 
 An archived, working version of this code can be [seen on Github](https://github.com/samhermes/samhermes.github.io/blob/e03be05ef9544bf4f5bc7d13b93c9ac709354cd9/js/travel-map.js), where I customize the popup styles a bit.

@@ -18,17 +18,17 @@ var downButton = document.querySelector('.down-button');
 
 // attach event handler to the button element
 downButton.addEventListener('click', function () {
-    // get the pixel value of how much the user has already scrolled
-    var alreadyScrolled = window.scrollY;
-    // get the window's height, subtract how much the user has scrolled
-    var windowHeight = window.innerHeight - alreadyScrolled;
+  // get the pixel value of how much the user has already scrolled
+  var alreadyScrolled = window.scrollY;
+  // get the window's height, subtract how much the user has scrolled
+  var windowHeight = window.innerHeight - alreadyScrolled;
 
-    // smoothly scroll down the page by calculated amount
-    window.scrollBy({
-        left: 0,
-        top: windowHeight,
-        behavior: 'smooth'
-    });
+  // smoothly scroll down the page by calculated amount
+  window.scrollBy({
+    left: 0,
+    top: windowHeight,
+    behavior: 'smooth'
+  });
 });
 ```
 

@@ -14,9 +14,9 @@ This part was super easy! I’m familiar with node, and all that entails, so ins
 
 ```js
 module.exports = {
-    dir: {
-        layouts: "_layouts"
-    }
+  dir: {
+    layouts: "_layouts"
+  }
 };
 ```
 
@@ -24,8 +24,8 @@ Now that the layouts were looking in the right place, I stumbled around trying t
 
 ```js
 {
-    "layout": "post",
-    "permalink": "/posts/{{ page.fileSlug }}/"
+  "layout": "post",
+  "permalink": "/posts/{{ page.fileSlug }}/"
 }
 ```
 
@@ -35,7 +35,7 @@ The next thing that I tried was explictly defining my collections in the configu
 
 ```js
 config.addCollection('posts', collection =>
-	collection.getFilteredByGlob('_posts/*.md')
+  collection.getFilteredByGlob('_posts/*.md')
 )
 ```
 
@@ -71,7 +71,7 @@ The last little bit was to connect updates to sass files to BrowserSync, so that
 
 ```js
 config.setBrowserSyncConfig({
-	files: './_site/css/**/*.css'
+  files: './_site/css/**/*.css'
 });
 ```
 

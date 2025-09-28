@@ -15,7 +15,7 @@ Once that runs, it will show up in package.json as:
 
 ```json
 "dependencies": {
-	"alexander": "github:samhermes/alexander"
+  "alexander": "github:samhermes/alexander"
 }
 ```
 
@@ -31,6 +31,6 @@ Now, package.json reflected the tagged version, and I'll need to update to a new
 
 ```json
 "dependencies": {
-	"alexander": "github:samhermes/alexander#1.0.3"
+  "alexander": "github:samhermes/alexander#1.0.3"
 }
 ```

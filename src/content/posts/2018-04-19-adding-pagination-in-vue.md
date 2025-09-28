@@ -62,8 +62,8 @@ The final bit is to add the previous and next page button to the template. This 
 
 ```html
 <nav v-if="pageCount >= 1" class="book-list-nav">
-	<button type="button" :disabled="pageNumber === 0" v-on:click="prevPage">Previous</button>
-	<button type="button" :disabled="pageNumber >= pageCount" v-on:click="nextPage">Next</button>
+  <button type="button" :disabled="pageNumber === 0" v-on:click="prevPage">Previous</button>
+  <button type="button" :disabled="pageNumber >= pageCount" v-on:click="nextPage">Next</button>
 </nav>
 ```
 

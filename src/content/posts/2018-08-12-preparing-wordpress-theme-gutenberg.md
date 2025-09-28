@@ -14,7 +14,7 @@ This is fairly similar to the `wp_enqueue_scripts` action that is typically used
 
 ```php
 function halle_block_editor_styles() {
-    wp_enqueue_style( 'halle-editor-fonts', 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,700|Poly:400,400i' );
+  wp_enqueue_style( 'halle-editor-fonts', 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,700|Poly:400,400i' );
 }
 add_action( 'enqueue_block_editor_assets', 'halle_block_editor_styles' );
 ```
@@ -27,7 +27,7 @@ Taking a cue from the [Gutenberg Handbook](https://wordpress.org/gutenberg/handb
 
 ```css
 .edit-post-visual-editor {
-    font-family: 'Poly', serif;
+  font-family: 'Poly', serif;
 }
 ```
 
@@ -38,7 +38,7 @@ Although the cascade works fairly well, both the post title and paragraphs need 
 ```css
 .editor-post-title__input,
 p {
-    font-family: 'Poly', serif;
+  font-family: 'Poly', serif;
 }
 ```
 

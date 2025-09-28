@@ -14,7 +14,7 @@ We begin by enabling grid on the parent element with a new value for the display
 
 ```css
 .two-column {
-	display: grid;
+  display: grid;
 }
 ```
 
@@ -22,8 +22,8 @@ From there, we need to decide the widths for each column. For a sidebar, we coul
 
 ```css
 .two-column {
-	display: grid;
-	grid-template-columns: 15em 1fr;
+  display: grid;
+  grid-template-columns: 15em 1fr;
 }
 ```
 
@@ -33,8 +33,8 @@ We can use the fraction unit to develop our own grid system of sorts, and the po
 
 ```css
 .two-column {
-	display: grid;
-	grid-template-columns: 10fr 4fr;
+  display: grid;
+  grid-template-columns: 10fr 4fr;
 }
 ```
 
@@ -42,10 +42,10 @@ If we’re on a fairly large screen, this layout probably looks great. However, 
 
 ```css
 @media screen and (min-width: 37.5em) {
-	.two-column {
-		display: grid;
-		grid-template-columns: 15em 1fr;
-	}
+  .two-column {
+    display: grid;
+    grid-template-columns: 15em 1fr;
+  }
 }
 ```
 
@@ -55,9 +55,9 @@ The last piece of this layout is the most exciting. Whereas we needed to perform
 
 ```css
 .two-column {
-	display: grid;
-	grid-template-columns: 15em 1fr;
-	grid-gap: 5em;
+  display: grid;
+  grid-template-columns: 15em 1fr;
+  grid-gap: 5em;
 }
 ```
 

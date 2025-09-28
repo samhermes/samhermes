@@ -11,11 +11,11 @@ In the block.json file, we want to add at least one new attribute for storing th
 
 ```json
 "attributes": {
-	...
-	"mediaId": {
-		"type": "number",
-		"default": 0
-	}
+  ...
+  "mediaId": {
+    "type": "number",
+    "default": 0
+  }
 }
 ```
 
@@ -23,13 +23,13 @@ If you’re using `render.php` to display the image on the front end, you could 
 
 ```json
 "attributes": {
-	...
-	"mediaURL": {
-		"type": "string"
-	},
-	"mediaAlt": {
-		"type": "string"
-	}
+  ...
+  "mediaURL": {
+    "type": "string"
+  },
+  "mediaAlt": {
+    "type": "string"
+  }
 }
 ```
 
@@ -49,12 +49,12 @@ This component could be placed in the main content area, or you could add it to 
 
 ```jsx
 {mediaId ? (
-	// If an image has been selected, display here using mediaUrl
+  // If an image has been selected, display here using mediaUrl
 ) : (
-	<MediaPlaceholder
-	  onSelect={onSelectMedia}
-	  allowedTypes={['image']}
-	/>
+  <MediaPlaceholder
+    onSelect={onSelectMedia}
+    allowedTypes={['image']}
+  />
 )}
 ```
 
@@ -66,9 +66,9 @@ To use the MediaPlaceholder component, we need to handle what happens when a use
 
 ```jsx
 const onSelectMedia = (media) => {
-	setAttributes({
-		mediaId: media.id,
-	});
+  setAttributes({
+    mediaId: media.id,
+  });
 };
 ```
 
@@ -88,17 +88,17 @@ If we want to get the `large` image size, we could check for its existence and s
 
 ```jsx
 const src =
-	media.sizes?.large?.url ||
-	media.media_details?.sizes?.large?.source_url ||
-	media.url;
+  media.sizes?.large?.url ||
+  media.media_details?.sizes?.large?.source_url ||
+  media.url;
 ```
 
 We could then update the `setAttributes` function to store that value:
 
 ```jsx
 setAttributes({
-	mediaId: media.id,
-	mediaUrl: src,
+  mediaId: media.id,
+  mediaUrl: src,
 });
 ```
 
@@ -118,37 +118,37 @@ Here’s the entire Edit function that we’ve created, with just the media cont
 import { useBlockProps, MediaPlaceholder, MediaUpload } from '@wordpress/block-editor';
 
 export default function Edit({
-	attributes: {
-		mediaId,
-		mediaUrl,
-		mediaAlt,
-	},
-	setAttributes,
+  attributes: {
+    mediaId,
+    mediaUrl,
+    mediaAlt,
+  },
+  setAttributes,
 }) {
-	const onSelectMedia = (media) => {
-		const src =
-			media.sizes?.large?.url ||
-			media.media_details?.sizes?.large?.source_url ||
-			media.url;
+  const onSelectMedia = (media) => {
+    const src =
+      media.sizes?.large?.url ||
+      media.media_details?.sizes?.large?.source_url ||
+      media.url;
 
-		setAttributes({
-			mediaId: media.id,
-			mediaUrl: src,
-			mediaAlt: media.alt
-		});
-	};
+    setAttributes({
+      mediaId: media.id,
+      mediaUrl: src,
+      mediaAlt: media.alt
+    });
+  };
 
-	return (
-		<div {...useBlockProps()}>
-			{mediaUrl ? (
-				// If an image has been selected, display here
-			) : (
-				<MediaPlaceholder
-					onSelect={onSelectMedia}
-					allowedTypes={['image']}
-				/>
-			)}
-		</div>
-	);
+  return (
+    <div {...useBlockProps()}>
+      {mediaUrl ? (
+        // If an image has been selected, display here
+      ) : (
+        <MediaPlaceholder
+          onSelect={onSelectMedia}
+          allowedTypes={['image']}
+        />
+      )}
+    </div>
+  );
 }
 ```
