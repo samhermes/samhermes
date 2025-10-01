@@ -4,6 +4,7 @@
 :root {
 	--base-font-family: 'Figtree', 'Helvetica Neue', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 	--color-bg: #0f2621;
+	--color-bg-light: #192f2a;
 	--color-text: #ffffffde;
 	--color-code-bg: #191919;
 	--border-color: #a888364f;
@@ -11,14 +12,14 @@
 	--color-extra-light: #f7f7f7;
 	--border-radius: 0.5rem;
 	--site-max: 90rem;
-	--site-edge: 1.5rem;
+	--site-edge: 1.2rem;
 
 	@media screen and (min-width: 37.5em) {
-		--site-edge: 2.5rem;
+		--site-edge: 2rem;
 	}
 
 	@media screen and (min-width: 60em) {
-		--site-edge: 3.5rem;
+		--site-edge: 3rem;
 	}
 }
 

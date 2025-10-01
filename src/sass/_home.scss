@@ -35,8 +35,7 @@
 }
 
 .home-intro {
-    padding: 0 0 3rem;
-    border-bottom: 1px solid var(--border-color);
+    padding: 0 0 4rem;
 
     .intro {
         margin: 0 auto;
@@ -61,27 +60,28 @@
 }
 
 .home-contain {
-    padding-top: 4rem;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    margin: 0 auto;
+    max-width: var(--site-max);
+    width: calc(100% - (var(--site-edge) * 2));
+    gap: 1rem;
 
     @media screen and (min-width: 37.5em) {
-        gap: 5rem;
+        gap: 1.5rem;
     }
 }
 
 .home-posts,
 .home-projects,
 .home-writing {
-    padding: 0 0 4rem;
+    background-color: var(--color-bg-light);
+    border: 1px solid #ffffff0f;
+    border-radius: 0.7rem;
+    padding: 1.5rem;
 
     @media screen and (min-width: 37.5em) {
-        padding-bottom: 5rem;
-    }
-
-    &:not(:last-child) {
-        border-bottom: 1px solid var(--border-color);
+        padding: 2.5rem 2.8rem;
     }
 
     .wrapper {
@@ -89,7 +89,6 @@
         gap: 2rem;
         margin: 0 auto;
         max-width: var(--site-max);
-        width: calc(100% - (var(--site-edge) * 2));
 
         @media screen and (min-width: 60em) {
             gap: 5rem;
@@ -133,15 +132,26 @@
     .post-list {
         margin: 0 0 2rem;
 
-        >li {
+        > li {
             padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1.5px solid var(--border-color);
             margin-bottom: 2rem;
         }
+    }
+}
 
-        .post-meta {
-            color: #AE9147;
-        }
+.home-projects {
+    background-color: transparent;
+    border-width: 0;
+    padding: 5rem 0;
+
+    .wrapper {
+        grid-template-columns: none;
+        grid-gap: 0;
+    }
+
+    .home-section-header {
+        margin-bottom: 2rem;
     }
 }
 
@@ -152,9 +162,23 @@
 
     .project-list {
         margin-bottom: 2rem;
+        grid-template-columns: 1fr;
+
+        @media screen and (min-width: 48em) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        li {
+            background-color: var(--color-bg-light);
+            border: 1px solid #ffffff0f;
+
+            @media screen and (min-width: 48em) {
+                padding: 2rem;
+            }
+        }
     }
 }
 
 .home-writing {
-    padding-bottom: 6rem;
+    margin-bottom: 4rem;
 }

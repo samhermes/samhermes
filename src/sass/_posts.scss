@@ -6,7 +6,7 @@
   h2 {
     position: sticky;
     top: 0;
-    background: var(--color-bg);
+    background-color: var(--color-bg-light);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 0 0.75rem;
     margin: 0;
@@ -75,7 +75,7 @@
 }
 
 .post-meta {
-  color: #9d8340ed;
+  color: #BCA15C;
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
