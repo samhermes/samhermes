@@ -1,13 +1,12 @@
 ---
 import SiteLayout from "./SiteLayout.astro";
-const { title, frontmatter } = Astro.props;
-const pageTitle = title ?? frontmatter.title;
+const { frontmatter } = Astro.props;
 ---
 
-<SiteLayout title={pageTitle}>
+<SiteLayout title={frontmatter.title}>
 	<div class="page-container">
 		<header class="page-header">
-			<h1 class="page-title">{pageTitle}</h1>
+			<h1 class="page-title">{frontmatter.title}</h1>
 		</header>
 
 		<div class="page-content-contain">

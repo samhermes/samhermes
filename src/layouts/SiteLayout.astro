@@ -1,15 +1,13 @@
 ---
 import PrideIcon from "../img/progress.svg";
 import "../sass/main.scss";
-const { title, excerpt, type, series, background, frontmatter } = Astro.props;
-const pageTitle = title ?? frontmatter?.title;
-const pageDesc = excerpt ?? frontmatter?.excerpt;
+const { title, excerpt, type, series, background } = Astro.props;
 const path = Astro.url.pathname;
-const metaTitle = `${path !== "/" ? `${pageTitle} - ` : ""}${series ? `${series} - ` : ""}Sam Hermes`;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const metaTitle = `${path !== "/" ? `${title} - ` : ""}${series ? `${series} - ` : ""}Sam Hermes`;
+const canonicalURL = new URL(path, Astro.site);
 const currentYear = new Date().getFullYear();
-const pageSlug = pageTitle
-	? `page-${pageTitle.toLowerCase().replace(/\s+/g, "-")}`
+const pageSlug = title
+	? `page-${title.toLowerCase().replace(/\s+/g, "-")}`
 	: "";
 const typeSlug = type ? ` type-${type}` : "";
 const backgroundColor = background ? `background-color: #${background}` : null;
@@ -21,7 +19,7 @@ const backgroundColor = background ? `background-color: #${background}` : null;
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<title>{metaTitle}</title>
-		{pageDesc ? <meta name="description" content={pageDesc} /> : null}
+		{excerpt ? <meta name="description" content={excerpt} /> : null}
 
 		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
