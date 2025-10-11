@@ -2,11 +2,12 @@
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
 import PostLayout from "../../layouts/PostLayout.astro";
+import { slugRewrite } from "../../utils/slugRewrite";
 
 export async function getStaticPaths() {
 	const posts = await getCollection("posts");
-	return posts.map((post) => ({
-		params: { slug: post.id.slice(11) },
+	return posts.map(slugRewrite).map((post) => ({
+		params: { slug: post.slug },
 		props: { post },
 	}));
 }
