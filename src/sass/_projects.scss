@@ -1,114 +1,114 @@
 .project-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-gap: 2rem;
-    grid-auto-rows: 1fr;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 2rem;
+  grid-auto-rows: 1fr;
+
+  @media screen and (min-width: 37.5em) {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: max-content;
+  }
+
+  .page-projects & {
+    margin: 0 0 4rem;
 
     @media screen and (min-width: 37.5em) {
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: max-content;
+      margin-bottom: 5rem;
+    }
+  }
+
+  li {
+    align-items: center;
+    border: 1px solid rgb(255 255 255 / 15%);
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+  }
+
+  .project-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-title {
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0 0 0.5rem;
+
+    @media screen and (min-width: 28.125em) {
+      font-size: 1.45em;
     }
 
-    .page-projects & {
-        margin: 0 0 4rem;
-
-        @media screen and (min-width: 37.5em) {
-            margin-bottom: 5rem;
-        }
+    @media screen and (min-width: 37.5em) {
+      font-size: 1.7em;
     }
 
-    li {
-        align-items: center;
-        border: 1px solid rgb(255 255 255 / 15%);
-        border-radius: 0.625rem;
-        padding: 1.5rem;
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
 
-    .project-info {
-        display: flex;
-        flex-direction: column;
+  .project-desc {
+    margin-bottom: 2rem;
+    color: #AE9147;
+  }
+
+  .project-github {
+    width: 1.7rem;
+    display: block;
+    color: inherit;
+    margin-top: auto;
+
+    svg {
+      width: 1.7rem;
+      height: auto;
+      display: block;
+      transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
+      will-change: opacity;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
-
-    .project-title {
-        font-size: 1.3em;
-        font-weight: 400;
-        line-height: 1.25;
-        margin: 0 0 0.5rem;
-
-        @media screen and (min-width: 28.125em) {
-          font-size: 1.45em;
-        }
-
-        @media screen and (min-width: 37.5em) {
-          font-size: 1.7em;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    .project-desc {
-        margin-bottom: 2rem;
-        color: #AE9147;
-    }
-
-    .project-github {
-        width: 1.7rem;
-        display: block;
-        color: inherit;
-        margin-top: auto;
-
-        svg {
-            width: 1.7rem;
-            height: auto;
-            display: block;
-            transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
-            will-change: opacity;
-
-            &:hover {
-                opacity: 0.5;
-            }
-        }
-    }
+  }
 }
 
 .past-project-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-    li {
-        margin-bottom: 2rem;
+  li {
+    margin-bottom: 2rem;
+  }
+
+  .project-title {
+    font-weight: 400;
+    margin: 0 0 0.25rem;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
-
-    .project-title {
-        font-weight: 400;
-        margin: 0 0 0.25rem;
-
-        a {
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
+  }
 }
 
 .past-project-heading {
-    font-size: 1.3em;
-    font-weight: 400;
-    margin: 0 0 3rem;
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: 0 0 3rem;
 
-    @media screen and (min-width: 37.5em) {
-      font-size: 1.5em;
-    }
+  @media screen and (min-width: 37.5em) {
+    font-size: 1.5em;
+  }
 }

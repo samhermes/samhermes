@@ -5,11 +5,11 @@ import PostLayout from "../../layouts/PostLayout.astro";
 import { slugRewrite } from "../../utils/slugRewrite";
 
 export async function getStaticPaths() {
-	const posts = await getCollection("posts");
-	return posts.map(slugRewrite).map((post) => ({
-		params: { slug: post.slug },
-		props: { post },
-	}));
+  const posts = await getCollection("posts");
+  return posts.map(slugRewrite).map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
 }
 
 const { post } = Astro.props;
@@ -17,5 +17,5 @@ const { Content } = await render(post);
 ---
 
 <PostLayout {...post.data}>
-	<Content />
+  <Content />
 </PostLayout>

@@ -3,48 +3,48 @@ import { getCollection } from "astro:content";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import Post from "../../components/Post.astro";
 const posts = (await getCollection("posts")).sort(
-	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 const years = [
-	...new Set(
-		posts
-			.map((post: any) => post.data.date.getFullYear())
-			.flat()
-			.filter(Boolean),
-	),
+  ...new Set(
+    posts
+      .map((post: any) => post.data.date.getFullYear())
+      .flat()
+      .filter(Boolean),
+  ),
 ];
 ---
 
 <SiteLayout title="Posts">
-	<div class="page-container">
-		<header class="page-header">
-			<h1 class="page-title">Posts</h1>
-		</header>
+  <div class="page-container">
+    <header class="page-header">
+      <h1 class="page-title">Posts</h1>
+    </header>
 
-		<div class="page-content-contain">
-			{
-				years.map((year) => {
-					const headingClass =
-						year === new Date().getFullYear()
-							? "screen-reader-text"
-							: "posts-subheading";
-					const yearPosts = posts.filter(
-						(post) => post.data.date.getFullYear() === year,
-					);
-					return (
-						<div class="year-group">
-							<h2 class={headingClass} id={`${year}-ref`}>
-								{year}
-							</h2>
-							<ul class="post-list" role="list" aria-labelledby={`${year}-ref`}>
-								{yearPosts.map((post) => (
-									<Post post={post} />
-								))}
-							</ul>
-						</div>
-					);
-				})
-			}
-		</div>
-	</div>
+    <div class="page-content-contain">
+      {
+        years.map((year) => {
+          const headingClass =
+            year === new Date().getFullYear()
+              ? "screen-reader-text"
+              : "posts-subheading";
+          const yearPosts = posts.filter(
+            (post) => post.data.date.getFullYear() === year,
+          );
+          return (
+            <div class="year-group">
+              <h2 class={headingClass} id={`${year}-ref`}>
+                {year}
+              </h2>
+              <ul class="post-list" role="list" aria-labelledby={`${year}-ref`}>
+                {yearPosts.map((post) => (
+                  <Post post={post} />
+                ))}
+              </ul>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
 </SiteLayout>

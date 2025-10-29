@@ -12,70 +12,70 @@ dl, dd, ol, ul, figure {
 }
 
 body {
-	font: 300 100% var(--base-font-family);
-	color: var(--color-text);
-	-webkit-text-size-adjust: 100%; /* stylelint-disable-line */
-	text-size-adjust: 100%;
-	background-color: var(--color-bg);
-	background-size: 2.5rem;
+  font: 300 100% var(--base-font-family);
+  color: var(--color-text);
+  -webkit-text-size-adjust: 100%; /* stylelint-disable-line */
+  text-size-adjust: 100%;
+  background-color: var(--color-bg);
+  background-size: 2.5rem;
 }
 
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
-	margin-bottom: 1rem;
-	overflow-wrap: break-word;
+  margin-bottom: 1rem;
+  overflow-wrap: break-word;
 }
 
 img {
-	max-width: 100%;
-	vertical-align: middle;
-	height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
 }
 
 ul, ol {
-	margin-left: 1.8em;
+  margin-left: 1.8em;
 }
 
 li {
-	> ul,
-	> ol {
-		margin-bottom: 0;
-	}
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 a {
-	color: var(--color-text);
-	text-decoration: none;
+  color: var(--color-text);
+  text-decoration: none;
 
-	&:hover {
-		color: var(--color-text);
-	}
+  &:hover {
+    color: var(--color-text);
+  }
 }
 
 blockquote {
-	border-left: 0.25em solid var(--color-text);
-	padding-left: 1.3rem;
-	font-style: italic;
+  border-left: 0.25em solid var(--color-text);
+  padding-left: 1.3rem;
+  font-style: italic;
 
-	> :last-child {
-		margin-bottom: 0;
-	}
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 .screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }

@@ -1,149 +1,149 @@
 @font-face {
-    font-family: Lusitana;
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/Lusitana-Regular.woff2') format('woff2');
+  font-family: Lusitana;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Lusitana-Regular.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: Lusitana;
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/Lusitana-700.woff2') format('woff2');
+  font-family: Lusitana;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Lusitana-700.woff2') format('woff2');
 }
 
 :root {
-    --color-text: #1d1d1d;
+  --color-text: #1d1d1d;
 }
 
 .type-story {
-    .site-header,
-    .site-footer {
-        color: var(--color-text);
+  .site-header,
+  .site-footer {
+    color: var(--color-text);
+  }
+
+  .site-header {
+    border-bottom: 1px solid #0000001c;
+  }
+
+  .site-footer {
+    border-top: 1px solid #0000001c;
+  }
+
+  .page {
+    margin: 0 auto;
+    max-width: var(--site-max);
+    width: calc(100% - (var(--site-edge) * 2));
+  }
+
+  .breadcrumbs {
+    margin-top: 0.9rem;
+
+    @media screen and (min-width: 60em) {
+      margin-top: 1.25rem;
     }
 
-    .site-header {
-        border-bottom: 1px solid #0000001c;
+    ol {
+      list-style: none;
+      display: inline-flex;
+      margin: 0;
+      font-size: 0.875rem;
+      font-weight: 400;
     }
 
-    .site-footer {
-        border-top: 1px solid #0000001c;
-    }
-
-    .page {
-        margin: 0 auto;
-        max-width: var(--site-max);
-        width: calc(100% - (var(--site-edge) * 2));
-    }
-
-    .breadcrumbs {
-        margin-top: 0.9rem;
-
-        @media screen and (min-width: 60em) {
-            margin-top: 1.25rem;
+    li {
+      &:not(:last-child) {
+        &::after {
+          content: '/';
+          margin: 0 1rem;
         }
+      }
 
-        ol {
-            list-style: none;
-            display: inline-flex;
-            margin: 0;
-            font-size: 0.875rem;
-            font-weight: 400;
-        }
-
-        li {
-            &:not(:last-child) {
-                &::after {
-                    content: '/';
-                    margin: 0 1rem;
-                }
-            }
-
-            a:hover {
-                text-decoration: underline;
-            }
-        }
+      a:hover {
+        text-decoration: underline;
+      }
     }
+  }
 }
 
 .story-container {
-    font-family: Lusitana, serif;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0 auto;
-    max-width: 42rem;
-    padding: 3rem 0 7rem;
+  font-family: Lusitana, serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 auto;
+  max-width: 42rem;
+  padding: 3rem 0 7rem;
 
-    @media screen and (min-width: 62.5em) {
-        padding: 3rem 0 10rem;
-    }
+  @media screen and (min-width: 62.5em) {
+    padding: 3rem 0 10rem;
+  }
 }
 
 .story-content {
+  p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-indent: 2em;
+
+    @media screen and (min-width: 37.5em) {
+      font-size: 1.4rem;
+    }
+  }
+
+  hr {
+    margin: 4rem auto;
+    border: 0;
+    border-top: 1px solid #000;
+    width: 25%;
+  }
+
+  .character-description {
+    margin: 2rem 0;
+
     p {
-        font-size: 1.125rem;
-        line-height: 1.6;
-        margin-bottom: 0;
-        text-indent: 2em;
-
-        @media screen and (min-width: 37.5em) {
-            font-size: 1.4rem;
-        }
+      text-indent: 0;
     }
-
-    hr {
-        margin: 4rem auto;
-        border: 0;
-        border-top: 1px solid #000;
-        width: 25%;
-    }
-
-    .character-description {
-        margin: 2rem 0;
-
-        p {
-            text-indent: 0;
-        }
-    }
+  }
 }
 
 .story-nav {
-    display: flex;
-    gap: 2rem;
-    margin-top: 5rem;
-    font-family: var(--base-font-family);
+  display: flex;
+  gap: 2rem;
+  margin-top: 5rem;
+  font-family: var(--base-font-family);
 
-    > * {
-        width: 50%;
-        border-left: 1px solid #0000001c;
-        padding-left: 1rem;
+  > * {
+    width: 50%;
+    border-left: 1px solid #0000001c;
+    padding-left: 1rem;
 
-        &:hover {
-            .story-title {
-                text-decoration: underline;
-            }
-        }
-
-        a {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
+    &:hover {
+      .story-title {
+        text-decoration: underline;
+      }
     }
 
-    .story-nav-next {
-        margin-left: auto;
+    a {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
     }
+  }
 
-    p {
-        text-indent: 0;
-        font-size: 1.125rem;
-        line-height: 1.3;
-        margin: 0;
-    }
+  .story-nav-next {
+    margin-left: auto;
+  }
 
-    .story-title {
-        font-size: 1.4rem;
-        font-weight: 500;
-    }
+  p {
+    text-indent: 0;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .story-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
 }

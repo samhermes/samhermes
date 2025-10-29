@@ -3,40 +3,40 @@ import { getCollection } from "astro:content";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import GitHubIcon from "../../img/github.svg";
 const projects = (await getCollection("projects")).sort(
-	(a, b) => Number(a.data.order) - Number(b.data.order),
+  (a, b) => Number(a.data.order) - Number(b.data.order),
 );
 ---
 
 <SiteLayout title="Projects">
-	<div class="page-container">
-		<header class="page-header">
-			<h1 class="page-title">Projects</h1>
-		</header>
+  <div class="page-container">
+    <header class="page-header">
+      <h1 class="page-title">Projects</h1>
+    </header>
 
-		<div class="page-content-contain">
-			<ul class="project-list" role="list">
-				{
-					projects.map((project) => (
-						<li>
-							<div class="project-info">
-								<h2 class="project-title">
-									<a class="project-link" href={project.data.external_url}>
-										{project.data.title}
-									</a>
-								</h2>
-								<p class="project-desc">{project.data.description}</p>
+    <div class="page-content-contain">
+      <ul class="project-list" role="list">
+        {
+          projects.map((project) => (
+            <li>
+              <div class="project-info">
+                <h2 class="project-title">
+                  <a class="project-link" href={project.data.external_url}>
+                    {project.data.title}
+                  </a>
+                </h2>
+                <p class="project-desc">{project.data.description}</p>
 
-								<a class="project-github" href={project.data.github_url}>
-									<GitHubIcon />
-									<span class="screen-reader-text">
-										{project.data.title} repository on GitHub
-									</span>
-								</a>
-							</div>
-						</li>
-					))
-				}
-			</ul>
-		</div>
-	</div>
+                <a class="project-github" href={project.data.github_url}>
+                  <GitHubIcon />
+                  <span class="screen-reader-text">
+                    {project.data.title} repository on GitHub
+                  </span>
+                </a>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
 </SiteLayout>

@@ -4,15 +4,15 @@ const { frontmatter } = Astro.props;
 ---
 
 <SiteLayout title={frontmatter.title}>
-	<div class="page-container">
-		<header class="page-header">
-			<h1 class="page-title">{frontmatter.title}</h1>
-		</header>
+  <div class="page-container">
+    <header class="page-header">
+      <h1 class="page-title">{frontmatter.title}</h1>
+    </header>
 
-		<div class="page-content-contain">
-			<div class="page-content">
-				<slot />
-			</div>
-		</div>
-	</div>
+    <div class="page-content-contain">
+      <div class="page-content">
+        <slot />
+      </div>
+    </div>
+  </div>
 </SiteLayout>

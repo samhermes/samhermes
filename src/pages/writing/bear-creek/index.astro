@@ -6,55 +6,55 @@ import bearCreekCover from "../../../img/writing/bear-creek.jpg";
 import "../../../sass/writing-bear-creek.scss";
 
 const stories = (await getCollection("bearCreek")).sort(
-	(a, b) => a.data.date.valueOf() - b.data.date.valueOf(),
+  (a, b) => a.data.date.valueOf() - b.data.date.valueOf(),
 );
 ---
 
 <StoryLayout
-	isHomepage
-	series="Bear Creek"
-	title="Bear Creek"
-	excerpt="An attack in a small town brings a man’s worst fears to life."
-	backgroundColor="819067"
+  isHomepage
+  series="Bear Creek"
+  title="Bear Creek"
+  excerpt="An attack in a small town brings a man’s worst fears to life."
+  backgroundColor="819067"
 >
-	<div class="bear-creek-container">
-		<header class="series-header">
-			<h1 class="story-title">Bear Creek</h1>
+  <div class="bear-creek-container">
+    <header class="series-header">
+      <h1 class="story-title">Bear Creek</h1>
 
-			<div class="story-content">
-				<p>
-					A homophobic attack in a small town brings a man’s worst fears to
-					life. He flounders in the aftermath as hard questions cause him to
-					question everything he holds dear.
-				</p>
-			</div>
+      <div class="story-content">
+        <p>
+          A homophobic attack in a small town brings a man’s worst fears to
+          life. He flounders in the aftermath as hard questions cause him to
+          question everything he holds dear.
+        </p>
+      </div>
 
-			<div class="series-image">
-				<Image
-					src={bearCreekCover}
-					alt="Sun shining through the trees in a wooded area."
-					layout="constrained"
-					priority
-					sizes="(width > 47.2em) 670px, 100vw"
-				/>
-			</div>
-		</header>
+      <div class="series-image">
+        <Image
+          src={bearCreekCover}
+          alt="Sun shining through the trees in a wooded area."
+          layout="constrained"
+          priority
+          sizes="(width > 47.2em) 670px, 100vw"
+        />
+      </div>
+    </header>
 
-		<nav class="series-nav">
-			<ul class="story-list" role="list">
-				{
-					stories.map((story) => (
-						<li>
-							<p class="story-title">
-								<a class="story-link" href={`/writing/bear-creek/${story.id}`}>
-									{story.data.title}
-								</a>
-							</p>
-							<p class="count">{story.data.count}</p>
-						</li>
-					))
-				}
-			</ul>
-		</nav>
-	</div>
+    <nav class="series-nav">
+      <ul class="story-list" role="list">
+        {
+          stories.map((story) => (
+            <li>
+              <p class="story-title">
+                <a class="story-link" href={`/writing/bear-creek/${story.id}`}>
+                  {story.data.title}
+                </a>
+              </p>
+              <p class="count">{story.data.count}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
 </StoryLayout>

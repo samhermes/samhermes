@@ -1,58 +1,76 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 import SiteLayout from "./SiteLayout.astro";
 import toCamelCase from "../utils/toCamelCase";
-const { isHomepage, title, excerpt, series, backgroundColor, count } = Astro.props;
-const seriesSlug = series ? series.toLowerCase().replace(/\s+/g, '-') : '';
-const stories = (await getCollection(toCamelCase(series)))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const currentPostIndex = stories.findIndex((story) => story.id == Astro.params.slug);
-const previousPost = currentPostIndex + 1 === stories.length ? undefined : stories[currentPostIndex + 1];
-const nextPost = currentPostIndex === 0 ? undefined : stories[currentPostIndex - 1];
+const { isHomepage, title, excerpt, series, backgroundColor, count } =
+  Astro.props;
+const seriesSlug = series ? series.toLowerCase().replace(/\s+/g, "-") : "";
+const stories = (await getCollection(toCamelCase(series))).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const currentPostIndex = stories.findIndex(
+  (story) => story.id == Astro.params.slug,
+);
+const previousPost =
+  currentPostIndex + 1 === stories.length
+    ? undefined
+    : stories[currentPostIndex + 1];
+const nextPost =
+  currentPostIndex === 0 ? undefined : stories[currentPostIndex - 1];
 
-import '../sass/writing.scss';
+import "../sass/writing.scss";
 ---
 
-<SiteLayout title={title} excerpt={excerpt} type="story" series={isHomepage ? '' : series} background={backgroundColor}>
-	<nav class="breadcrumbs" aria-label="Breadcrumb">
-		<ol>
-			<li><a href="/writing/">Writing</a></li>
-			<li><a href=`/writing/${seriesSlug}`>{series}</a></li>
-		</ol>
-	</nav>
+<SiteLayout
+  title={title}
+  excerpt={excerpt}
+  type="story"
+  series={isHomepage ? "" : series}
+  background={backgroundColor}
+>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/writing/">Writing</a></li>
+      <li><a href=`/writing/${seriesSlug}`>{series}</a></li>
+    </ol>
+  </nav>
 
-	<article class="story-container">
-		{!isHomepage ? (
-			<header class="story-header">
-				<h1 class="story-title">{title}</h1>
-				<p class="story-count">{count}</p>
-				<p class="story-series">{series}</p>
-			</header>
-		) : null}
+  <article class="story-container">
+    {
+      !isHomepage ? (
+        <header class="story-header">
+          <h1 class="story-title">{title}</h1>
+          <p class="story-count">{count}</p>
+          <p class="story-series">{series}</p>
+        </header>
+      ) : null
+    }
 
-		<div class="story-content">
-			<slot />
-		</div>
+    <div class="story-content">
+      <slot />
+    </div>
 
-		{!isHomepage ? (
-			<nav class="story-nav">
-				{previousPost ? (
-					<div class="story-nav-prev">
-						<a href={`/writing/${seriesSlug}/${previousPost.id}`}>
-							<p>Previous:</p>
-							<p class="story-title">{previousPost.data.title}</p>
-						</a>
-					</div>
-				) : null}
-				{nextPost ? (
-					<div class="story-nav-next">
-						<a href={`/writing/${seriesSlug}/${nextPost.id}`}>
-							<p>Next:</p>
-							<p class="story-title">{nextPost.data.title}</p>
-						</a>
-					</div>
-				) : null}
-			</nav>
-		) : null}
-	</article>
+    {
+      !isHomepage ? (
+        <nav class="story-nav">
+          {previousPost ? (
+            <div class="story-nav-prev">
+              <a href={`/writing/${seriesSlug}/${previousPost.id}`}>
+                <p>Previous:</p>
+                <p class="story-title">{previousPost.data.title}</p>
+              </a>
+            </div>
+          ) : null}
+          {nextPost ? (
+            <div class="story-nav-next">
+              <a href={`/writing/${seriesSlug}/${nextPost.id}`}>
+                <p>Next:</p>
+                <p class="story-title">{nextPost.data.title}</p>
+              </a>
+            </div>
+          ) : null}
+        </nav>
+      ) : null
+    }
+  </article>
 </SiteLayout>

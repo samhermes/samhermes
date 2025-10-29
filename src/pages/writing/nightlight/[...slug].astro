@@ -5,11 +5,11 @@ import StoryLayout from "../../../layouts/StoryLayout.astro";
 import "../../../sass/writing-nightlight.scss";
 
 export async function getStaticPaths() {
-	const posts = await getCollection("nightlight");
-	return posts.map((post) => ({
-		params: { slug: post.id },
-		props: { post },
-	}));
+  const posts = await getCollection("nightlight");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
 }
 
 const { post } = Astro.props;
@@ -17,5 +17,5 @@ const { Content } = await render(post);
 ---
 
 <StoryLayout {...post.data}>
-	<Content />
+  <Content />
 </StoryLayout>

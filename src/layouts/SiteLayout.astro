@@ -7,61 +7,58 @@ const metaTitle = `${path !== "/" ? `${title} - ` : ""}${series ? `${series} - `
 const canonicalURL = new URL(path, Astro.site);
 const currentYear = new Date().getFullYear();
 const pageSlug = title
-	? `page-${title.toLowerCase().replace(/\s+/g, "-")}`
-	: "";
+  ? `page-${title.toLowerCase().replace(/\s+/g, "-")}`
+  : "";
 const typeSlug = type ? ` type-${type}` : "";
 const backgroundColor = background ? `background-color: #${background}` : null;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>{metaTitle}</title>
-		{excerpt ? <meta name="description" content={excerpt} /> : null}
+    <title>{metaTitle}</title>
+    {excerpt ? <meta name="description" content={excerpt} /> : null}
 
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-		<link
-			rel="canonical"
-			href={canonicalURL}
-		/>
-		<link
-			rel="alternate"
-			type="application/rss+xml"
-			title="Sam Hermes"
-			href={new URL("feed.xml", Astro.site)}
-		/>
-	</head>
-	<body class={`${pageSlug}${typeSlug}`} style={backgroundColor}>
-		<header class="site-header">
-			<div class="contain">
-				<a class="logotype" href="/"> Sam Hermes </a>
-				<nav class="site-nav" aria-label="Site">
-					<h2 id="main-nav-heading" class="screen-reader-text">
-						Site Navigation
-					</h2>
-					<ul aria-labelledby="main-nav-heading" role="list">
-						<li><a href="/about">About</a></li>
-						<li>
-							<a href="https://samhermes.typeform.com/to/d4C4FT">Contact</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<main class="page">
-			<slot />
-		</main>
-		<footer class="site-footer">
-			<div class="contain">
-				<p class="copyright">&copy; {currentYear} Sam Hermes</p>
-				<div class="pride"><PrideIcon /></div>
-			</div>
-		</footer>
-	</body>
+    <link rel="canonical" href={canonicalURL} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Sam Hermes"
+      href={new URL("feed.xml", Astro.site)}
+    />
+  </head>
+  <body class={`${pageSlug}${typeSlug}`} style={backgroundColor}>
+    <header class="site-header">
+      <div class="contain">
+        <a class="logotype" href="/"> Sam Hermes </a>
+        <nav class="site-nav" aria-label="Site">
+          <h2 id="main-nav-heading" class="screen-reader-text">
+            Site Navigation
+          </h2>
+          <ul aria-labelledby="main-nav-heading" role="list">
+            <li><a href="/about">About</a></li>
+            <li>
+              <a href="https://samhermes.typeform.com/to/d4C4FT">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="contain">
+        <p class="copyright">&copy; {currentYear} Sam Hermes</p>
+        <div class="pride"><PrideIcon /></div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,184 +1,184 @@
 .page-home {
-    .site-header {
-        border-bottom: 0;
+  .site-header {
+    border-bottom: 0;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+
+    @media screen and (min-width: 37.5em) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .more {
+    align-self: flex-start;
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
     }
 
-    h2 {
-        font-size: 1.2rem;
-        font-weight: 400;
-        margin: 0;
-
-        @media screen and (min-width: 37.5em) {
-            font-size: 1.5rem;
-        }
+    .more-icon {
+      display: inline-block;
+      width: 0.5em;
+      height: 0.8em;
+      margin-left: 0.5rem;
+      margin-bottom: -0.06rem;
     }
-
-    .more {
-        align-self: flex-start;
-        display: inline-block;
-        font-size: 1.125rem;
-        font-weight: 400;
-        color: inherit;
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        .more-icon {
-            display: inline-block;
-            width: 0.5em;
-            height: 0.8em;
-            margin-left: 0.5rem;
-            margin-bottom: -0.06rem;
-        }
-    }
+  }
 }
 
 .home-intro {
-    padding: 0 0 4rem;
+  padding: 0 0 4rem;
 
-    .intro {
-        margin: 0 auto;
-        max-width: var(--site-max);
-        width: calc(100% - (var(--site-edge) * 2));
-        padding: 25vh 0 0;
-
-        p {
-            font-size: 2.5rem;
-            font-weight: 400;
-            margin: 0;
-
-            @media screen and (min-width: 37.5em) {
-                font-size: 3rem;
-            }
-
-            @media screen and (min-width: 60em) {
-                font-size: 3.5rem;
-            }
-        }
-    }
-}
-
-.home-contain {
-    display: flex;
-    flex-direction: column;
+  .intro {
     margin: 0 auto;
     max-width: var(--site-max);
     width: calc(100% - (var(--site-edge) * 2));
-    gap: 1rem;
+    padding: 25vh 0 0;
 
-    @media screen and (min-width: 37.5em) {
-        gap: 1.5rem;
+    p {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin: 0;
+
+      @media screen and (min-width: 37.5em) {
+        font-size: 3rem;
+      }
+
+      @media screen and (min-width: 60em) {
+        font-size: 3.5rem;
+      }
     }
+  }
+}
+
+.home-contain {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--site-max);
+  width: calc(100% - (var(--site-edge) * 2));
+  gap: 1rem;
+
+  @media screen and (min-width: 37.5em) {
+    gap: 1.5rem;
+  }
 }
 
 .home-posts,
 .home-projects,
 .home-writing {
-    background-color: var(--color-bg-light);
-    border: 1px solid #ffffff0f;
-    border-radius: 0.7rem;
-    padding: 1.5rem;
+  background-color: var(--color-bg-light);
+  border: 1px solid #ffffff0f;
+  border-radius: 0.7rem;
+  padding: 1.5rem;
 
-    @media screen and (min-width: 37.5em) {
-        padding: 2.5rem 2.8rem;
+  @media screen and (min-width: 37.5em) {
+    padding: 2.5rem 2.8rem;
+  }
+
+  .wrapper {
+    display: grid;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: var(--site-max);
+
+    @media screen and (min-width: 60em) {
+      gap: 5rem;
+      grid-template-columns: 3fr 5fr;
     }
-
-    .wrapper {
-        display: grid;
-        gap: 2rem;
-        margin: 0 auto;
-        max-width: var(--site-max);
-
-        @media screen and (min-width: 60em) {
-            gap: 5rem;
-            grid-template-columns: 3fr 5fr;
-        }
-    }
+  }
 }
 
 .home-section-header {
-    display: flex;
-    flex: 0 0 40%;
-    margin: 0;
+  display: flex;
+  flex: 0 0 40%;
+  margin: 0;
 
-    @media screen and (min-width: 60em) {
-        margin: 0 0 2rem;
-    }
+  @media screen and (min-width: 60em) {
+    margin: 0 0 2rem;
+  }
 
-    svg {
-        display: block;
-        width: 1.3rem;
-        height: 1.3rem;
-    }
+  svg {
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+  }
 }
 
 .home-posts {
-    .home-section-header {
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
+  .home-section-header {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
 
-        @media screen and (min-width: 60em) {
-            border-bottom: 0;
-        }
+    @media screen and (min-width: 60em) {
+      border-bottom: 0;
     }
+  }
 }
 
 .home-post-list {
-    display: flex;
-    flex-direction: column;
-    max-width: 43.75rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 43.75rem;
 
-    .post-list {
-        margin: 0 0 2rem;
+  .post-list {
+    margin: 0 0 2rem;
 
-        > li {
-            padding-bottom: 2rem;
-            border-bottom: 1.5px solid var(--border-color);
-            margin-bottom: 2rem;
-        }
+    >li {
+      padding-bottom: 2rem;
+      border-bottom: 1.5px solid var(--border-color);
+      margin-bottom: 2rem;
     }
+  }
 }
 
 .home-projects {
-    background-color: transparent;
-    border-width: 0;
-    padding: 5rem 0;
+  background-color: transparent;
+  border-width: 0;
+  padding: 5rem 0;
 
-    .wrapper {
-        grid-template-columns: none;
-        grid-gap: 0;
-    }
+  .wrapper {
+    grid-template-columns: none;
+    grid-gap: 0;
+  }
 
-    .home-section-header {
-        margin-bottom: 2rem;
-    }
+  .home-section-header {
+    margin-bottom: 2rem;
+  }
 }
 
 .home-project-list {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 
-    .project-list {
-        margin-bottom: 2rem;
-        grid-template-columns: 1fr;
+  .project-list {
+    margin-bottom: 2rem;
+    grid-template-columns: 1fr;
 
-        @media screen and (min-width: 48em) {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        li {
-            background-color: var(--color-bg-light);
-            border: 1px solid #ffffff0f;
-
-            @media screen and (min-width: 48em) {
-                padding: 2rem;
-            }
-        }
+    @media screen and (min-width: 48em) {
+      grid-template-columns: 1fr 1fr 1fr;
     }
+
+    li {
+      background-color: var(--color-bg-light);
+      border: 1px solid #ffffff0f;
+
+      @media screen and (min-width: 48em) {
+        padding: 2rem;
+      }
+    }
+  }
 }
 
 .home-writing {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
