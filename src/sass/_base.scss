@@ -1,12 +1,25 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -14,15 +27,25 @@ dl, dd, ol, ul, figure {
 body {
   font: 300 100% var(--base-font-family);
   color: var(--color-text);
-  -webkit-text-size-adjust: 100%; /* stylelint-disable-line */
+  -webkit-text-size-adjust: 100%; // stylelint-disable-line
   text-size-adjust: 100%;
   background-color: var(--color-bg);
   background-size: 2.5rem;
 }
 
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure {
   margin-bottom: 1rem;
   overflow-wrap: break-word;
 }
@@ -33,7 +56,8 @@ img {
   height: auto;
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 1.8em;
 }
 
@@ -44,7 +68,12 @@ li {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
 }
 
@@ -77,5 +106,5 @@ blockquote {
   padding: 0;
   position: absolute !important;
   width: 1px;
-  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  word-wrap: normal !important; // Many screen reader and browser combinations announce broken words as they would appear visually.
 }
