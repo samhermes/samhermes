@@ -6,6 +6,7 @@
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",
+    "lint": "npm run lint:css",
     "lint:css": "stylelint '**/*.scss'",
     "format:css": "stylelint '**/*.scss' --fix",
     "preview": "astro preview"

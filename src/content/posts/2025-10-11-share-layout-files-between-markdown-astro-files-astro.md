@@ -7,7 +7,7 @@ As I migrated my site to Astro, one issue that came up was how to handle the flo
 
 I tried a couple of approaches to fix this issue, and first started with trying to merge the layout files and then adding in a lot of conditional checks. I’d default to the `.astro` format, and then check for frontmatter data from the markdown files. This ended up with a lot of code like this:
 
-```
+```jsx
 const pageTitle = title ?? frontmatter?.title;
 ```
 
@@ -17,8 +17,8 @@ Fortunately, Astro supports nested layout files. This allows for a shared wrappe
 
 The result of this is that I have a `SiteLayout.astro` file that supports a set of props, and then I have other layout files such as `PostLayout.astro` and `PageLayout.astro` that handle passing the metadata for that content type. This looks something like this:
 
-```
+```jsx
 <SiteLayout title={frontmatter.title}>
-	...
+  ...
 </SiteLayout>
 ```
