@@ -2,7 +2,7 @@
 
 // Site variables
 :root {
-  --base-font-family: 'Figtree', 'Helvetica Neue', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --base-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --color-bg: #090909;
   --color-bg-light: #191919;
   --color-text: #ffffffde;
@@ -25,7 +25,6 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-  "fonts",
   "base",
   "code",
   "global",

@@ -3,7 +3,7 @@ title: Remove date from slug in Astro
 date: 2025-10-11T18:59:00 -5
 tags: ['Static Sites', 'JavaScript']
 ---
-AWhen I migrated my site from Eleventy to Astro, I had a bunch of posts that were still using a filename structure from when my site was on Jekyll. All of my posts were stored in markdown with the date first, then the title slug (like `YYYY-MM-DD-title-slug.md`). This kept the files in date order and made it easy to reference when I wrote something.
+When I migrated my site from Eleventy to Astro, I had a bunch of posts that were still using a filename structure from when my site was on Jekyll. All of my posts were stored in markdown with the date first, then the title slug (like `YYYY-MM-DD-title-slug.md`). This kept the files in date order and made it easy to reference when I wrote something.
 
 Out of the box with Astro, those dates were being used in the URL. This makes sense, as they are there! It would be weird if it didn’t. However, I wanted to remove the date to maintain the existing permalinks. In Eleventy, I had been able to specify how to handle the permalinks, but Astro doesn’t appear to have any built-in way to address this at the moment.
 
