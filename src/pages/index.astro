@@ -4,8 +4,8 @@ import { Image } from "astro:assets";
 import SiteLayout from "../layouts/SiteLayout.astro";
 import ArrowIcon from "../img/arrow.svg";
 import GitHubIcon from "../img/github.svg";
-import nightlightLogo from "../img/writing/nightlight-logo.svg";
-import nightlightCover from "../img/writing/nightlight.jpg";
+import apolloLogo from "../img/writing/apollo-logo.svg";
+import apolloCover from "../img/writing/apollo.jpg";
 import bearCreekLogo from "../img/writing/bear-creek-logo.svg";
 import bearCreekCover from "../img/writing/bear-creek.jpg";
 import Post from "../components/Post.astro";
@@ -94,62 +94,68 @@ const projects = (await getCollection("projects"))
         <div class="home-section-header">
           <h2>Writing</h2>
         </div>
-        <ul class="series-list" role="list">
-          <li class="series-item">
-            <div class="series-info">
-              <h3 class="series-title">
-                <a href="/writing/bear-creek">
-                  <Image
-                    src={bearCreekLogo}
-                    alt=""
-                    width="190"
-                    height="48"
-                    aria-hidden="true"
-                  />
-                  <span class="screen-reader-text">Bear Creek</span>
-                </a>
-              </h3>
-              <p class="series-description">
-                An attack in a small town brings a man’s worst fears to life.
-              </p>
-            </div>
-            <div class="series-image">
-              <Image
-                src={bearCreekCover}
-                layout="constrained"
-                alt="Sun shining through the trees in a wooded area."
-                sizes="(width > 31.25em) 283px, 100vw"
-              />
-            </div>
-          </li>
-          <li class="series-item">
-            <div class="series-info">
-              <h3 class="series-title">
-                <a href="/writing/nightlight">
-                  <Image
-                    src={nightlightLogo}
-                    alt=""
-                    width="150"
-                    height="42"
-                    aria-hidden="true"
-                  />
-                  <span class="screen-reader-text">Nightlight</span>
-                </a>
-              </h3>
-              <p class="series-description">
-                Austin and Zach find each other in a hopeless place.
-              </p>
-            </div>
-            <div class="series-image">
-              <Image
-                src={nightlightCover}
-                layout="constrained"
-                alt="A hand in the dark reaching out towards the light coming from a window."
-                sizes="(width > 31.25em) 283px, 100vw"
-              />
-            </div>
-          </li>
-        </ul>
+        <div class="home-writing-list">
+          <ul class="series-list" role="list">
+            <li class="series-item">
+              <div class="series-info">
+                <h3 class="series-title">
+                  <a href="/writing/apollo">
+                    <Image
+                      src={apolloLogo}
+                      alt=""
+                      width="120"
+                      height="42"
+                      aria-hidden="true"
+                    />
+                    <span class="screen-reader-text">Apollo</span>
+                  </a>
+                </h3>
+                <p class="series-description">
+                  Connor and Brady dream of a life outside their small town.
+                </p>
+              </div>
+              <div class="series-image">
+                <Image
+                  src={apolloCover}
+                  layout="constrained"
+                  alt="A shimmering planet with dark reds and blues, only the right side visible."
+                  sizes="(width > 31.25em) 283px, 100vw"
+                />
+              </div>
+            </li>
+            <li class="series-item">
+              <div class="series-info">
+                <h3 class="series-title">
+                  <a href="/writing/bear-creek">
+                    <Image
+                      src={bearCreekLogo}
+                      alt=""
+                      width="190"
+                      height="48"
+                      aria-hidden="true"
+                    />
+                    <span class="screen-reader-text">Bear Creek</span>
+                  </a>
+                </h3>
+                <p class="series-description">
+                  An attack in a small town brings a man’s worst fears to life.
+                </p>
+              </div>
+              <div class="series-image">
+                <Image
+                  src={bearCreekCover}
+                  layout="constrained"
+                  alt="Sun shining through the trees in a wooded area."
+                  sizes="(width > 31.25em) 283px, 100vw"
+                />
+              </div>
+            </li>
+          </ul>
+          <a class="more" href="/writing">
+            All Writing
+            <svg class="more-icon"><use xlink:href="#arrow"></use></svg>
+          </a>
+        </div>
       </div>
     </section>
   </div>

@@ -1,10 +1,12 @@
 ---
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import { Image } from "astro:assets";
-import nightlightLogo from "../../img/writing/nightlight-logo.svg";
-import nightlightCover from "../../img/writing/nightlight.jpg";
+import apolloLogo from "../../img/writing/apollo-logo.svg";
+import apolloCover from "../../img/writing/apollo.jpg";
 import bearCreekLogo from "../../img/writing/bear-creek-logo.svg";
 import bearCreekCover from "../../img/writing/bear-creek.jpg";
+import nightlightLogo from "../../img/writing/nightlight-logo.svg";
+import nightlightCover from "../../img/writing/nightlight.jpg";
 ---
 
 <SiteLayout title="Writing">
@@ -15,6 +17,33 @@ import bearCreekCover from "../../img/writing/bear-creek.jpg";
 
     <div class="page-content-contain">
       <ul class="series-list" role="list">
+        <li class="series-item">
+          <div class="series-info">
+            <h3 class="series-title">
+              <a href="/writing/apollo">
+                <Image
+                  src={apolloLogo}
+                  alt=""
+                  width="120"
+                  height="42"
+                  aria-hidden="true"
+                />
+                <span class="screen-reader-text">Apollo</span>
+              </a>
+            </h3>
+            <p class="series-description">
+              Connor and Brady dream of a life outside their small town.
+            </p>
+          </div>
+          <div class="series-image">
+            <Image
+              src={apolloCover}
+              layout="constrained"
+              alt="A shimmering planet with dark reds and blues, only the right side visible."
+              sizes="(width > 31.25em) 283px, 100vw"
+            />
+          </div>
+        </li>
         <li class="series-item">
           <div class="series-info">
             <h3 class="series-title">

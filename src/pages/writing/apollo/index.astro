@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import StoryLayout from "../../../layouts/StoryLayout.astro";
+import apolloCover from "../../../img/writing/apollo.jpg";
+import "../../../sass/writing-apollo.scss";
+
+const stories = (await getCollection("apollo")).sort(
+  (a, b) => a.data.date.valueOf() - b.data.date.valueOf(),
+);
+---
+
+<StoryLayout
+  isHomepage
+  series="Apollo"
+  title="Apollo"
+  excerpt="Connor and Brady face relentless bullying at their high school for being different. They can't wait to escape their small town and live in peace. What awaits them is more fantastic than they could ever imagine."
+  backgroundColor="c8c8c8"
+>
+  <div class="apollo-container">
+    <header class="series-header">
+      <h1 class="story-title">Apollo</h1>
+
+      <div class="story-content">
+        <p>
+          Connor and Brady face relentless bullying at their high school
+          for being different. They can't wait to escape their small town
+          and live in peace. What awaits them is more fantastic than they
+          could ever imagine.
+        </p>
+      </div>
+
+      <div class="series-image">
+        <Image
+          src={apolloCover}
+          alt="Sun shining through the trees in a wooded area."
+          layout="constrained"
+          priority
+          sizes="(width > 47.2em) 670px, 100vw"
+        />
+      </div>
+    </header>
+
+    <nav class="series-nav">
+      <ul class="story-list" role="list">
+        {
+          stories.map((story) => (
+            <li>
+              <p class="story-title">
+                <a class="story-link" href={`/writing/apollo/${story.id}`}>
+                  {story.data.title}
+                </a>
+              </p>
+              <p class="count">{story.data.count}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</StoryLayout>

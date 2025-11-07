@@ -98,6 +98,20 @@
     width: 25%;
   }
 
+  blockquote {
+    border-left-width: 1px;
+    font-style: normal;
+    margin: 2.5rem 0;
+
+    p {
+      text-indent: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
   .character-description {
     margin: 2rem 0;
 
