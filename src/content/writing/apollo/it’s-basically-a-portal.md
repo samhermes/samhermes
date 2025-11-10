@@ -1,12 +1,11 @@
 ---
 layout: ../../../layouts/StoryLayout.astro
-title: Bingo
+title: It’s Basically a Portal
 excerpt: The plot thickens as Connor and Brady attempt to learn what the mysterious message meant. They'll soon find that their journey has hardly begun.
 date: 2025-11-07 19:54:00 Z
 series: Apollo
 backgroundColor: c8c8c8
 count: 2
-permalink: "writing/apollo/bingo/index.html"
 ---
 At the start of third period, Connor and Brady met in the computer lab at a desk tucked into the corner of the room. Connor had arrived first and scoped out the location, where it was difficult for anyone to see what was on the screen. He opened a web browser and sat staring at the search field. Brady soon found him there.
 

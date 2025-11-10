@@ -1,12 +1,11 @@
 ---
 layout: ../../../layouts/StoryLayout.astro
-title: Contact
+title: Creatures Just Like Us
 excerpt: Connor and Brady are a pair of aliens living in a small town. They're about to start high school and can't wait to escape.
 date: 2025-11-06 22:30:00 Z
 series: Apollo
 backgroundColor: c8c8c8
 count: 1
-permalink: "writing/apollo/contact/index.html"
 ---
 Outside the front of Frederick A. Smith High School, a car pulled up. The rear passenger door opened, and Connor and Brady stepped out, backpacks in hand. They looked around apprehensively, then waved goodbye to their mom as she pulled away. They headed towards the school, bracing for the start of the first day of freshman year.
 

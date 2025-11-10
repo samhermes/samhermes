@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Blinker';
+  font-family: 'Zen Dots';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/blinker-regular.woff2') format('woff2');
+  src: url('../fonts/zen-dots-regular.woff2') format('woff2');
 }
 
 .series-header,
@@ -14,26 +14,26 @@
   position: relative;
 
   .story-title {
-    font-family: "Blinker", sans-serif;
-    font-size: 3.25rem;
+    font-family: "Zen Dots", sans-serif;
+    font-size: 2.5rem;
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1;
     text-align: center;
     text-wrap: balance;
     max-width: 80%;
-    margin: 0 auto 0.7rem;
+    margin: 0 auto 1.25rem;
 
     @media screen and (min-width: 37.5em) {
-      font-size: 4rem;
+      font-size: 3.25rem;
     }
   }
 
   .story-count {
     order: -1;
-    font-family: "Blinker", sans-serif;
+    font-family: "Zen Dots", sans-serif;
     font-size: 1.5rem;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 
     @media screen and (min-width: 37.5em) {
       font-size: 1.8rem;
@@ -102,7 +102,7 @@
     flex-direction: column;
 
     &:not(:last-child) {
-      margin-bottom: 2.5rem;
+      margin-bottom: 3.5rem;
     }
 
     p {
@@ -110,21 +110,22 @@
     }
 
     .story-title {
-      font-size: 2.2rem;
-      font-family: "Blinker", sans-serif;
+      font-size: 2rem;
+      font-family: "Zen Dots", sans-serif;
+      line-height: 1;
       margin: 0;
 
       @media screen and (min-width: 37.5em) {
-        font-size: 2.8rem;
+        font-size: 2.25rem;
       }
     }
 
     .count {
       order: -1;
-      font-family: "Blinker", sans-serif;
+      font-family: "Zen Dots", sans-serif;
       font-size: 1.3rem;
       line-height: 1.2;
-      margin-bottom: 0.3rem;
+      margin-bottom: 1.25rem;
     }
 
     a:hover {
