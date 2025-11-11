@@ -17,7 +17,7 @@
     font-family: "Zen Dots", sans-serif;
     font-size: 2.5rem;
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.1;
     text-align: center;
     text-wrap: balance;
     max-width: 80%;
@@ -112,11 +112,14 @@
     .story-title {
       font-size: 2rem;
       font-family: "Zen Dots", sans-serif;
-      line-height: 1;
+      line-height: 1.1;
       margin: 0;
+      text-wrap: balance;
 
       @media screen and (min-width: 37.5em) {
         font-size: 2.25rem;
+        max-width: 25rem;
+        margin: 0 auto;
       }
     }
 
