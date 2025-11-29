@@ -4,7 +4,7 @@
   width: 100%;
 
   @media screen and (min-width: 37.5em) {
-    padding: 2rem 0 1.3rem;
+    padding: 2rem 0 1.8rem;
   }
 
   .contain {
@@ -41,32 +41,24 @@
 
   ul {
     list-style: none;
-    margin: 0 -0.5rem 0 0;
+    margin: 0;
     padding: 0;
     display: flex;
+    gap: 0.9rem;
 
     @media screen and (min-width: 25em) {
-      gap: 0.5rem;
+      gap: 1.3rem;
     }
   }
 
   li {
-    font-size: 1rem;
+    font-size: 0.875rem;
 
     a {
       display: block;
-      padding: 0.4rem 0.5rem 0.2rem;
       font-weight: 400;
       transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
       color: inherit;
-
-      @media screen and (min-width: 25em) {
-        padding-top: 0.5rem;
-      }
-
-      @media screen and (min-width: 37.5em) {
-        padding-bottom: 0.2rem;
-      }
 
       &:hover {
         opacity: 0.5;

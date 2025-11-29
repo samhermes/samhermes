@@ -120,6 +120,56 @@
   margin: 0 1.5rem 0 0;
 }
 
+.post-list-pagination {
+  padding: 3rem 0 0;
+
+  ul {
+    list-style: none;
+    border-top: 1.5px solid var(--border-color);
+    margin: 0;
+    padding: 2rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    position: relative;
+  }
+
+  li {
+    font-size: 1.125rem;
+    font-weight: 400;
+
+    a {
+      align-self: flex-start;
+      display: inline-block;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      .more-icon {
+        display: inline-block;
+        width: 0.5em;
+        height: 0.8em;
+        margin-left: 0.5rem;
+        margin-bottom: -0.06rem;
+      }
+    }
+
+    &.pagination-previous {
+      .more-icon {
+        margin-left: 0;
+        margin-right: 0.5rem;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .pagination-spacer {
+    min-width: 4rem;
+  }
+}
+
 /* Post Page */
 
 .type-post {
