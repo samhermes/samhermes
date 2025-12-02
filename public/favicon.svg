@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="292" height="292"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" id="SvgjsSvg1007" width="292" height="292" x="0" y="0" version="1.1" viewBox="0 0 292 292"><style>circle{fill: #1D1F25;}@media (prefers-color-scheme: dark){circle{fill:white;}path{fill:#1D1F25}}</style><circle cx="146" cy="146" r="146" fill="#1D1F25"/><path fill="#FFF" d="m86.2 190.4 19-15c10.6 17.2 25.4 25.2 43.8 25.2 19.6 0 29.8-9.6 29.8-22.8 0-17.4-18.6-20.8-38.2-25C118 148.2 94 142.2 94 113c0-22.8 20.8-41.8 50.2-41.8 25 0 41.4 9 55.6 25l-18 14.2C173.2 98.8 163.2 91 144.2 91c-19.6 0-27.8 9.2-27.8 21.8 0 14.8 17.2 17.6 36.2 21.6 23 4.8 48.6 11.4 48.6 43.2 0 22.4-18.4 43.6-51.6 43.6-30.4 0-49.6-12-63.4-30.8z"/></svg></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96"><svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_2)">
+<g clip-path="url(#clip1_6_2)">
+<path d="M48 96C74.5097 96 96 74.5097 96 48C96 21.4903 74.5097 0 48 0C21.4903 0 0 21.4903 0 48C0 74.5097 21.4903 96 48 96Z" fill="#C9A74F"></path>
+<path d="M28.3397 62.5973L34.5863 57.6658C38.0712 63.3205 42.937 65.9507 48.9863 65.9507C55.4301 65.9507 58.7836 62.7945 58.7836 58.4548C58.7836 52.7342 52.6685 51.6164 46.2247 50.2356C38.7945 48.7233 30.9041 46.7507 30.9041 37.1507C30.9041 29.6548 37.7425 23.4082 47.4082 23.4082C55.6274 23.4082 61.0192 26.3671 65.6877 31.6274L59.7699 36.2959C56.9425 32.4822 53.6548 29.9178 47.4082 29.9178C40.9644 29.9178 38.2685 32.9425 38.2685 37.0849C38.2685 41.9507 43.9233 42.8712 50.1699 44.1863C57.7315 45.7644 66.1479 47.9342 66.1479 58.389C66.1479 65.7534 60.0986 72.7233 49.1836 72.7233C39.189 72.7233 32.8767 68.7781 28.3397 62.5973Z" fill="#090909"></path>
+</g>
+</g>
+<defs>
+<clipPath id="SvgjsClipPath1031">
+<rect width="96" height="96" fill="white"></rect>
+</clipPath>
+<clipPath id="SvgjsClipPath1030">
+<rect width="96" height="96" fill="white"></rect>
+</clipPath>
+</defs>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
