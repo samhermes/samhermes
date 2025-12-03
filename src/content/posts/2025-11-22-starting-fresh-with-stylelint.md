@@ -11,7 +11,7 @@ I first started by installing the `stylelint` package through NPM. That, however
 
 The first thing I ran into was that the default config that comes with Stylelint is for CSS. This is still a Sassy world, baby, so I installed the Sass version of the config, like so:
 
-```
+```bash
 npm install stylelint-config-standard-scss
 ```
 

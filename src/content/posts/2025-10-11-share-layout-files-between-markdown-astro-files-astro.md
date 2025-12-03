@@ -17,7 +17,7 @@ Fortunately, Astro supports nested layout files. This allows for a shared wrappe
 
 The result of this is that I have a `SiteLayout.astro` file that supports a set of props, and then I have other layout files such as `PostLayout.astro` and `PageLayout.astro` that handle passing the metadata for that content type. This looks something like this:
 
-```jsx
+```astro
 <SiteLayout title={frontmatter.title}>
   ...
 </SiteLayout>

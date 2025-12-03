@@ -285,15 +285,12 @@
   li {
     code {
       font-size: 1rem;
+      font-weight: 500;
       background: rgb(255 255 255 / 90%);
       border: 1px solid #bebebe;
       padding: 0.2em 0.5em;
       border-radius: 0.2em;
       word-wrap: break-word;
-
-      @media screen and (min-width: 37.5em) {
-        font-size: 1.1rem;
-      }
     }
   }
 
@@ -352,6 +349,8 @@
   }
 
   code {
-    font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    line-height: 1.7;
   }
 }

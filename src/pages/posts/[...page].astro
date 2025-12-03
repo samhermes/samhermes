@@ -30,9 +30,9 @@ const pageTitle = `Posts${page.currentPage === 1 ? "" : ` - Page ${page.currentP
         {page.data.map((post) => <Post post={post} />)}
       </ul>
 
-      <nav class="post-list-pagination" aria-label="Pagination">
+      <nav class="post-list-pagination" aria-labelledby="post-list-pagination-heading">
         <h2 id="post-list-pagination-heading" class="screen-reader-text">
-          Post List Pagination
+          Pagination
         </h2>
         <ul aria-labelledby="post-list-pagination-heading" role="list">
           {

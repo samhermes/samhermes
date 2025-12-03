@@ -5,7 +5,7 @@ export default defineConfig({
     site: 'https://samhermes.com',
     markdown: {
         shikiConfig: {
-            theme: 'dracula',
+            theme: 'houston',
         },
     },
 });
