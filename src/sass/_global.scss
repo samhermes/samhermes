@@ -21,11 +21,13 @@
     position: relative;
     display: inline-flex;
     font-size: 1.4rem;
-    font-weight: 400;
+    font-weight: 300;
     color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.19em;
 
     @media screen and (min-width: 25em) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     &:hover {
