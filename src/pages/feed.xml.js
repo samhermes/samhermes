@@ -11,7 +11,7 @@ export async function GET(context) {
   );
   return rss({
     title: 'Sam Hermes',
-    description: 'Front-end developer, writing about web development, including CSS, accessibility, JavaScript, and WordPress.',
+    description: 'Front-end developer and writer, writing about web development, including CSS, accessibility, JavaScript, and WordPress.',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,
