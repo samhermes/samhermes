@@ -1,3 +1,7 @@
+.page-writing .writing-contain {
+  max-width: 100%;
+}
+
 .series-list {
   list-style: none;
   margin: 0;
@@ -6,8 +10,12 @@
   grid-gap: 2rem;
   grid-auto-rows: 1fr;
 
-  @media screen and (min-width: 31.25em) {
+  @media screen and (min-width: 37.5em) {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 50em) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -19,7 +27,7 @@
   position: relative;
   max-height: 22rem;
 
-  @media screen and (min-width: 31.25em) {
+  @media screen and (min-width: 37.5em) {
     max-height: 100%;
   }
 

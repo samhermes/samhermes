@@ -8,13 +8,15 @@ import apolloLogo from "../img/writing/apollo-logo.svg";
 import apolloCover from "../img/writing/apollo.jpg";
 import bearCreekLogo from "../img/writing/bear-creek-logo.svg";
 import bearCreekCover from "../img/writing/bear-creek.jpg";
+import nightlightLogo from "../img/writing/nightlight-logo.svg";
+import nightlightCover from "../img/writing/nightlight.jpg";
 import Post from "../components/Post.astro";
 const posts = (await getCollection("posts"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 5);
 const projects = (await getCollection("projects"))
   .sort((a, b) => Number(a.data.order) - Number(b.data.order))
-  .slice(0, 3);
+  .slice(0, 2);
 ---
 
 <SiteLayout
@@ -26,6 +28,7 @@ const projects = (await getCollection("projects"))
 
   <section class="home-intro">
     <div class="intro">
+      <p class="title">Front-End Developer + Writer</p>
       <p>Making the web more human.</p>
     </div>
   </section>
@@ -146,6 +149,35 @@ const projects = (await getCollection("projects"))
                   src={bearCreekCover}
                   layout="constrained"
                   alt="Sun shining through the trees in a wooded area."
+                  sizes="(width > 31.25em) 283px, 100vw"
+                />
+              </div>
+            </li>
+            <li class="series-item">
+              <div class="series-info">
+                <h3 class="series-title">
+                  <a href="/writing/nightlight">
+                    <Image
+                      src={nightlightLogo}
+                      alt=""
+                      width="150"
+                      height="42"
+                      aria-hidden="true"
+                      priority
+                    />
+                    <span class="screen-reader-text">Nightlight</span>
+                  </a>
+                </h3>
+                <p class="series-description">
+                  Austin and Zach find each other in a hopeless place.
+                </p>
+              </div>
+              <div class="series-image">
+                <Image
+                  src={nightlightCover}
+                  layout="constrained"
+                  alt="A hand in the dark reaching out towards the light coming from a window."
+                  priority
                   sizes="(width > 31.25em) 283px, 100vw"
                 />
               </div>

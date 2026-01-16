@@ -75,7 +75,7 @@
 }
 
 .post-meta {
-  color: #c9a74f;
+  color: var(--color-text-meta);
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
@@ -125,7 +125,7 @@
 
   ul {
     list-style: none;
-    border-top: 1.5px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
     margin: 0;
     padding: 2rem 0 0;
     display: flex;
@@ -183,11 +183,11 @@
 
     margin: 0 auto;
     max-width: var(--site-max);
-    background-color: #eee;
+    background-color: var(--color-bg-light);
     padding: 0 var(--site-edge);
 
     @media screen and (min-width: 62.5em) {
-      border-radius: 0.7rem;
+      border-radius: var(--border-radius);
       padding: 0;
       width: calc(100% - (var(--site-edge) * 2));
     }
@@ -212,7 +212,7 @@
   }
 
   .post-meta {
-    color: #946A00;
+    color: var(--color-text-meta);
   }
 }
 
@@ -286,8 +286,8 @@
     code {
       font-size: 1rem;
       font-weight: 500;
-      background: rgb(255 255 255 / 90%);
-      border: 1px solid #bebebe;
+      background: #fff;
+      border: 1px solid #ffd9b6;
       padding: 0.2em 0.5em;
       border-radius: 0.2em;
       word-wrap: break-word;
