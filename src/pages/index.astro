@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import SiteLayout from "../layouts/SiteLayout.astro";
-import ArrowIcon from "../img/arrow.svg";
+import Sprite from "../img/sprite.svg";
 import GitHubIcon from "../img/github.svg";
 import apolloLogo from "../img/writing/apollo-logo.svg";
 import apolloCover from "../img/writing/apollo.jpg";
@@ -23,7 +23,7 @@ const projects = (await getCollection("projects"))
   title="Home"
   excerpt="Front-end developer and writer, writing about web development, including CSS, accessibility, JavaScript, and WordPress."
 >
-  <ArrowIcon />
+  <Sprite />
   <h1 class="screen-reader-text">Home</h1>
 
   <section class="home-intro">
@@ -47,10 +47,7 @@ const projects = (await getCollection("projects"))
           >
             {posts.map((post) => <Post post={post} />)}
           </ul>
-          <a class="more" href="/posts">
-            All Posts
-            <svg class="more-icon"><use xlink:href="#arrow"></use></svg>
-          </a>
+          <a class="more" href="/posts">All Posts<svg class="more-icon" width="9" height="14"><use xlink:href="#arrow"></use></svg></a>
         </div>
       </div>
     </section>
@@ -84,10 +81,7 @@ const projects = (await getCollection("projects"))
               ))
             }
           </ul>
-          <a class="more" href="/projects">
-            All Projects
-            <svg class="more-icon"><use xlink:href="#arrow"></use></svg>
-          </a>
+          <a class="more" href="/projects">All Projects<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
         </div>
       </div>
     </section>
@@ -183,10 +177,7 @@ const projects = (await getCollection("projects"))
               </div>
             </li>
           </ul>
-          <a class="more" href="/writing">
-            All Writing
-            <svg class="more-icon"><use xlink:href="#arrow"></use></svg>
-          </a>
+          <a class="more" href="/writing">All Writing<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
         </div>
       </div>
     </section>

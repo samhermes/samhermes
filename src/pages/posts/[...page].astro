@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import ArrowIcon from "../../img/arrow.svg";
+import Sprite from "../../img/sprite.svg";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import Post from "../../components/Post.astro";
 
@@ -17,7 +17,7 @@ const pageTitle = `Posts${page.currentPage === 1 ? "" : ` - Page ${page.currentP
 ---
 
 <SiteLayout title={pageTitle}>
-  <ArrowIcon />
+  <Sprite />
   <div class="page-container">
     <header class="page-header">
       <h1 class="page-title">
