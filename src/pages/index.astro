@@ -1,31 +1,31 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
 import SiteLayout from "../layouts/SiteLayout.astro";
-import ArrowIcon from "../img/arrow.svg";
+import Sprite from "../img/sprite.svg";
 import GitHubIcon from "../img/github.svg";
-import apolloLogo from "../img/writing/apollo-logo.svg";
-import apolloCover from "../img/writing/apollo.jpg";
-import bearCreekLogo from "../img/writing/bear-creek-logo.svg";
-import bearCreekCover from "../img/writing/bear-creek.jpg";
 import Post from "../components/Post.astro";
+import Series from "../components/Series.astro";
 const posts = (await getCollection("posts"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 5);
 const projects = (await getCollection("projects"))
   .sort((a, b) => Number(a.data.order) - Number(b.data.order))
+  .slice(0, 2);
+const series = (await getCollection("series"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
 ---
 
 <SiteLayout
   title="Home"
-  excerpt="Front-end developer, writing about web development, including CSS, accessibility, JavaScript, and WordPress."
+  excerpt="Front-end developer and writer, writing about web development, including CSS, accessibility, JavaScript, and WordPress."
 >
-  <ArrowIcon />
+  <Sprite />
   <h1 class="screen-reader-text">Home</h1>
 
   <section class="home-intro">
     <div class="intro">
+      <p class="title">Front-End Developer + Writer</p>
       <p>Making the web more human.</p>
     </div>
   </section>
@@ -44,10 +44,7 @@ const projects = (await getCollection("projects"))
           >
             {posts.map((post) => <Post post={post} />)}
           </ul>
-          <a class="more" href="/posts">
-            All Posts
-            <svg class="more-icon"><use xlink:href="#arrow"></use></svg>
-          </a>
+          <a class="more" href="/posts">All Posts<svg class="more-icon" width="9" height="14"><use xlink:href="#arrow"></use></svg></a>
         </div>
       </div>
     </section>
@@ -81,10 +78,7 @@ const projects = (await getCollection("projects"))
               ))
             }
           </ul>
-          <a class="more" href="/projects">
-            All Projects
-            <svg class="more-icon"><use xlink:href="#arrow"></use></svg>
-          </a>
+          <a class="more" href="/projects">All Projects<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
         </div>
       </div>
     </section>
@@ -96,65 +90,9 @@ const projects = (await getCollection("projects"))
         </div>
         <div class="home-writing-list">
           <ul class="series-list" role="list">
-            <li class="series-item">
-              <div class="series-info">
-                <h3 class="series-title">
-                  <a href="/writing/apollo">
-                    <Image
-                      src={apolloLogo}
-                      alt=""
-                      width="120"
-                      height="42"
-                      aria-hidden="true"
-                    />
-                    <span class="screen-reader-text">Apollo</span>
-                  </a>
-                </h3>
-                <p class="series-description">
-                  Connor and Brady dream of a life outside their small town.
-                </p>
-              </div>
-              <div class="series-image">
-                <Image
-                  src={apolloCover}
-                  layout="constrained"
-                  alt="A shimmering planet with dark reds and blues, only the right side visible."
-                  sizes="(width > 31.25em) 283px, 100vw"
-                />
-              </div>
-            </li>
-            <li class="series-item">
-              <div class="series-info">
-                <h3 class="series-title">
-                  <a href="/writing/bear-creek">
-                    <Image
-                      src={bearCreekLogo}
-                      alt=""
-                      width="190"
-                      height="48"
-                      aria-hidden="true"
-                    />
-                    <span class="screen-reader-text">Bear Creek</span>
-                  </a>
-                </h3>
-                <p class="series-description">
-                  An attack in a small town brings a man’s worst fears to life.
-                </p>
-              </div>
-              <div class="series-image">
-                <Image
-                  src={bearCreekCover}
-                  layout="constrained"
-                  alt="Sun shining through the trees in a wooded area."
-                  sizes="(width > 31.25em) 283px, 100vw"
-                />
-              </div>
-            </li>
+            {series.map((seriesItem) => <Series series={seriesItem.data} />)}
           </ul>
-          <a class="more" href="/writing">
-            All Writing
-            <svg class="more-icon"><use xlink:href="#arrow"></use></svg>
-          </a>
+          <a class="more" href="/writing">All Writing<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
         </div>
       </div>
     </section>

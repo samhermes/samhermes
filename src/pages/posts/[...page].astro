@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content";
+import Sprite from "../../img/sprite.svg";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import Post from "../../components/Post.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const posts = await getCollection("posts");
+  return paginate(
+    posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    { pageSize: 19 },
+  );
+}
+// All paginated data is passed on the "page" prop
+const { page } = Astro.props;
+const pageTitle = `Posts${page.currentPage === 1 ? "" : ` - Page ${page.currentPage}`}`;
+---
+
+<SiteLayout title={pageTitle}>
+  <Sprite />
+  <div class="page-container">
+    <header class="page-header">
+      <h1 class="page-title">
+        Posts{page.currentPage === 1 ? "" : ` - Page ${page.currentPage}`}
+      </h1>
+    </header>
+
+    <div class="page-content-contain">
+      <ul class="post-list" role="list">
+        {page.data.map((post) => <Post post={post} />)}
+      </ul>
+
+      <nav class="post-list-pagination" aria-labelledby="post-list-pagination-heading">
+        <h2 id="post-list-pagination-heading" class="screen-reader-text">
+          Pagination
+        </h2>
+        <ul aria-labelledby="post-list-pagination-heading" role="list">
+          {
+            page.url.prev ? (
+              <li class="pagination-previous">
+                <a href={page.url.prev}><svg class="more-icon" aria-hidden="true" tabindex="-1"><use xlink:href="#arrow" /></svg>Previous</a>
+              </li>
+            ) : (
+              <div class="pagination-spacer" />
+            )
+          }
+          <li class="pagination-current">
+            Page {page.currentPage} of {page.lastPage}
+          </li>
+          {
+            page.url.next ? (
+              <li class="pagination-next">
+                <a href={page.url.next}>Next<svg class="more-icon" aria-hidden="true" tabindex="-1"><use xlink:href="#arrow" /></svg></a>
+              </li>
+            ) : (
+              <div class="pagination-spacer" />
+            )
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+</SiteLayout>

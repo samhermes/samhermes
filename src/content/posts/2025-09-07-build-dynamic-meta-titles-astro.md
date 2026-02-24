@@ -11,7 +11,7 @@ You can get the page title from `Astro.props`, which contains data about the cur
 
 The path can be checked against the homepage path, which is `/`. In this example, if it’s not the homepage, it inserts the page title and a dash, and then always adds the site title.
 
-```js
+```astro
 ---
 const { title } = Astro.props;
 const path = Astro.url.pathname;

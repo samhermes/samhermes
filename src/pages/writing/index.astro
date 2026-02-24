@@ -1,12 +1,10 @@
 ---
 import SiteLayout from "../../layouts/SiteLayout.astro";
-import { Image } from "astro:assets";
-import apolloLogo from "../../img/writing/apollo-logo.svg";
-import apolloCover from "../../img/writing/apollo.jpg";
-import bearCreekLogo from "../../img/writing/bear-creek-logo.svg";
-import bearCreekCover from "../../img/writing/bear-creek.jpg";
-import nightlightLogo from "../../img/writing/nightlight-logo.svg";
-import nightlightCover from "../../img/writing/nightlight.jpg";
+import { getCollection } from "astro:content";
+import Series from "../../components/Series.astro";
+const series = (await getCollection("series"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 ---
 
 <SiteLayout title="Writing">
@@ -16,93 +14,12 @@ import nightlightCover from "../../img/writing/nightlight.jpg";
     </header>
 
     <div class="page-content-contain">
-      <ul class="series-list" role="list">
-        <li class="series-item">
-          <div class="series-info">
-            <h3 class="series-title">
-              <a href="/writing/apollo">
-                <Image
-                  src={apolloLogo}
-                  alt=""
-                  width="120"
-                  height="42"
-                  aria-hidden="true"
-                />
-                <span class="screen-reader-text">Apollo</span>
-              </a>
-            </h3>
-            <p class="series-description">
-              Connor and Brady dream of a life outside their small town.
-            </p>
-          </div>
-          <div class="series-image">
-            <Image
-              src={apolloCover}
-              layout="constrained"
-              alt="A shimmering planet with dark reds and blues, only the right side visible."
-              sizes="(width > 31.25em) 283px, 100vw"
-            />
-          </div>
-        </li>
-        <li class="series-item">
-          <div class="series-info">
-            <h3 class="series-title">
-              <a href="/writing/bear-creek">
-                <Image
-                  src={bearCreekLogo}
-                  alt=""
-                  width="190"
-                  height="48"
-                  aria-hidden="true"
-                  priority
-                />
-                <span class="screen-reader-text">Bear Creek</span>
-              </a>
-            </h3>
-            <p class="series-description">
-              An attack in a small town brings a man’s worst fears to life.
-            </p>
-          </div>
-          <div class="series-image">
-            <Image
-              src={bearCreekCover}
-              layout="constrained"
-              alt="Sun shining through the trees in a wooded area."
-              priority
-              sizes="(width > 31.25em) 283px, 100vw"
-            />
-          </div>
-        </li>
-        <li class="series-item">
-          <div class="series-info">
-            <h3 class="series-title">
-              <a href="/writing/nightlight">
-                <Image
-                  src={nightlightLogo}
-                  alt=""
-                  width="150"
-                  height="42"
-                  aria-hidden="true"
-                  priority
-                />
-                <span class="screen-reader-text">Nightlight</span>
-              </a>
-            </h3>
-            <p class="series-description">
-              Austin and Zach find each other in a hopeless place.
-            </p>
-          </div>
-          <div class="series-image">
-            <Image
-              src={nightlightCover}
-              layout="constrained"
-              alt="A hand in the dark reaching out towards the light coming from a window."
-              priority
-              sizes="(width > 31.25em) 283px, 100vw"
-            />
-          </div>
-        </li>
-      </ul>
+      <div class="writing-contain">
+        <h2>Series</h2>
+        <ul class="series-list" role="list">
+          {series.map((seriesItem) => <Series series={seriesItem.data} />)}
+        </ul>
+      </div>
     </div>
   </div>
 </SiteLayout>

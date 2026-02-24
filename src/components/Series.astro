@@ -1,0 +1,35 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from "astro:assets";
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/writing/*.{jpeg,jpg,png,svg}');
+const { series } = Astro.props;
+---
+<li class="series-item">
+  <div class="series-info">
+    <h3 class="series-title">
+      <a href={`/writing/${series.slug}`}>
+        <Image
+          src={images[series.logo.imagePath]()}
+          alt=""
+          width={series.logo.width}
+          height={series.logo.height}
+          aria-hidden="true"
+          priority
+        />
+        <span class="screen-reader-text">{series.title}</span>
+      </a>
+    </h3>
+    <p class="series-description">
+      {series.description}
+    </p>
+  </div>
+  <div class="series-image">
+    <Image
+      src={images[series.cover.imagePath]()}
+      layout="constrained"
+      alt={series.cover.alt}
+      priority
+      sizes="(width > 31.25em) 283px, 100vw"
+    />
+  </div>
+</li>

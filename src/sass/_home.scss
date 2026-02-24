@@ -9,7 +9,7 @@
     margin: 0;
 
     @media screen and (min-width: 37.5em) {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
 
@@ -35,13 +35,18 @@
 }
 
 .home-intro {
-  padding: 0 0 4rem;
-
   .intro {
-    margin: 0 auto;
+    background-color: var(--color-bg-medium);
+    border-radius: var(--border-radius);
+    margin: 0 auto 1rem;
     max-width: var(--site-max);
     width: calc(100% - (var(--site-edge) * 2));
-    padding: 25vh 0 0;
+    padding: 40vh 1.5rem 1.5rem;
+
+    @media screen and (min-width: 37.5em) {
+      padding: 45vh 3rem 3rem;
+      margin-bottom: 1.5rem;
+    }
 
     p {
       font-size: 2.5rem;
@@ -55,6 +60,16 @@
       @media screen and (min-width: 60em) {
         font-size: 3.5rem;
       }
+
+      &.title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+
+        @media screen and (min-width: 37.5em) {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 }
@@ -62,7 +77,7 @@
 .home-contain {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   max-width: var(--site-max);
   width: calc(100% - (var(--site-edge) * 2));
   gap: 1rem;
@@ -76,12 +91,11 @@
 .home-projects,
 .home-writing {
   background-color: var(--color-bg-light);
-  border: 1px solid #ffffff0f;
-  border-radius: 0.7rem;
+  border-radius: var(--border-radius);
   padding: 1.5rem;
 
   @media screen and (min-width: 37.5em) {
-    padding: 2.5rem 2.8rem;
+    padding: 2.5rem 3rem;
   }
 
   .wrapper {
@@ -94,6 +108,14 @@
       gap: 5rem;
       grid-template-columns: 3fr 5fr;
     }
+  }
+}
+
+.home-posts,
+.home-projects {
+  .post-list,
+  .project-list {
+    border-bottom: 1px solid var(--border-color);
   }
 }
 
@@ -116,11 +138,6 @@
 .home-posts {
   .home-section-header {
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border-color);
-
-    @media screen and (min-width: 60em) {
-      border-bottom: 0;
-    }
   }
 }
 
@@ -130,28 +147,13 @@
   max-width: 43.75rem;
 
   .post-list {
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
+    padding-bottom: 1rem;
 
     > li {
       padding-bottom: 2rem;
-      border-bottom: 1.5px solid var(--border-color);
       margin-bottom: 2rem;
     }
-  }
-}
-
-.home-projects {
-  background-color: transparent;
-  border-width: 0;
-  padding: 5rem 0;
-
-  .wrapper {
-    grid-template-columns: none;
-    grid-gap: 0;
-  }
-
-  .home-section-header {
-    margin-bottom: 2rem;
   }
 }
 
@@ -161,28 +163,36 @@
   flex-grow: 1;
 
   .project-list {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
     grid-template-columns: 1fr;
 
     @media screen and (min-width: 48em) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    li {
-      background-color: var(--color-bg-light);
-      border: 1px solid #ffffff0f;
-
-      @media screen and (min-width: 48em) {
-        padding: 2rem;
-      }
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 3rem;
     }
   }
 }
 
 .home-writing {
-  margin-bottom: 4rem;
+  .wrapper {
+    grid-template-columns: none;
+    gap: 0;
+  }
 
+  .home-section-header {
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 37.5em) {
+      margin-bottom: 2rem;
+    }
+  }
+  
   .series-list {
     margin-bottom: 2rem;
+
+    @media screen and (min-width: 50em) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }
