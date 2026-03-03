@@ -75,7 +75,6 @@
 }
 
 .post-meta {
-  color: var(--color-text-meta);
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
@@ -179,8 +178,6 @@
   }
 
   .page {
-    --color-text: #1d1d1d;
-
     margin: 0 auto;
     max-width: var(--site-max);
     background-color: var(--color-bg-light);
@@ -209,10 +206,6 @@
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #0f262136;
     margin-bottom: 2rem;
-  }
-
-  .post-meta {
-    color: var(--color-text-meta);
   }
 }
 

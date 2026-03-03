@@ -13,17 +13,15 @@ const { title, excerpt, date, tags } = Astro.props;
         <p class="post-date"><FormattedDate date={date} /></p>
         {
           tags?.length ? (
-            <div class="post-meta">
-              <div class="post-tags-container">
-                <TagIcon />
-                <ul class="post-tags" aria-label="Post Tags" role="list">
-                  {tags.map((tag) => (
-                    <li>
-                      <a href={`/category/${tag.replace(/\s+/g, '-').toLowerCase()}`}>{tag}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div class="post-tags-container">
+              <TagIcon />
+              <ul class="post-tags" aria-label="Post Tags" role="list">
+                {tags.map((tag) => (
+                  <li>
+                    <a href={`/category/${tag.replace(/\s+/g, '-').toLowerCase()}`}>{tag}</a>
+                  </li>
+                ))}
+              </ul>
             </div>
           ) : null
         }
