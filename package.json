@@ -9,7 +9,8 @@
     "lint": "npm run lint:css",
     "lint:css": "stylelint '**/*.scss'",
     "format:css": "stylelint '**/*.scss' --fix",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "generate-types": "wrangler types"
   },
   "repository": {
     "type": "git",
@@ -31,8 +32,10 @@
     "stylelint-config-standard-scss": "^15.0.1"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.1.1",
     "@astrojs/rss": "^4.0.17",
     "astro": "^6.0.4",
-    "sanitize-html": "^2.17.0"
+    "sanitize-html": "^2.17.0",
+    "wrangler": "^4.73.0"
   }
 }
