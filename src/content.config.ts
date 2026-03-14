@@ -1,5 +1,5 @@
 // 1. Import utilities from `astro:content`
-import { defineCollection } from 'astro:content';
+import { defineCollection } from 'astro/content/config';
 
 // 2. Import loader(s)
 import { glob } from 'astro/loaders';

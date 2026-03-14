@@ -1,4 +1,4 @@
-import { defineConfig, passthroughImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 
 import cloudflare from '@astrojs/cloudflare';
 
@@ -10,10 +10,6 @@ export default defineConfig({
       shikiConfig: {
           theme: 'houston',
       },
-  },
-
-  image: {
-    service: passthroughImageService()
   },
 
   adapter: cloudflare(),
