@@ -31,8 +31,8 @@
     "stylelint-config-standard-scss": "^15.0.1"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.12",
-    "astro": "^5.15.9",
+    "@astrojs/rss": "^4.0.15-beta.4",
+    "astro": "^6.0.4",
     "sanitize-html": "^2.17.0"
   }
 }
