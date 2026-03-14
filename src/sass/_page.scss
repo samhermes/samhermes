@@ -1,19 +1,18 @@
 .page-container {
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   max-width: var(--site-max);
   width: calc(100% - (var(--site-edge) * 2));
 
-  .page-header {
-    flex: 0 0 40%;
-    padding-top: 2.5rem;
-    background-color: var(--color-bg-medium);
-    border-radius: var(--border-radius);
-    padding: 15vh 1.5rem 1.5rem;
-    margin-bottom: 1rem;
+  @media screen and (min-width: 37.5em) {
+    margin-bottom: 8rem;
+  }
 
-    @media screen and (min-width: 37.5em) {
-      padding: 20vh 3rem 3rem;
-    }
+  .page-header {
+    color: rgba(255, 255, 255, 0.91);
+    flex: 0 0 40%;
+    border-radius: var(--border-radius);
+    padding: 15vh 0 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .page-content-contain {
@@ -23,7 +22,7 @@
     padding: 1.5rem 1.5rem 5rem;
 
     @media screen and (min-width: 37.5em) {
-      padding: 2.5rem 3rem 8rem;
+      padding: 2.5rem 3rem;
     }
 
     > * {

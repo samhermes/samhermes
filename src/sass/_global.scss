@@ -1,10 +1,12 @@
 .site-header {
+  color: rgba(255, 255, 255, 0.91);
+  border-bottom: 0.09375rem solid rgba(92, 222, 255, 0.25);
   padding: 1.2rem 0;
   margin: 0 auto;
   width: 100%;
 
   @media screen and (min-width: 37.5em) {
-    padding: 1.5rem 0 1.3rem;
+    padding: 1.5rem 0;
   }
 
   .contain {
@@ -120,10 +122,9 @@ a.external {
 /* Site Footer */
 
 .site-footer {
-  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.91);
   padding: 1.5rem 0 3rem;
   margin: 0;
-  position: relative;
 
   .contain {
     display: flex;
@@ -145,43 +146,6 @@ a.external {
       width: 2.2rem;
       height: auto;
       border-radius: 0.3rem;
-    }
-  }
-}
-
-.social {
-  margin: 0 0 0 auto;
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-
-  li {
-    margin-left: 1.25em;
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    svg {
-      width: 1.4em;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
-      will-change: opacity;
-      display: block;
-      color: inherit;
-
-      &:hover {
-        opacity: 0.5;
-      }
     }
   }
 }
