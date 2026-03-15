@@ -1,5 +1,16 @@
 @charset "utf-8";
 
+// Import partials from `sass_dir` (defaults to `_sass`)
+@forward "fonts";
+@forward "base";
+@forward "code";
+@forward "global";
+@forward "home";
+@forward "posts";
+@forward "page";
+@forward "projects";
+@forward "series";
+
 // Site variables
 :root {
   --base-font-family: 'Figtree', system-ui, -apple-system, 'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -24,15 +35,4 @@
   }
 }
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-  "fonts",
-  "base",
-  "code",
-  "global",
-  "home",
-  "posts",
-  "page",
-  "projects",
-  "series"
-;
+

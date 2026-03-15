@@ -9,7 +9,7 @@ const { series } = Astro.props;
     <h3 class="series-title">
       <a href={`/writing/${series.slug}`}>
         <Image
-          src={images[series.logo.imagePath]()}
+          src={series.logo.imagePath}
           alt=""
           width={series.logo.width}
           height={series.logo.height}
