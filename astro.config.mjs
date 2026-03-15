@@ -13,6 +13,7 @@ export default defineConfig({
   },
 
   adapter: cloudflare({
-    service: passthroughImageService()
+    service: passthroughImageService(),
+    imageService: 'compile'
   }),
 });
