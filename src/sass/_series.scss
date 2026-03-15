@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   grid-auto-rows: 1fr;
 
   @media screen and (min-width: 37.5em) {
@@ -16,6 +16,10 @@
 
   @media screen and (min-width: 50em) {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 60em) {
+    grid-gap: 1.5rem;
   }
 }
 

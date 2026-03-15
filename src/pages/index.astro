@@ -44,7 +44,9 @@ const series = (await getCollection("series"))
           >
             {posts.map((post) => <Post post={post} />)}
           </ul>
-          <a class="more" href="/posts">All Posts<svg class="more-icon" width="9" height="14"><use xlink:href="#arrow"></use></svg></a>
+          <div class="home-listing-footer">
+            <a class="more" href="/posts">All Posts<svg class="more-icon" width="9" height="14"><use xlink:href="#arrow"></use></svg></a>
+          </div>
         </div>
       </div>
     </section>
@@ -78,7 +80,9 @@ const series = (await getCollection("series"))
               ))
             }
           </ul>
-          <a class="more" href="/projects">All Projects<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
+          <div class="home-listing-footer">
+            <a class="more" href="/projects">All Projects<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
+          </div>
         </div>
       </div>
     </section>
@@ -92,7 +96,9 @@ const series = (await getCollection("series"))
           <ul class="series-list" role="list">
             {series.map((seriesItem) => <Series series={seriesItem.data} />)}
           </ul>
-          <a class="more" href="/writing">All Writing<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
+          <div class="home-listing-footer">
+            <a class="more" href="/writing">All Writing<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
+          </div>
         </div>
       </div>
     </section>

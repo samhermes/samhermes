@@ -5,7 +5,7 @@
     margin: 0;
 
     @media screen and (min-width: 37.5em) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
 
@@ -92,14 +92,22 @@
   padding: 1.5rem;
 
   @media screen and (min-width: 37.5em) {
+    padding: 2rem 2.25rem;
+  }
+
+  @media screen and (min-width: 60em) {
     padding: 2.5rem 3rem;
   }
 
   .wrapper {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
     margin: 0 auto;
     max-width: var(--site-max);
+
+    @media screen and (min-width: 37.5em) {
+      gap: 2rem;
+    }
 
     @media screen and (min-width: 60em) {
       gap: 5rem;
@@ -108,27 +116,45 @@
   }
 }
 
-.home-posts,
-.home-projects {
-  .post-list,
-  .project-list {
-    border-bottom: 1px solid var(--border-color);
-  }
-}
-
 .home-section-header {
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   flex: 0 0 40%;
-  margin: 0;
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem 1rem;
+
+  @media screen and (min-width: 37.5em) {
+    padding: 0 2.25rem 1.5rem;
+    margin: 0 -2.25rem;
+  }
 
   @media screen and (min-width: 60em) {
+    border-bottom: 0;
     margin: 0 0 2rem;
+    padding: 0;
   }
 
   svg {
     display: block;
     width: 1.3rem;
     height: 1.3rem;
+  }
+}
+
+.home-listing-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 1rem 1.5rem 0;
+  margin: 0 -1.5rem;
+
+  @media screen and (min-width: 37.5em) {
+    padding: 1.5rem 2.5rem 0;
+    margin: 0 -2.5rem;
+  }
+
+  @media screen and (min-width: 60em) {
+    border-bottom: 0;
+    margin: 0;
+    padding: 1rem 0 0;
   }
 }
 
@@ -141,15 +167,13 @@
 .home-post-list {
   display: flex;
   flex-direction: column;
-  max-width: 43.75rem;
 
   .post-list {
     margin: 0 0 1rem;
-    padding-bottom: 1rem;
 
     > li {
       padding-bottom: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -160,13 +184,11 @@
   flex-grow: 1;
 
   .project-list {
-    margin-bottom: 1rem;
     padding-bottom: 2rem;
     grid-template-columns: 1fr;
 
     @media screen and (min-width: 48em) {
       grid-template-columns: 1fr 1fr;
-      padding-bottom: 3rem;
     }
   }
 }
@@ -178,7 +200,7 @@
   }
 
   .home-section-header {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 
     @media screen and (min-width: 37.5em) {
       margin-bottom: 2rem;
@@ -190,6 +212,13 @@
 
     @media screen and (min-width: 50em) {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .home-listing-footer {
+    @media screen and (min-width: 50em) {
+      border-top: 0;
+      padding-top: 0;
     }
   }
 }
