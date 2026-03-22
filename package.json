@@ -10,6 +10,7 @@
     "lint:css": "stylelint '**/*.scss'",
     "format:css": "stylelint '**/*.scss' --fix",
     "preview": "astro preview",
+    "deploy": "wrangler deploy",
     "generate-types": "wrangler types"
   },
   "repository": {
@@ -29,11 +30,15 @@
     "markdown-it-anchor": "^8.6.5",
     "sass": "^1.42.1",
     "stylelint": "^16.24.0",
-    "stylelint-config-standard-scss": "^15.0.1"
+    "stylelint-config-standard-scss": "^15.0.1",
+    "wrangler": "^4.76.0"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.17",
     "astro": "^6.0.8",
     "sanitize-html": "^2.17.0"
-  }
+  },
+  "engines": {
+		"node": ">=22"
+	}
 }
