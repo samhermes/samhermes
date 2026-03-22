@@ -21,7 +21,7 @@
     "wrangler": "^4.76.0"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.12",
+    "@astrojs/cloudflare": "^12.6.13",
     "@astrojs/rss": "^4.0.17",
     "astro": "^5.16.9",
     "sanitize-html": "^2.17.0"
