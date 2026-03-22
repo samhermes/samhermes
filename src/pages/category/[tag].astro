@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import Sprite from "../../img/sprite.svg";
 import Post from "../../components/Post.astro";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 
@@ -34,6 +35,7 @@ const { posts, tagName } = Astro.props;
 ---
 
 <SiteLayout title={tagName}>
+  <Sprite />
   <div class="page-container">
     <header class="page-header">
       <h1 class="page-title">Category: {tagName}</h1>
