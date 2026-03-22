@@ -1,8 +1,6 @@
 {
   "name": "samhermes",
   "version": "1.4.6",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",
@@ -13,17 +11,6 @@
     "deploy": "wrangler deploy",
     "generate-types": "wrangler types"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/samhermes/samhermes.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/samhermes/samhermes/issues"
-  },
-  "homepage": "https://github.com/samhermes/samhermes#readme",
   "devDependencies": {
     "luxon": "^2.5.2",
     "markdown-it": "^14.1.1",
@@ -34,11 +21,13 @@
     "wrangler": "^4.76.0"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/rss": "^4.0.17",
-    "astro": "^6.0.8",
+    "astro": "^5.16.9",
     "sanitize-html": "^2.17.0"
   },
+  "private": true,
   "engines": {
-		"node": ">=22"
-	}
+    "node": ">=22"
+  }
 }
