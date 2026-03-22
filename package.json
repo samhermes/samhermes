@@ -1,6 +1,6 @@
 {
   "name": "samhermes",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,18 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samhermes/samhermes.github.io.git"
+    "url": "git+https://github.com/samhermes/samhermes.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samhermes/samhermes.github.io/issues"
+    "url": "https://github.com/samhermes/samhermes/issues"
   },
-  "homepage": "https://github.com/samhermes/samhermes.github.io#readme",
+  "homepage": "https://github.com/samhermes/samhermes#readme",
   "devDependencies": {
     "luxon": "^2.5.2",
-    "markdown-it": "^13.0.2",
+    "markdown-it": "^14.1.1",
     "markdown-it-anchor": "^8.6.5",
     "sass": "^1.42.1",
     "stylelint": "^16.24.0",
@@ -33,8 +33,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.17",
-    "astro": "^6.0.4",
-    "sanitize-html": "^2.17.0",
-    "wrangler": "^4.73.0"
+    "astro": "^6.0.8",
+    "sanitize-html": "^2.17.0"
   }
 }
