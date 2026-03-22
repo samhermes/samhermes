@@ -47,6 +47,7 @@
     p {
       font-size: 2.5rem;
       font-weight: 500;
+      line-height: 1.1;
       margin: 0;
 
       @media screen and (min-width: 37.5em) {
@@ -60,6 +61,7 @@
       &.title {
         color: #5CDEFF;
         font-size: 1.3rem;
+        line-height: 1.25;
         margin-bottom: 0.5rem;
 
         @media screen and (min-width: 37.5em) {
