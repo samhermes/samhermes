@@ -37,6 +37,6 @@ The `part` attribute allows for an element to be targeted from outside the bound
 
 ```css
 my-custom-element::part(header) {
-	border-bottom: 1px solid pink;
+  border-bottom: 1px solid pink;
 }
 ```
