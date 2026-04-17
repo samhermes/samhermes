@@ -266,6 +266,18 @@
     }
   }
 
+  h2,
+  h3,
+  h4 {
+    code {
+      font-weight: 500;
+      background: #ececec;
+      padding: 0.2em 0.3em;
+      border-radius: 0.2em;
+      word-wrap: break-word;
+    }
+  }
+
   ul,
   ol {
     margin-bottom: 1.8rem;
@@ -321,7 +333,7 @@
   }
 
   code {
-    font-size: 0.875rem;
+    font-size: 0.875em;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
     line-height: 1.7;
   }
