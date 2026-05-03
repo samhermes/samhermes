@@ -35,17 +35,13 @@
   }
 
   .project-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.25;
     margin: 0 0 0.5rem;
 
-    @media screen and (min-width: 28.125em) {
-      font-size: 1.45rem;
-    }
-
     @media screen and (min-width: 37.5em) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     a {
@@ -59,8 +55,13 @@
   }
 
   .project-desc {
+    font-size: 0.875rem;
     margin-bottom: 1rem;
     color: var(--color-text-meta);
+
+    @media screen and (min-width: 37.5em) {
+      font-size: 1rem;
+    }
   }
 
   .project-github {

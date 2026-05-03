@@ -12,7 +12,7 @@
   .more {
     align-self: flex-start;
     display: inline-block;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 400;
     color: inherit;
 
@@ -45,7 +45,7 @@
     }
 
     p {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
       font-weight: 500;
       line-height: 1.1;
       margin: 0;
@@ -59,9 +59,9 @@
       }
 
       &.title {
-        color: #5adbff;
-        font-size: 1.3rem;
-        font-weight: 400;
+        color: #FA5053;
+        font-size: 1.2rem;
+        font-weight: 300;
         line-height: 1.25;
         margin-bottom: 0.5rem;
 
@@ -175,8 +175,12 @@
     margin: 0 0 1rem;
 
     > li {
-      padding-bottom: 2rem;
-      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+
+      @media screen and (min-width: 48em) {
+        padding-bottom: 2rem;
+      }
     }
   }
 }

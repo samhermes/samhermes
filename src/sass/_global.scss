@@ -1,8 +1,8 @@
 .site-header {
   color: rgba(255, 255, 255, 0.91);
   background-color: inherit;
-  border-bottom: 0.09375rem solid rgba(92, 222, 255, 0.25);
-  padding: 1rem 0;
+  border-bottom: 0.09375rem solid rgba(255, 255, 255, 0.09);
+  padding: 0.9rem 0;
   margin: 0 auto;
   width: 100%;
   position: sticky;
@@ -11,7 +11,7 @@
   z-index: 9;
 
   @media screen and (min-width: 37.5em) {
-    padding: 1.3rem 0;
+    padding: 1rem 0;
   }
 
   .contain {
@@ -27,14 +27,14 @@
     will-change: opacity;
     position: relative;
     display: inline-flex;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
     color: inherit;
     text-transform: uppercase;
     letter-spacing: 0.09em;
 
     @media screen and (min-width: 25em) {
-      font-size: 1.3rem;
+      font-size: 1.125rem;
     }
 
     &:hover {
@@ -61,7 +61,11 @@
   }
 
   li {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
+
+    @media screen and (min-width: 25em) {
+      font-size: 0.875rem;
+    }
 
     a {
       display: block;
@@ -76,39 +80,13 @@
   }
 }
 
-/* Page Elements */
-
-.page {
-  min-height: calc(100vh - 10.5rem);
-  color: var(--color-text);
-
-  @media screen and (min-width: 37.5em) {
-    min-height: calc(100vh - 11.1875rem);
-  }
-
-  .contain {
-    max-width: 48rem;
-    margin: 0 auto;
-    padding: 2rem 0 7rem;
-    width: 90%;
-
-    @media screen and (min-width: 37.5em) {
-      padding: 3rem 0 7rem;
-    }
-  }
-}
-
 .page-title {
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
 
   @media screen and (min-width: 37.5em) {
     font-size: 2rem;
-  }
-
-  @media screen and (min-width: 60em) {
-    font-size: 2.5rem;
   }
 }
 
