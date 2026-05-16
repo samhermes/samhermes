@@ -1,5 +1,6 @@
 ---
 import PrideIcon from "../img/progress.svg";
+import Logo from "../img/logo.svg";
 import "../sass/main.scss";
 const { title, excerpt, type, series, background } = Astro.props;
 const path = Astro.url.pathname;
@@ -37,7 +38,10 @@ const backgroundColor = background ? `background-color: #${background}` : null;
   <body class={`${pageSlug}${typeSlug}`} style={backgroundColor}>
     <header class="site-header">
       <div class="contain">
-        <a class="logotype" href="/"> Sam Hermes </a>
+        <a class="logotype" href="/">
+          <Logo aria-hidden="true" tabindex="-1" />
+          <span class="screen-reader-text">Sam Hermes</span>
+        </a>
         <nav class="site-nav" aria-label="Site">
           <h2 id="main-nav-heading" class="screen-reader-text">
             Site Navigation

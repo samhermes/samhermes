@@ -2,7 +2,7 @@
   color: rgba(255, 255, 255, 0.91);
   background-color: inherit;
   border-bottom: 0.09375rem solid rgba(255, 255, 255, 0.09);
-  padding: 0.9rem 0;
+  padding: 1rem 0;
   margin: 0 auto;
   width: 100%;
   position: sticky;
@@ -11,7 +11,7 @@
   z-index: 9;
 
   @media screen and (min-width: 37.5em) {
-    padding: 1rem 0;
+    padding: 1.125rem 0;
   }
 
   .contain {
@@ -39,6 +39,19 @@
 
     &:hover {
       opacity: 0.5;
+    }
+
+    svg {
+      width: 7.4rem;
+      height: auto;
+
+      @media screen and (min-width: 25em) {
+        width: 8rem;
+      }
+
+      path {
+        fill: currentColor;
+      }
     }
   }
 }
