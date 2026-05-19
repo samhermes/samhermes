@@ -19,7 +19,7 @@
 
     li {
       padding-bottom: 1.5rem;
-      border-bottom: 0.09375rem solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
     }
   }
 
@@ -33,13 +33,13 @@
   }
 
   .project-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     line-height: 1.25;
     margin: 0 0 0.3rem;
 
     @media screen and (min-width: 37.5em) {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
 
     a {

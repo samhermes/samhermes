@@ -1,11 +1,11 @@
 .page-home {
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     margin: 0;
 
     @media screen and (min-width: 37.5em) {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -115,8 +115,8 @@
     }
 
     @media screen and (min-width: 60em) {
-      gap: 5rem;
-      grid-template-columns: 1fr 2fr;
+      gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
@@ -171,6 +171,10 @@
   display: flex;
   flex-direction: column;
 
+  @media screen and (min-width: 60em) {
+    grid-column: 2 / -1;
+  }
+
   .post-list {
     margin: 0 0 1rem;
 
@@ -179,11 +183,12 @@
     }
 
     > li {
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
       margin-bottom: 1.5rem;
 
       @media screen and (min-width: 37.5em) {
-        padding-bottom: 2rem;
+        padding-bottom: 1.65rem;
+        margin-bottom: 1.65rem;
       }
 
       @media screen and (min-width: 60em) {
@@ -199,6 +204,10 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+
+  @media screen and (min-width: 60em) {
+    grid-column: 2 / -1;
+  }
 
   .project-list {
     padding-bottom: 1.5rem;
