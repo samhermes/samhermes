@@ -1,7 +1,7 @@
 ---
 title: Web Component styling with custom properties
 date: 2026-06-07T13:55:00 -5
-tags: ['CSS']
+tags: ['Web Components', 'CSS']
 ---
 When you are creating a web component, you may want to expose certain properties to outside styling. For this, custom properties are a great tool. For example, you could set a background color inside of the web component itself, but open it up to outside customization. Additionally, custom properties provide a fallback method, which is a great way to set your own defaults.
 
