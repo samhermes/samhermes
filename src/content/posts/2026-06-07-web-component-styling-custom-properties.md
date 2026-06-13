@@ -9,7 +9,7 @@ In the custom elements styles, this might look like:
 
 ```css
 :host {
-	background-color: var(--background-color, purple);
+  background-color: var(--background-color, purple);
 }
 ```
 
@@ -17,7 +17,7 @@ Then, by targeting the name of the custom element, you could set the updated val
 
 ```css
 my-custom-element {
-	--background-color: pink;
+  --background-color: pink;
 }
 ```
 
@@ -25,7 +25,7 @@ Alternatively, you could set the custom properties at the root of the document. 
 
 ```css
 :root {
-	--my-custom-element--background-color: pink;
+  --my-custom-element--background-color: pink;
 }
 ```
 
