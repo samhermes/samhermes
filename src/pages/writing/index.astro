@@ -3,8 +3,7 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
 import { getCollection } from "astro:content";
 import Series from "../../components/Series.astro";
 const series = (await getCollection("series"))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3);
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
 <SiteLayout title="Writing">

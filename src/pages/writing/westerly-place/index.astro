@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import StoryLayout from "../../../layouts/StoryLayout.astro";
+import WesterlyPlaceLogo from "../../../img/writing/westerly-place-logo.svg";
+import westerlyPlaceCover from "../../../img/writing/westerly-place-header.jpg";
+import "../../../sass/writing-westerly-place.scss";
+
+const stories = (await getCollection("westerlyPlace")).sort(
+  (a, b) => a.data.date.valueOf() - b.data.date.valueOf(),
+);
+---
+
+<StoryLayout
+  isHomepage
+  series="Westerly Place"
+  title="Westerly Place"
+  excerpt="They couldn’t imagine leaving such a perfect utopia."
+  backgroundColor="F1E9D2"
+>
+  <header class="series-header">
+    <h1 class="story-title">
+      <WesterlyPlaceLogo />
+    </h1>
+
+    <div class="series-image">
+      <Image
+        src={westerlyPlaceCover}
+        alt="An aerial view of a suburb with uniform homes and roads."
+        layout="constrained"
+        priority
+        sizes="(width > 47.2em) 670px, 100vw"
+      />
+    </div>
+  </header>
+
+  <div class="series-intro-content">
+    <p>
+      Westerly Place is the kind of place that anyone would want to move to. It
+      has everything. Manicured lawns, big houses, and, most importantly, peace
+      and quiet. In fact, nothing has ever happened there, and that’s just how
+      everyone likes it. Unfortunately for them, they are not, and never have
+      been, in control.
+    </p>
+
+    <div class="character-description">
+      <p><strong>Daniel</strong></p>
+      <p>
+        Daniel Walker lives in Westerly Place with his very normal family. He’s
+        a great student, a great chess player, and a great son. Nothing of much
+        note has happened to him, he’s just an average teenager.
+      </p>
+    </div>
+
+    <div class="character-description">
+      <p><strong>Jake</strong></p>
+      <p>
+        Daniel’s uncle, Jake, lives in the city in an old two story brick house.
+        He loves collecting treasures from his travels and making tasty food.
+        He has a dream of meeting an amazing man and creating a life together.
+      </p>
+    </div>
+  </div>
+
+  <nav class="series-nav">
+    <ul class="story-list" role="list">
+      {
+        stories.map((story) => (
+          <li>
+            <p class="story-title">
+              <a class="story-link" href={`/writing/westerly-place/${story.id}`}>
+                {story.data.title}
+              </a>
+            </p>
+            <p class="count">{story.data.number}.</p>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</StoryLayout>

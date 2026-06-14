@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import SiteLayout from "./SiteLayout.astro";
 import toCamelCase from "../utils/toCamelCase";
-const { isHomepage, title, excerpt, series, backgroundColor, count } =
+const { isHomepage, title, excerpt, series, backgroundColor, count, number } =
   Astro.props;
 const seriesSlug = series ? series.toLowerCase().replace(/\s+/g, "-") : "";
 const stories = (await getCollection(toCamelCase(series))).sort(
@@ -40,7 +40,12 @@ import "../sass/writing.scss";
       !isHomepage ? (
         <header class="story-header">
           <h1 class="story-title">{title}</h1>
-          <p class="story-count">{count}</p>
+          {number ? (
+            <p class="story-count">{number}.</p>
+          ) : (
+            <p class="story-count">{count}</p>
+          )}
+          
           <p class="story-series">{series}</p>
         </header>
       ) : null

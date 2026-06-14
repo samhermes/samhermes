@@ -23,6 +23,9 @@ const bearCreek = defineCollection({
 const apollo = defineCollection({
 	loader: glob({ pattern: ['*.md', '!index.md'], base: "./src/content/writing/apollo" }),
 });
+const westerlyPlace = defineCollection({
+	loader: glob({ pattern: ['*.md', '!index.md'], base: "./src/content/writing/westerly-place" }),
+});
 
 // 4. Export a single `collections` object to register your collection(s)
-export const collections = { posts, projects, series, nightlight, bearCreek, apollo };
+export const collections = { posts, projects, series, nightlight, bearCreek, apollo, westerlyPlace };
