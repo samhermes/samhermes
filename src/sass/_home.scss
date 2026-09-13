@@ -211,14 +211,10 @@
 
   .project-list {
     padding-bottom: 1.5rem;
-    row-gap: 2rem;
+    row-gap: 2.5rem;
 
     @media screen and (min-width: 25em) {
       grid-template-columns: 1fr 1fr;
-    }
-
-    @media screen and (min-width: 50em) {
-      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }

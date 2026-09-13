@@ -10,7 +10,7 @@ const posts = (await getCollection("posts"))
   .slice(0, 5);
 const projects = (await getCollection("projects"))
   .sort((a, b) => Number(a.data.order) - Number(b.data.order))
-  .slice(0, 3);
+  .slice(0, 4);
 const series = (await getCollection("series"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
@@ -51,6 +51,22 @@ const series = (await getCollection("series"))
       </div>
     </section>
 
+    <section class="home-writing">
+      <div class="wrapper">
+        <div class="home-section-header">
+          <h2>Writing</h2>
+        </div>
+        <div class="home-writing-list">
+          <ul class="series-list" role="list">
+            {series.map((seriesItem) => <Series series={seriesItem.data} />)}
+          </ul>
+          <div class="home-listing-footer">
+            <a class="more" href="/writing">All Writing<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="home-projects">
       <div class="wrapper">
         <div class="home-section-header">
@@ -82,22 +98,6 @@ const series = (await getCollection("series"))
           </ul>
           <div class="home-listing-footer">
             <a class="more" href="/projects">All Projects<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-writing">
-      <div class="wrapper">
-        <div class="home-section-header">
-          <h2>Writing</h2>
-        </div>
-        <div class="home-writing-list">
-          <ul class="series-list" role="list">
-            {series.map((seriesItem) => <Series series={seriesItem.data} />)}
-          </ul>
-          <div class="home-listing-footer">
-            <a class="more" href="/writing">All Writing<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
           </div>
         </div>
       </div>
