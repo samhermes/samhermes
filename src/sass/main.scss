@@ -15,10 +15,13 @@
 :root {
   --base-font-family: 'Figtree', system-ui, -apple-system, 'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --color-bg: #181818;
+  --color-bg-medium: #2b2b2b;
   --color-bg-light: #ffffffe8;
   --color-text: #1d1d1d;
-  --color-text-meta: #444;
+  --color-text-light: #fffffff2;
+  --color-text-meta: #cdcdcd;
   --border-color: #18181830;
+  --border-color-light: #ffffff20;
   --border-radius: 0.7rem;
   --site-max: 90rem;
   --site-edge: 1.2rem;
