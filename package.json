@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.13",
-    "@astrojs/rss": "^4.0.17",
+    "@astrojs/rss": "^4.0.18",
     "astro": "^5.16.9",
     "sanitize-html": "^2.17.0"
   },
