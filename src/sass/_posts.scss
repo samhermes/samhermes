@@ -188,6 +188,7 @@
   line-height: 1.2;
   margin: 0 0 1.2rem;
   font-weight: 400;
+  text-wrap: pretty;
 
   @media screen and (min-width: 37.5em) {
     font-size: 2rem;
@@ -228,7 +229,7 @@
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.063rem;
     line-height: 1.6;
     margin-bottom: 1.8rem;
 
@@ -274,10 +275,10 @@
   ul,
   ol {
     margin-bottom: 1.8rem;
-    font-size: 1.1rem;
+    font-size: 1.063rem;
 
     @media screen and (min-width: 37.5em) {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
 
     & > li {
