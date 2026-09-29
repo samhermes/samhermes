@@ -15,14 +15,14 @@ For the [Alexander package](https://www.npmjs.com/package/@samhermes/alexander) 
 "type": "module",
 "main": "dist/alexander.js",
 "exports": {
-	".": {
-		"import": "./dist/alexander.js",
-		"require": "./dist/alexander.umd.cjs"
-	}
+  ".": {
+    "import": "./dist/alexander.js",
+    "require": "./dist/alexander.umd.cjs"
+  }
 },
 "files": [
-	"dist",
-	"scss"
+  "dist",
+  "scss"
 ]
 ```
 
