@@ -12,4 +12,5 @@ cover: {
     alt: A hand in the dark reaching out towards the light coming from a window.
 }
 description: Austin and Zach find each other in a hopeless place.
+tags: ['Gay Short Story', 'LGBTQ Story', 'MLM Story']
 ---

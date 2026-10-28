@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content";
+import Sprite from "../../../img/sprite.svg";
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import Series from "../../../components/Series.astro";
+
+export async function getStaticPaths() {
+  const allSeries = (await getCollection("series")).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
+
+  const uniqueTags = [
+    ...new Set(
+      allSeries
+        .map((post: any) => post.data.tags)
+        .flat()
+        .filter(Boolean),
+    ),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredSeries = allSeries.filter(
+      (post: any) => post.data.tags && post.data.tags.includes(tag),
+    );
+    const formattedTag = tag.replace(/\s+/g, '-').toLowerCase();
+    return {
+      params: { tag: formattedTag },
+      props: { series: filteredSeries, tagName: tag },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { series, tagName } = Astro.props;
+---
+
+<SiteLayout title={tagName}>
+  <div class="page-container writing-category-container">
+    <header class="page-header">
+      <h1 class="page-title">Category: {tagName}</h1>
+      <p class="category-eyebrow"><a href="/writing">Writing</a></p>
+    </header>
+
+    <div class="writing-category-content">
+      <h2 id="category-series-list-heading" class="screen-reader-text">Series List</h2>
+      <ul class="series-list" role="list" aria-labelledby="category-series-list-heading">
+        {series.map((seriesItem) => <Series series={seriesItem.data} />)}
+      </ul>
+    </div>
+  </div>
+</SiteLayout>

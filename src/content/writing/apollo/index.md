@@ -12,4 +12,5 @@ cover: {
     alt: 'A shimmering planet with dark reds and blues, only the right side visible.',
 }
 description: Connor and Brady dream of a life outside their small town.
+tags: ['Gay Short Story', 'LGBTQ Story']
 ---

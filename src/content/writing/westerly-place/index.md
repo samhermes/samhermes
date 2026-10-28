@@ -12,4 +12,5 @@ cover: {
     alt: An aerial view of a suburb with uniform homes and roads.
 }
 description: They couldn’t imagine leaving such a perfect utopia.
+tags: ['Gay Short Story', 'LGBTQ Story']
 ---

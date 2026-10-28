@@ -12,4 +12,5 @@ cover: {
     alt: Sun shining through the trees in a wooded area.
 }
 description: An attack in a small town brings a man’s worst fears to life.
+tags: ['Gay Short Story', 'LGBTQ Story', 'MLM Story']
 ---
