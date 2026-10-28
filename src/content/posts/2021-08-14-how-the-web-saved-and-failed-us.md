@@ -1,6 +1,7 @@
 ---
 title: How the web saved and failed us
 date: 2021-08-14 16:50:00 Z
+tags: ['Product']
 ---
 
 I've been intrigued by the role that the web played during the pandemic, so it's high time to reflect on the good and the bad.

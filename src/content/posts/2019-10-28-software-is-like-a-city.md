@@ -1,6 +1,7 @@
 ---
 title: Software is like a city
 date: 2019-10-28 16:56:00 Z
+tags: ['Product']
 ---
 
 Before I deep dive into this, a quick disclaimer to say that this is merely a thought exercise. Enjoy!

@@ -1,7 +1,7 @@
 ---
 title: Apple Music grievances, in no particular order
 date: 2025-10-05T12:42:00 -5
-tags: ['Apple']
+tags: ['Apple', 'Product']
 ---
 I enjoy being annoyed, which is why I subscribe to Apple Music. Apple seems to enjoy annoying people, by moving things around and generally not fixing the most confusing parts of the app. A match made in heaven.
 
