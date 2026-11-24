@@ -1,6 +1,6 @@
 {
 	"name": "samhermes",
-	"compatibility_date": "2025-10-08",
+	"compatibility_date": "2026-11-24",
 	"compatibility_flags": ["nodejs_compat"],
 	"main": "./dist/_worker.js/index.js",
 	"assets": {
