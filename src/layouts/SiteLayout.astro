@@ -34,6 +34,8 @@ const backgroundColor = background ? `background-color: #${background}` : null;
       title="Sam Hermes"
       href={new URL("feed.xml", Astro.site)}
     />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body class={`${pageSlug}${typeSlug}`} style={backgroundColor}>
     <header class="site-header">

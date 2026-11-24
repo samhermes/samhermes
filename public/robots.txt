@@ -6,3 +6,5 @@ Disallow: /
 
 User-agent: Applebot-Extended
 Disallow: /
+
+Sitemap: https://samhermes.com/sitemap-index.xml
