@@ -1,6 +1,6 @@
 {
   "name": "samhermes",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",
